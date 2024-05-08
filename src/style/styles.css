@@ -22,8 +22,10 @@
 @media screen and (min-width: 769px) {
   .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 
@@ -157,6 +159,15 @@ input[type="text"], input[type="password"], input[type="email"]{
   color: #000;
 }
 */ 
+
+.menu{
+    background-color:#333;
+    padding: 10px 20px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
 .menu button{
     font: 10px Arial, Helvetica, sans-serif;
     background-color: #006400;
