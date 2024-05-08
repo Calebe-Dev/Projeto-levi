@@ -101,7 +101,7 @@ input[type="text"], input[type="password"], input[type="email"]{
     font-size: 16px; /* Define o tamanho da fonte do botão */
     font-weight: bold; /* Define o peso da fonte do botão */
     text-align: center; /* Centraliza o texto do botão */
-    padding: 15px 25px; /* Define o espaçamento interno do botão */
+    padding: 15px 25\px; /* Define o espaçamento interno do botão */
     background-color: #007BFF; /* Define a cor de fundo do botão */
     color: #fff; /* Define a cor do texto do botão */
     border: none; /* Remove a borda do botão */
@@ -123,6 +123,41 @@ input[type="text"], input[type="password"], input[type="email"]{
     background-color: #ccc; /* Define a cor de fundo do botão desabilitado */
     cursor: not-allowed; /* Define o cursor do mouse como um botão desabilitado */
 }
+
+
+.out_button{
+  margin-top: 10px; /* Define a margem superior do botão */
+  font-size: 16px; /* Define o tamanho da fonte do botão */
+  font-weight: bold; /* Define o peso da fonte do botão */
+  text-align: center; /* Centraliza o texto do botão */
+  padding: 15px 15px; /* Define o espaçamento interno do botão */
+  background-color: #333; /* Define a cor de fundo do botão */
+  color: #fff; /* Define a cor do texto do botão */
+  border: none; /* Remove a borda do botão */
+  border-radius: 10px; /* Define o raio do canto do botão */
+  cursor: pointer; /* Define o cursor do mouse como um ponteiro */
+  box-shadow: #003366; /* Adiciona uma sombra ao botão */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+.out_button:hover{
+  background-color: #0056b3; /* Define a cor de fundo do botão ao passar o mouse */
+}
+
+.out_button:active{
+  background-color: #003366; /* Define a cor de fundo do botão ao clicar */
+}
+
+.out_button:disabled{
+  background-color: #ccc; /* Define a cor de fundo do botão desabilitado */
+  cursor: not-allowed; /* Define o cursor do mouse como um botão desabilitado */
+}
+
+
+
+
+
+
 
 
 .logo img {
@@ -204,7 +239,6 @@ input[type="text"], input[type="password"], input[type="email"]{
 .menu {
     background-color: #006400;
     display: flex;
-
     width: 100%;
     padding: 10px 20px;
     flex-direction: column;
