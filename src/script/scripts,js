@@ -1,0 +1,42 @@
+// Função para cadastrar um novo funcionário
+function cadastrarFuncionario(nome, email, senha, cargo, setor) {
+  // Carrega o conteúdo do arquivo JSON
+  let db = require('./db.json');
+
+  // Cria um novo funcionário
+  let novoFuncionario = {
+    nome: nome,
+    email: email,
+    senha: senha,
+    cargo: cargo,
+    setor: setor
+  };
+
+  // Adiciona o novo funcionário ao banco de dados
+  db.funcionarios.push(novoFuncionario);
+
+  // Salva o banco de dados atualizado
+  fs.writeFileSync('./db.json', JSON.stringify(db));
+
+  console.log('Funcionário cadastrado com sucesso!');
+}
+
+// Função para realizar o login
+function login(email, senha) {
+  // Carrega o conteúdo do arquivo JSON
+  let db = require('./db.json');
+
+  // Procura o funcionário com o email fornecido
+  let funcionario = db.funcionarios.find(f => f.email === email);
+
+  // Verifica se o funcionário foi encontrado e se a senha está correta
+  if (funcionario && funcionario.senha === senha) {
+    console.log('Login bem-sucedido!');
+  } else {
+    console.log('Email ou senha incorretos.');
+  }
+}
+
+// Exemplo de uso
+cadastrarFuncionario('João', 'joao@example.com', '123456', 'Analista', 'TI');
+login('joao@example.com', '123456');
