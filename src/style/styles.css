@@ -235,17 +235,18 @@ input[type="text"], input[type="password"], input[type="email"]{
 
 
 
-
-
 .footer {
-  display: block;
-  background-color: #006400;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(9px);
 }
 
 css
