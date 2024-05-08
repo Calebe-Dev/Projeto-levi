@@ -1,0 +1,265 @@
+ body{
+    background-color: #7CBBBD;
+}
+
+.container{
+    background-color: #F5F5F5; /* Cor do fundo */
+    display: flex;  /*Define como os elementos serão exibidos*/
+    flex-direction: column; /* Define a direção dos elementos */
+    align-items: center; /* Centraliza os elementos na horizontal */
+    justify-content: center; /* Centraliza os elementos na vertical */
+    width: 80%; /* Define a largura do container */
+    height: 80%; /* Define a altura do container */
+    margin: 20px auto; /* Centraliza o container na página */
+    padding: 20px; /* Define o espaçamento interno do container */
+    border-radius: 12px; /* Define o raio do canto do container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao container */
+    font-family: Arial, sans-serif; /* Define a fonte do texto */
+    font-size: 16px; /* Define o tamanho da fonte do texto */
+    color: #333; /* Define a cor do texto */
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+
+.header{
+    display: flex; /* Define como os elementos serão exibidos */
+    flex-direction: column; /* Define a direção dos elementos */
+    flex-wrap: nowrap; /* Define como os elementos serão quebrados */
+    justify-content: center; /* Centraliza os elementos na vertical */
+    align-items: center; /* Centraliza os elementos na horizontal */
+    width: 100%; /* Define a largura do header */
+    padding: 50px; /* Define o espaçamento interno do header */
+    border-radius: 10px; /* Define o raio do canto do header */
+}
+
+
+css
+/* Estiliza o logo */
+.logo {
+  /* Define a largura e altura do logo */
+  width: 80px;
+  height: 80px;
+  /* Centraliza o logo horizontalmente */
+  margin: 20px, 10px, 20px, 10px;
+  /* Adiciona uma margem inferior ao logo */
+  margin-bottom: 20px;
+  
+}
+
+/* Define a imagem do logo */
+.logo img {
+  /* Define a largura e altura da imagem do logo */
+  width: 60%;
+  height: 60%;
+  /* Remove o espaçamento interno da imagem do logo */
+  padding: 20px;
+  /* Remove a margem da imagem do logo */
+  margin: 0;
+}
+
+
+
+.main{
+    display: flex; /* Define como os elementos serão exibidos */
+    flex-direction: column; /* Define a direção dos elementos */
+    flex-wrap: nowrap; /* Define como os elementos serão quebrados */
+    justify-content: space-between; /* Centraliza os elementos na vertical */
+    align-items: center; /* Centraliza os elementos na horizontal */
+    width: 100%; /* Define a largura do main */
+    padding: 20px; /* Define o espaçamento interno do main */
+    border-radius: 10px; /* Define o raio do canto do main */
+}
+
+.button{
+    margin-top: 10px; /* Define a margem superior do botão */
+    display: flex; /* Define como os elementos serão exibidos */
+    flex-direction: row; /* Define a direção dos elementos */
+    flex-wrap: nowrap; /* Define como os elementos serão quebrados */
+    justify-content: space-between; /* Centraliza os elementos na vertical */
+    align-items: center; /* Centraliza os elementos na horizontal */
+    width: 100%; /* Define a largura do botão */
+    padding: 5px 20px 5px 20px; /* Define o espaçamento interno do botão */
+    border-radius: 10px; /* Define o raio do canto do botão */
+}
+
+
+
+/* Estiliza todos os campos de entrada */
+ /*tipos de input*/
+input[type="text"], input[type="password"], input[type="email"]{
+  width: 100%; /* Define a largura do campo de entrada */
+  padding: 12px 20px; /* Define o espaçamento interno do campo de entrada */
+  margin: 8px 0; /* Define a margem superior e inferior do campo de entrada */
+  box-sizing: border-box; /* Define que o tamanho do campo de entrada não inclui o padding ou o border */
+  border: 1px solid #ccc; /* Define a cor e o estilo do border do campo de entrada */
+  border-radius: 12px; /* Define o raio do canto do campo de entrada */
+  box-shadow: #003366; /* Adiciona uma sombra ao campo de entrada */
+  font-size: 16px; /* Define o tamanho da fonte do campo de entrada */
+}
+
+
+
+
+.enter_button{
+    margin-top: 10px; /* Define a margem superior do botão */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+    font-weight: bold; /* Define o peso da fonte do botão */
+    text-align: center; /* Centraliza o texto do botão */
+    padding: 15px 25px; /* Define o espaçamento interno do botão */
+    background-color: #007BFF; /* Define a cor de fundo do botão */
+    color: #fff; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 10px; /* Define o raio do canto do botão */
+    cursor: pointer; /* Define o cursor do mouse como um ponteiro */
+    box-shadow: #003366; /* Adiciona uma sombra ao botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+.enter_button:hover{
+    background-color: #0056b3; /* Define a cor de fundo do botão ao passar o mouse */
+}
+
+.enter_button:active{
+    background-color: #003366; /* Define a cor de fundo do botão ao clicar */
+}
+
+.enter_button:disabled{
+    background-color: #ccc; /* Define a cor de fundo do botão desabilitado */
+    cursor: not-allowed; /* Define o cursor do mouse como um botão desabilitado */
+}
+
+
+/*--------------------------------*/
+/* .menu {
+    background-color: #006400;
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    flex-direction: column;
+    border-radius: 8px;
+    justify-content: flex-start;
+    box-shadow: #003366;
+}
+
+.menu-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+
+}
+
+/*
+.menu-list li {
+    width: 100%;
+    margin-right: 10px;
+}
+.menu-list a {
+  text-decoration: none;
+  color: #000;
+}
+*/ 
+.menu button{
+    font: 10px Arial, Helvetica, sans-serif;
+    background-color: #006400;
+    border: none;
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 10px 7px;
+    border-radius: 12px;
+}
+
+.menu button:hover{
+    background-color: #0056b3;
+
+}
+
+.menu button:active{
+    background-color: #003366;
+}
+
+.menu button:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+*/
+
+
+
+.menu {
+    background-color: #006400;
+    display: flex;
+
+    width: 100%;
+    padding: 10px 20px;
+    flex-direction: column;
+    border-radius: 8px;
+    justify-content: flex-start;
+    box-shadow: #003366;
+
+}
+
+.menu-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.menu-list li {
+    width: 100%;
+    margin-right: 10px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+.footer {
+  display: block;
+  background-color: #006400;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+css
+.content table {
+  width: 100%; /* Make the table fill the width of the content div */
+  margin-bottom: 20px; /* Add some space between the table and other elements */
+}
+
+.content table th, #content table td {
+  padding: 10px; /* Add padding to the table cells */
+  text-align: center; /* Center the text in the table cells */
+}
+
+.content table thead {
+  background-color: #f2f2f2; /* Add a light gray background color to the table header */
+}
+

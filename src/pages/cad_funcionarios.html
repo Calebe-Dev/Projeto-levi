@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+ <div class="container">
+  <div class="header">
+    <div class="logo">
+      <img src="/src/img/logo.png" alt="Logo">
+    </div>
+    <div class="title">
+      <h1>Cadastro de funcionários</h1>
+    </div>
+    <div class="subtitulo">
+
+    </div>
+  </div>
+  <div class="main">
+    <div class="nav">
+      <div class="forms">      
+        <div class="form-cadastro">
+            <form action="cadastro.js" method="post">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required>
+         
+              <label for="mail">E-mail:</label>
+              <input type="email" id="mail" name="mail" required>
+          
+              <label for="senha">Senha:</label>
+              <input type="password" id="senha" name="senha" required>
+          
+              <label for="cargo">Cargo:</label>
+              <input type="text" id="cargo" name="cargo" required>
+          
+              <label for="setor">Setor:</label>
+              <input type="text" id="setor" name="setor" required>
+            </form>
+          </div>
+          
+      </div>
+        <div class="button">
+          <button class="enter_button" onclick="window.location.href='/src/pages/inicio.html'">Cadastrarr</button>
+          <button class="out_button" onclick="window.location.href='/index.html'">Sair</button> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+
+  </div>
+ </div>
+  <script src='/src/script/script.js'></script>
+</body>
+</html>
+
