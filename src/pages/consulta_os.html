@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cadastro de Ordem de Serviço</title>
+  <title>Consulta de Ordens de Serviço</title>
   <link href="/src/style/reset.css" rel="stylesheet">
   <link href='/src/style/styles.css' rel='stylesheet'>
 </head>
@@ -14,23 +14,39 @@
       <img src="/src/img/logo.png" alt="Logo">
     </div>
     <div class="title">
-      <h1>Cadastro de Ordem de Serviço</h1>
+      <h1>Consulta de Ordens de Serviço</h1>
     </div>
   </div>
   <div class="main">
     <div class="content">
-      <form action="/submit_ordem_servico" method="post">
-        <label for="veiculo">Veículo:</label>
-        <input type="text" id="veiculo" name="veiculo" required>
-  
-        <label for="data_os">Data da Ordem de Serviço:</label>
-        <input type="date" id="data_os" name="data_os" required>
-  
-        <label for="descricao">Descrição:</label>
-        <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea>
-  
-        <button type="submit">Cadastrar</button>
-      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Número da OS</th>
+            <th>Veículo</th>
+            <th>Data de Abertura</th>
+            <th>Descrição</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Veículo A</td>
+            <td>01/05/2024</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+            <td>Em andamento</td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Veículo B</td>
+            <td>10/05/2024</td>
+            <td>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td>Concluída</td>
+          </tr>
+          <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+      </table>
     </div>
   </div>
   <div class="footer">
