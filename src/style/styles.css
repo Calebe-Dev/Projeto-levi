@@ -350,3 +350,148 @@ input[type="email"] {
   box-shadow: #003366;
   padding: 10px;
 }
+
+
+/*-------|Pagona consulta cheklist|----------*/
+
+/* Estilo geral do formulário
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #5F9EA0;
+}
+
+*/
+
+
+#formulario {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f6f6f6;
+}
+
+h1 {
+  text-align: center;
+}
+/*
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+*/
+.logo {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo img {
+  width: 200px;
+}
+
+/* Estilos para os campos de entrada */
+.campo {
+  margin-bottom: 15px;
+}
+
+.campo-manutenção {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+/* Estilos para os itens de manutenção */
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+label[for="oleoMotor"],
+label[for="filtroOleo"],
+label[for="filtroAr"],
+label[for="pneus"] {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+/* Estilos para o botão de envio */
+button {
+  background-color: #006400;
+  color: #fff;
+  margin-top: 5%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #1e7415;
+}
+
+.direitos {
+  margin-top: 20px; /* Espaçamento acima dos direitos reservados */
+  text-align: center; /* Centraliza o texto */
+  font-size: 12px; /* Tamanho da fonte menor para os direitos reservados */
+  color: #777; /* Cor de texto mais clara */
+}
+
+/* Estilos para o footer */
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(9px);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  #formulario {
+      width: 90%;
+  }
+  button {
+      width: 100%;
+      padding: 5%;
+      background-color: #006400;
+  }
+}
+
