@@ -277,6 +277,16 @@ input[type="email"] {
   color: #000;
 }
 
+/* Todos os direitos reservados*/
+.direitos {
+  margin-top: 20px; /* Espaçamento acima dos direitos reservados */
+  text-align: center; /* Centraliza o texto */
+  font-size: 12px; /* Tamanho da fonte menor para os direitos reservados */
+  color: #777; /* Cor de texto mais clara */
+}
+
+
+
 /* Estilos para o footer */
 .footer {
   display: flex;
