@@ -251,7 +251,7 @@ input[type="email"] {
   background-color: #333;
   display: flex;
   width: 100%;
-  padding: 10px 20px;
+  padding: 5px 10px 5px 10px;
   flex-direction: column;
   border-radius: 15px;
   justify-content: center;
@@ -290,14 +290,29 @@ input[type="email"] {
 /* Estilos para o footer */
 .footer {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: end;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-color: rgba(18, 18, 18, 0.8);
   backdrop-filter: blur(9px);
+}
+
+.footer_out_button{
+  background-color: #333;
+  color: #F5F5F5;
+  width: 20%;;
+  border-radius: 15px;
+  border: none;
+  box-shadow: #003366;
+  padding: 10px;
+}
+
+.footer_out_button:hover{
+  background-color: #003366;
+}
 }
