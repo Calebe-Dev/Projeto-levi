@@ -47,8 +47,16 @@
     </div>
   </div>
   <div class="footer">
+    <button class="footer_return_button">Voltar</button>
     <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
-    </div>
+ </div>
+</div>
+ <script> 
+ const footer_return_button = document.querySelector('.footer_return_button');
+ footer_return_button.addEventListener('click', () => {
+   window.history.back();
+ });
+ </script>
  </div>
 </body>
 </html>

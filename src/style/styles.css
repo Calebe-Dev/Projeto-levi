@@ -123,6 +123,31 @@ body {
   cursor: not-allowed;
 }
 
+.edit_button {
+  background-color: #008000;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit_button:hover{
+  background-color: #660e00;
+  
+}
+
+.delete_button {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
 /* Estilos para campos de entrada */
 input[type="text"],
 input[type="password"],input[type="number"],
@@ -145,7 +170,7 @@ input[type="email"] {
   font-weight: bold;
   text-align: center;
   padding: 15px 25px;
-  background-color: #007BFF;
+  background-color: #008000;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -174,7 +199,7 @@ input[type="email"] {
   font-weight: bold;
   text-align: center;
   padding: 15px 15px;
-  background-color: #333;
+  background-color: #eb2a04;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -184,7 +209,7 @@ input[type="email"] {
 }
 
 .out_button:hover {
-  background-color: #0056b3;
+  background-color: #660e00;
 }
 
 .out_button:active {
@@ -303,16 +328,25 @@ input[type="email"] {
 }
 
 .footer_out_button{
-  background-color: #333;
+  background-color: #eb2a04;
+  color: #fff;
+  width: 20%;;
+  border-radius: 15px;
+  border: none;
+  box-shadow: #eb2a04;
+  padding: 10px;
+}
+
+.footer_out_button:hover{
+  background-color: #660e00;
+}
+
+.footer_return_button {
+  background-color: #007bff;
   color: #F5F5F5;
   width: 20%;;
   border-radius: 15px;
   border: none;
   box-shadow: #003366;
   padding: 10px;
-}
-
-.footer_out_button:hover{
-  background-color: #003366;
-}
 }

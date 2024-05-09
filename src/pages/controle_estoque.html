@@ -36,8 +36,8 @@
             <td>100</td>
             <td>R$ 10,00</td>
             <td>
-              <button>Editar</button>
-              <button>Excluir</button>
+              <button class="edit_button">Editar</button>
+              <button class="delete_button">Excluir</button>
             </td>
           </tr>
           <tr>
@@ -46,8 +46,8 @@
             <td>50</td>
             <td>R$ 15,00</td>
             <td>
-              <button>Editar</button>
-              <button>Excluir</button>
+              <button class="edit_button">Editar</button>
+              <button class="delete_button">Excluir</button>
             </td>
           </tr>
           <!-- Adicione mais linhas conforme necessário -->
@@ -56,8 +56,16 @@
     </div>
   </div>
   <div class="footer">
-    <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+     <button class="footer_return_button">Voltar</button>
+     <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
   </div>
+ </div>
+  <script> 
+  const footer_return_button = document.querySelector('.footer_return_button');
+  footer_return_button.addEventListener('click', () => {
+    window.history.back();
+  });
+  </script>
  </div>
 </body>
 </html>
