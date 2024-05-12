@@ -173,6 +173,32 @@ input[type="email"] {
   font-size: 16px;
 }
 
+.fuel_label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+select option {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+select option:hover {
+  background-color: #e6e6e6;
+}
+
+
+
 /* Estilos para botões de entrada */
 .enter_button {
   margin-top: 10px;

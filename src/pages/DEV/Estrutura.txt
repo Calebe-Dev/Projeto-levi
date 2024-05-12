@@ -1,0 +1,1716 @@
+
+/src/style/styles.css:
+/* Estilos gerais */
+body {
+  background-color: #7CBBBD;
+}
+
+.container {
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+  margin: 20px auto;
+  padding: 20px 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+      flex-direction: row;
+      width: 50%;
+      height: 40%;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+}
+
+/* Estilos para o header */
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 200px;
+}
+
+/* Estilos para o main */
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/*Estilo para content*/
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilos para titulo */
+  .container .title {
+    background-color: #333;
+    color: #f1f1f1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    width: 100%;
+    border-radius: 0;
+    border: 12px;
+    padding: 15px 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  @media screen and (min-width: 769px) {
+    .container .title{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 15px 55px;
+    }
+  }
+
+/* Estilos para botões */
+
+
+.menu button{
+ /*Design*/
+    background-color: #006400;
+    color: white;
+    font: 16px Arial, Helvetica, sans-serif;
+    border: none;
+    cursor: pointer;
+
+    /*Positioning*/
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    padding: 10px 10px;
+    border-radius: 12px;
+}
+
+.menu button:hover{
+  background-color: #0056b3;
+}
+
+.menu button:active{
+  background-color: #003366;
+}
+
+.menu button:disabled{
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.edit_button {
+  background-color: #008000;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit_button:hover{
+  background-color: #660e00;
+  
+}
+
+.delete_button {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+/* Estilos para campos de entrada */
+input[type="text"],
+input[type="password"],input[type="number"],
+input[type="date"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: #003366;
+  font-size: 16px;
+}
+
+.fuel_label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+select option {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+select option:hover {
+  background-color: #e6e6e6;
+}
+
+
+
+/* Estilos para botões de entrada */
+.enter_button {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 25px;
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: #003366;
+  transition: background-color 0.3s ease;
+}
+
+.enter_button:hover {
+  background-color: #0056b3;
+}
+
+.enter_button:active {
+  background-color: #003366;
+}
+
+.enter_button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estilos para botões de saída */
+.out_button {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 15px;
+  background-color: #eb2a04;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: #003366;
+  transition: background-color 0.3s ease;
+}
+
+.out_button:hover {
+  background-color: #660e00;
+}
+
+.out_button:active {
+  background-color: #003366;
+}
+
+.out_button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/*Botoes de envio*/
+.submit_button {
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: #003366
+}
+
+.submit_button:hover {
+  background-color: #0056b3;
+}
+
+.submit_button:active {
+  background-color: #003366;
+}
+
+
+
+
+/* Estilos para tabelas */
+.content table {
+  width: 100%;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+}
+
+.content table th,
+.content table td {
+  padding: 10px 5px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.content table th {
+  background-color: #f2f2f2;
+}
+
+.content table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.content table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilos para o menu */
+.menu {
+  background-color: #333;
+  display: flex;
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+  flex-direction: column;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #003366;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 5px;
+      width: 80%;
+  }
+}
+
+.menu-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.menu-list li {
+  width: 100%;
+  margin-right: 10px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Todos os direitos reservados*/
+.direitos {
+  margin-top: 20px; /* Espaçamento acima dos direitos reservados */
+  text-align: center; /* Centraliza o texto */
+  font-size: 12px; /* Tamanho da fonte menor para os direitos reservados */
+  color: #777; /* Cor de texto mais clara */
+}
+
+
+
+/* Estilos para o footer */
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(9px);
+}
+
+.footer_out_button{
+  background-color: #eb2a04;
+  color: #fff;
+  width: 20%;;
+  border-radius: 15px;
+  border: none;
+  box-shadow: #eb2a04;
+  padding: 10px;
+}
+
+.footer_out_button:hover{
+  background-color: #660e00;
+}
+
+.footer_return_button {
+  background-color: #007bff;
+  color: #F5F5F5;
+  width: 20%;;
+  border-radius: 15px;
+  border: none;
+  box-shadow: #003366;
+  padding: 10px;
+}
+
+
+/*-------|Pag consulta cheklist|----------*/
+
+
+
+
+#formulario {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f6f6f6;
+}
+
+
+
+/* Estilos para os campos de entrada */
+.campo {
+  margin-bottom: 15px;
+}
+
+.title_cheklist{
+  background-color: #003366;
+  color: #fff  ;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.campo-manutenção {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: start;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.item{
+    display: flex;
+    padding: 12px;
+}
+
+/*
+label[for="oleoMotor"],
+label[for="filtroOleo"],
+label[for="filtroAr"],
+label[for="pneus"] {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+*/
+
+
+
+
+
+/index.html:
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Five Software e Varejista ltda</title>
+  <link rel="icon" href="src/img/logo_vl.png" type="image/x-icon">
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+ <div class="container">
+  <div class="header">
+    <div class="logo">
+      <img src="/src/img/logo.png" alt="Logo">
+    </div>
+  </div>
+  <div class="main">
+    <div class="nav">
+
+      <div class="forms">      
+        <div class="form-login">
+          <form id="formLogin" action="#" method="post">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required>
+        
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+        
+            <button class="enter_button"  onclick="window.location.href='/src/pages/inicio_funcionario.html'">Entrar</button>
+        </form>        
+      </div>
+        <div class="button">
+        </div>
+      </div>
+   
+   
+    </div>
+  </div>
+  <div class="direitos">
+    © 2024 Five Software e Varejista Ltda. Todos os direitos reservados.
+  </div>
+
+ </div>
+
+</body>
+</html>
+
+/src/pages/inicio_funcionario.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+ <div class="container">
+  <div class="header">
+    <div class="logo">
+      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+    <div class="title">
+      <h1>Painel Operacional</h1>
+    </div>
+  </div>
+  <div class="main">
+      <div class="content">
+        <div class="menu">
+          <ul class="menu-list">
+            <li>
+              <button onclick="window.location.href='/src/pages/cad_os.html'">Cadastrar OS</button>
+            </li>
+            <li>
+              <button onclick="window.location.href='/src/pages/consulta_estoque.html'">Consultar Estoque</button>
+            </li>
+            <li>
+              <button onclick="window.location.href='/src/pages/consulta_manutencao_pendente.html'">Consultar Manutenções Pendentes</button>
+            </li>
+            <li>
+              <button onclick="window.location.href='/src/pages/exe_os-mecanico.html'">Executar Ordem de Serviço</button>
+            </li>
+          </ul>
+        </div>  
+      </div>
+  </div>
+  <div class="footer">
+    <button class="footer_return_button">Voltar</button>
+    <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+ </div>
+</div>
+ <script> 
+ const footer_return_button = document.querySelector('.footer_return_button');
+ footer_return_button.addEventListener('click', () => {
+   window.history.back();
+ });
+ </script>
+</body>
+</html>
+
+/src/pages/cad_programa_manutemcao.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Programa de Manutenção</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+ <div class="container">
+  <div class="header">
+    <div class="logo">
+      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+    <div class="title">
+      <h1>Cadastro de Programa de Manutenção</h1>
+    </div>
+  </div>
+  <div class="main">
+    <div class="content">
+      <form action="/submit_programa_manutencao" method="post">
+        <label for="veiculo">Veículo:</label>
+        <input type="text" id="veiculo" name="veiculo" required>
+  
+        <label for="tipo_manutencao">Tipo de Manutenção:</label>
+        <input type="text" id="tipo_manutencao" name="tipo_manutencao" required>
+  
+        <label for="data_manutencao">Data de Manutenção:</label>
+        <input type="date" id="data_manutencao" name="data_manutencao" required>
+  
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" rows="4" cols="50" required></textarea>
+  
+        <button class="submit_button" type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <button class="footer_return_button">Voltar</button>
+    <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+ </div>
+</div>
+ <script> 
+ const footer_return_button = document.querySelector('.footer_return_button');
+ footer_return_button.addEventListener('click', () => {
+   window.history.back();
+ });
+ </script>
+ </div>
+</body>
+</html>
+
+/src/pages/cad_os.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Ordem de Serviço</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href="/src/style/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+      </div>
+      <div class="title">
+        <h1>Cadastro de Ordem de Serviço</h1>
+      </div>
+    </div>
+    <div class="main">
+      <div class="nav">
+        <div class="forms">
+          <div class="form-cadastro">
+            <form id="formCadastroOS" action="#" method="post">
+              <label for="numeroOS">Número da OS:</label>
+              <input type="text" id="numeroOS" name="numeroOS" required>
+
+              <label for="dataAbertura">Data de Abertura:</label>
+              <input type="date" id="dataAbertura" name="dataAbertura" required>
+
+              <label for="veiculo">Veículo:</label>
+              <select id="veiculo" name="veiculo">
+                </select>
+
+              <label for="solicitante">Solicitante:</label>
+              <input type="text" id="solicitante" name="solicitante" required>
+
+              <label for="descricaoProblema">Descrição do Problema:</label>
+              <input type="text" id="descricaoProblema" name="descricaoProblema">
+
+              <label for="statusOS">Status:</label>
+              <select id="statusOS" name="statusOS">
+                <option value="aberta">Aberta</option>
+                <option value="andamento">Em Andamento</option>
+                <option value="concluida">Concluída</option>
+              </select>
+
+              <button class="enter_button" type="submit">Cadastrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+  <script>
+    const footer_return_button = document.querySelector('.footer_return_button');
+    footer_return_button.addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
+
+/src/pages/cad_pecas.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Peças</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href="/src/style/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+      </div>
+      <div class="title">
+        <h1>Cadastro de Peças</h1>
+      </div>
+    </div>
+    <div class="main">
+      <div class="nav">
+        <div class="forms">
+          <div class="form-cadastro">
+            <form id="formCadastroPeca" action="#" method="post">
+              <label for="nomePeca">Nome da Peça:</label>
+              <input type="text" id="nomePeca" name="nomePeca" required>
+
+              <label for="descricaoPeca">Descrição:</label>
+              <input type="text" id="descricaoPeca" name="descricaoPeca">
+
+              <label for="codigoPeca">Código da Peça:</label>
+              <input type="text" id="codigoPeca" name="codigoPeca" required>
+
+              <label for="fabricante">Fabricante:</label>
+              <input type="text" id="fabricante" name="fabricante" required>
+
+              <label for="fornecedor">Fornecedor:</label>
+              <input type="text" id="fornecedor" name="fornecedor" required>
+
+              <label for="quantidadeEstoque">Quantidade em Estoque:</label>
+              <input type="number" id="quantidadeEstoque" name="quantidadeEstoque" required>
+
+              <label for="precoUnitario">Preço Unitário:</label>
+              <input type="number" id="precoUnitario" name="precoUnitario" required>
+
+              <button class="enter_button" type="submit">Cadastrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+  <script>
+    const footer_return_button = document.querySelector('.footer_return_button');
+    footer_return_button.addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
+
+/src/pages/cad_veiculos.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Veículos</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href="/src/style/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+      </div>
+      <div class="title">
+        <h1>Cadastro de Veículos</h1>
+      </div>
+    </div>
+    <div class="main">
+      <div class="nav">
+        <div class="forms">
+          <div class="form-cadastro">
+            <form id="formCadastroVeiculo" action="#" method="post">
+              <label for="placa">Placa:</label>
+              <input type="text" id="placa" name="placa" required>
+
+              <label for="modelo">Modelo:</label>
+              <input type="text" id="modelo" name="modelo" required>
+
+              <label for="ano">Ano:</label>
+              <input type="number" id="ano" name="ano" required>
+
+              <label for="tipoCombustivel" class="fuel_label">Tipo de Combustível:</label>
+              <select id="tipoCombustivel" name="tipoCombustivel">
+                <option value="gasolina">Gasolina</option>
+                <option value="alcool">Álcool</option>
+                <option value="diesel">Diesel</option>
+                <option value="flex">Flex</option>
+              </select>
+              
+
+              <label for="chassi">Número do Chassi:</label>
+              <input type="text" id="chassi" name="chassi" required>
+
+              <label for="odometro">Odômetro Inicial (km):</label>
+              <input type="number" id="odometro" name="odometro" required>
+
+              <button class="enter_button" type="submit">Cadastrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+  <script>
+    const footer_return_button = document.querySelector('.footer_return_button');
+    footer_return_button.addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
+
+/src/pages/Consulta_checklist.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Manutenção de Veículos</title>
+    <link href="/src/style/reset.css" rel="stylesheet">
+    <link href="/src/style/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+              <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+            </div>
+            <div class="title">
+              <h1>Checklist de Manutenção de Veículos</h1>
+            </div>
+          </div>
+        <div class="main">
+            <form id="formulario">
+                <div class="campo">
+                    <label for="nome">Responsável pela inspeção:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+        
+                <div class="campo">
+                    <label for="cpf">CPF Responsável:</label>
+                    <input type="number" id="cpf" name="cpf" required>
+                </div>
+        
+                <div class="campo">
+                    <label for="modelo">Modelo:</label>
+                    <input type="text" id="modelo" name="modelo" required>
+                </div>
+        
+                <div class="campo">
+                    <label for="placa">Placa:</label>
+                    <input type="text" id="placa" name="placa" required>
+                </div>
+        
+                <div class="campo">
+                    <label for="odometro">Odômetro (km):</label>
+                    <input type="number" id="odometro" name="odometro" required>
+                </div>
+        
+                <div class="campo">
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+        
+                <div class="campo-manutenção">
+                    <div class="title_cheklist"><h2>Itens de Manutenção</h2></div>
+
+                    <div class="item">
+                    <label class="cheklist_name" for="oleoMotor">Óleo do Motor:</label>
+                    <input class="cheklist_checkbox" type="checkbox" id="oleoMotor" name="oleoMotor"> 
+                </div>
+                <div class="item">
+                    <label class="cheklist_name" for="filtroOleo">Filtro de Óleo:</label>
+                    <input class="cheklist_checkbox" type="checkbox" id="filtroOleo" name="filtroOleo">
+                </div>
+                <div class="item">
+                    <label class="cheklist_name" for="filtroAr">Filtro de Ar:</label>
+                    <input class="cheklist_checkbox" type="checkbox" id="filtroAr" name="filtroAr">
+                </div>
+                <div class="item">
+                    <label class="cheklist_name" for="pneus">Pneus:</label>
+                    <input class="cheklist_checkbox" type="checkbox" id="pneus" name="pneus">
+                </div>
+                <div class="item">
+                    <label class="cheklist_name" for="freios">Freios:</label>
+                    <input class="cheklist_checkbox"" type="checkbox" id="freios" name="freios">
+                </div>
+                <div class="item">
+                    <label class="cheklist_name" for="oleoSuspensao">Óleo da Suspensão:</label>
+                    <input class="cheklist_checkbox" type="checkbox" id="oleoSuspensao" name="oleoSuspensao">
+                </div>
+                <div class="item">
+                    <label class="cheklist_name" for="adtivoRadiador">Aditivo do Radiador:</label>
+                    <input class="cheklist_checkbox" type="checkbox" id="oleoRadiador" name="oleoRadiador">
+                </div>
+                <div class="item">
+                    <label class="cheklist_name" for="oleoFiltro">Óleo do Filtro:</label>
+                    <input class="cheklist_checkbox" type="checkbox" id="oleoFiltro" name="oleoFiltro">
+                </div>
+                </div>
+        
+                <div class="campo">
+                    <button class="submit_button" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <button class="footer_return_button">Voltar</button>
+            <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+         </div>
+    </div>
+</body>
+</html>
+
+/src/pages/consulta_manutencao_pendente.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulta de Veículos com Manutenção Pendente</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href="/src/style/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+      </div>
+      <div class="title">
+        <h1>Consulta de Veículos com Manutenção Pendente</h1>
+      </div>
+    </div>
+    <div class="main">
+      <div class="content">
+        <table>
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Modelo</th>
+              <th>Próxima Manutenção</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+  <script>
+    const footer_return_button = document.querySelector('.footer_return_button');
+    footer_return_button.addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
+
+/src/pages/consulta_os.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulta de Ordens de Serviço</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+ <div class="container">
+  <div class="header">
+    <div class="logo">
+      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+    <div class="title">
+      <h1>Consulta de Ordens de Serviço</h1>
+    </div>
+  </div>
+  <div class="main">
+    <div class="content">
+      <table>
+        <thead>
+          <tr>
+            <th>Número da OS</th>
+            <th>Veículo</th>
+            <th>Data de Abertura</th>
+            <th>Descrição</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Veículo A</td>
+            <td>01/05/2024</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+            <td>Em andamento</td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Veículo B</td>
+            <td>10/05/2024</td>
+            <td>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td>Concluída</td>
+          </tr>
+          <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <button class="footer_return_button">Voltar</button>
+    <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+ </div>
+</div>
+ <script> 
+ const footer_return_button = document.querySelector('.footer_return_button');
+ footer_return_button.addEventListener('click', () => {
+   window.history.back();
+ });
+ </script>
+ </div>
+</body>
+</html>
+
+/src/pages/consulta_estoque.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Estoque</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+ <div class="container">
+  <div class="header">
+    <div class="logo">
+      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+    <div class="title">
+      <h1>Controle de Estoque de Peças</h1>
+    </div>
+  </div>
+  <div class="main">
+    <div class="content">
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Descrição</th>
+            <th>Quantidade em Estoque</th>
+            <th>Preço Unitário</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Peça A</td>
+            <td>100</td>
+            <td>R$ 10,00</td>
+            <td>
+              <button class="edit_button">Editar</button>
+              <button class="delete_button">Excluir</button>
+            </td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Peça B</td>
+            <td>50</td>
+            <td>R$ 15,00</td>
+            <td>
+              <button class="edit_button">Editar</button>
+              <button class="delete_button">Excluir</button>
+            </td>
+          </tr>
+          <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+     <button class="footer_return_button">Voltar</button>
+     <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+  </div>
+ </div>
+  <script> 
+  const footer_return_button = document.querySelector('.footer_return_button');
+  footer_return_button.addEventListener('click', () => {
+    window.history.back();
+  });
+  </script>
+ </div>
+</body>
+</html>
+
+
+/src/pages/exe_os-mecanico.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Execução da OS</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href="/src/style/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+      </div>
+      <div class="title">
+        <h1>Execução da OS</h1>
+      </div>
+    </div>
+    <div class="main">
+      <div class="nav">
+        <div class="forms">
+          <div class="form-cadastro">
+            <form id="formExecucaoOS" action="#" method="post">
+              <label for="numeroOS">Número da OS:</label>
+              <input type="text" id="numeroOS" name="numeroOS" readonly>
+
+              <label for="servicosRealizados">Serviços Realizados:</label>
+              <input type="text" id="servicosRealizados" name="servicosRealizados">
+
+              <label for="pecasUtilizadas">Peças Utilizadas:</label>
+              <input type="text" id="pecasUtilizadas" name="pecasUtilizadas">
+
+              <label for="observacoes">Observações:</label>
+              <input type="text" id="observacoes" name="observacoes">
+
+              <button class="enter_button" type="submit">Finalizar OS</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+  <script>
+    const footer_return_button = document.querySelector('.footer_return_button');
+    footer_return_button.addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
+
+/src/pages/reg_manutencao_esterna.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Manutenção Externa</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href="/src/style/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+      </div>
+      <div class="title">
+        <h1>Registro de Manutenção Externa</h1>
+      </div>
+    </div>
+    <div class="main">
+      <div class="nav">
+        <div class="forms">
+          <div class="form-cadastro">
+            <form id="formManutencaoExterna" action="#" method="post">
+              <label for="dataManutencao">Data da Manutenção:</label>
+              <input type="date" id="dataManutencao" name="dataManutencao" required>
+
+              <label for="oficina">Oficina:</label>
+              <input type="text" id="oficina" name="oficina" required>
+
+              <label for="valorTotal">Valor Total:</label>
+              <input type="number" id="valorTotal" name="valorTotal" required>
+
+              <label for="descricaoServicos">Descrição dos Serviços:</label>
+              <textarea id="descricaoServicos" name="descricaoServicos"></textarea>
+
+              <label for="pecasUtilizadas">Peças Utilizadas:</label>
+              <textarea id="pecasUtilizadas" name="pecasUtilizadas"></textarea>
+
+              <button class="enter_button" type="submit">Registrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+  <script>
+    const footer_return_button = document.querySelector('.footer_return_button');
+    footer_return_button.addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
+
+
+
+estrutura pasta src/pages/
+cad_cronograma_manutencao.html		consulta_estoque.html
+cad_funcionarios.html			consulta_estoque_baixa.html
+cad_os.html				consulta_manutencao_pendente.html
+cad_os2.html				consulta_os.html
+cad_pecas.html				controle_estoque.html
+cad_veiculo.html			exe_os-mecanico.html
+consulta_checklists.html		inicio_funcionario.html
+consulta_cheklists2.html		inicio_gerente.html
+consulta_cronograma_manutencao.html	reg_manutencao_externa.html
+
+
+
+
+Documentacao do projeto:
+ 
+
+Disciplina: Engenharia de Software 
+
+Grupo 4 - Controle de Frota  
+ 
+ 
+ 
+
+ 
+
+
+
+
+
+
+
+
+Abril/2024
+
+Índice
+1. Introdução	4
+1.1 História e Tradição:	4
+1.2 Expansão para o comércio eletrônico	4
+1.3 Necessidade de um sistema de controle de frota	4
+1.4 Descrição dos processos.	5
+1.4.1 Estrutura da frota e seus usos	5
+1.4.2 Controle manual de manutenção da frota	5
+1.4.3 Controle de estoque	5
+1.4.4 Compras	6
+1.5 Problemas.	6
+1.5.1 No momento a empresa constatou os seguintes problemas:	6
+1.6 Objetivo do sistema	8
+1.6.1 Melhorar a gestão da frota	8
+1.7 Funcionalidades do sistema.	8
+1.7.1 Cadastro de Usuários:	8
+1.7.2 Registro dos veículos de sua manutenção:	8
+1.7.3 Controle de estoque:	9
+1.7.4 Aplicativo de checklist:	9
+1.7.5 Cronograma de manutenção:	9
+1.8 Próximos passos	10
+1.8.1 Contato da Five Software	10
+2. Fase da pesquisa	11
+2.1 Introdução	11
+2.2 Áreas afetados	11
+2.3 Agenda das entrevistas	12
+2.4 Entrevistas	12
+3. Situação atual	16
+3.1 Descrição	16
+3.2 Problemas e prejuízos	22
+3.2.1 Perdas e custo	22
+3.2.2 Falhas na comunicação causam prejuízos	22
+3.2.3 Entradas e saídas	23
+3.2.4 Falta de tecnologia amplia prejuízos	24
+3.2.5 Processos sem padronização	24
+4. Prototipação	25
+4.1 Requisitos não funcionais	26
+4.2 Requisitos Funcionais	28
+
+ 
+1.	Introdução
+
+
+Itu, abril de 2024  
+Aos cuidados do(a) gerente de projetos da Five Software 
+ 
+Prezado(a) Senhor(a), 
+Referente: Desenvolvimento de Sistema de Controle de frota 
+ 
+Varejista LTDA: Tradição e Inovação em Móveis e Eletrodomésticos
+ 
+    1.1 História e Tradição:
+  A Varejista LTDA, empresa familiar fundada em 1982 na cidade de Itu, São Paulo, carrega em sua trajetória a paixão por transformar sonhos em realidade. Desde o início, o Sr. João Pinho, patriarca da família, dedicou-se a oferecer móveis de alta qualidade com preços acessíveis, construindo uma sólida reputação de confiança e excelência no atendimento. Ao longo dos anos a empresa expandiu seus horizontes, tornando-se referência em móveis e eletrodomésticos na região de Itu, tendo se destacado pela variedade de produtos, desde móveis clássicos até designs modernos e inovadores, sempre com foco em materiais nobres e acabamento impecável. 
+ 
+    1.2 Expansão para o comércio eletrônico 
+Com o olhar sempre voltado para o futuro, a Varejista LTDA se prepara para um novo capítulo em sua história. A empresa está expandindo seus negócios para o comércio eletrônico, com o objetivo de atender clientes em toda a região de São Paulo. Essa iniciativa visa levar a tradição e a qualidade da Varejista LTDA para um público ainda maior, democratizando o acesso a produtos de alto padrão. 
+ 
+1.3	Necessidade de um sistema de controle de frota 
+Atualmente, a empresa possui uma frota composta por carros, caminhões, motos e microônibus e com o objetivo de otimizar a gestão da frota e garantir a eficiência das operações logísticas, a empresa busca um sistema de controle de manutenção da frota completo e robusto. 
+
+1.4 Descrição dos processos. 
+1.4.1 Estrutura da frota e seus usos 
+ Atualmente a empresa conta com 4 pontos de operação, sendo eles duas fábricas um depósito e uma loja. cada fábrica é atendida por dois caminhões destinados a função de transporte de materiais/matérias primas, e o transporte dos produtos para loja ou depósito, dois carros que atendem a gerência, e um microônibus utilizado no transporte de funcionários, além de contar com duas motos utilizadas nas rondas de segurança, O depósito conta com apenas um caminhão, dois carros e duas motos para os mesmos fins. Já a loja conta com um caminhão dois carros, duas motos e um microônibus também para os mesmos fins, a empresa também possui um caminhão de pequeno porte que deve ser contemplado pelo sistema pois mesmo não sendo utilizado na operação diária das fábricas ou da loja é um item estimado por todos os colaboradores da companhia e seus clientes, sendo esse o caminhão utilizado inicialmente pelo fundador da empresa no começo de seu negócio, esse caminhão fica em exposição na frente da loja e é utilizado em ações de marketing em feiras e exposições. a planos para expansão e renovação da frota. Não há um controle de frota que funciona em conjunto entre os pontos de operação. 
+
+1.4.2 Controle manual de manutenção da frota 
+Nosso controle de frota, é realizado com partes manuais, utilizando anotações em papeis e planilhas do Excel. Todos esses afazeres são realizados pela funcionária da empresa, mas com o aumento da nossa frota, durante este período, está ficando problemático controlar tantas informações que surgem diariamente.  
+
+1.4.3 Controle de estoque 
+O controle de estoque das peças para manutenção dos veículos que a empresa possui é realizado em uma planilha de Excel, que contém as quantidades, tipos, marcas, modelo, referências de peças e seus valores por unidade e categorias. Todas as semanas são recebidas novas remessas de 
+peças para repor as que foram utilizadas nos concertos dos veículos pertencentes a frota da empresa Varejista LTDA. O procedimento de recebimento e armazenamento dessas peças quando chegam no 
+almoxarifado se dá da seguinte forma, a nota fiscal é enviada ao escritório para o controle fiscal por  parte da contabilidade, já as peças de reposição são levadas para serem armazenadas nos seus devidos locais, como prateleiras, conforme o tamanho da peça as maiores na parte inferior e as menores e mais leves são armazenadas na parte superior dessas prateleiras, já as peças que são compradas em maior quantidade, são armazenadas em locais de maior facilidade de acesso pelo funcionário do almoxarifado, pois a empresa procura comprar seus veículos que são composto por, carros, caminhões, motos e micro-ônibus sempre da mesma marca e modelo, pensando em economizar na hora da compra das peças de reposição, quando comprada em maior quantidade o fornecedor das peças, concede um desconto para a empresa Varejista LTDA. 
+A cada semestre a empresa Varejista LTDA, realiza inventário, que consiste na contagem de seus estoques, com isso definindo as peças que tenham maior prioridade na hora da compra. Essas informações são passadas para o setor de compras, que as fazem conforme são requisitadas. 
+
+1.4.4 Compras  
+No processo de compras das peças, conforme são requisitadas pelo funcionário responsável pelo controle de estoque do almoxarifado, a empresa realiza um processo de pesquisa de preço de mercado com diferentes possíveis fornecedores, já que empresa possui diferentes portes de veículos, não sendo possível comprar somente de um fornecedor. 
+Com as cotações em mãos o responsável pelo setor de compras realiza as devidas compras conforme a prioridade e urgência das peças que o setor de manutenção de nossa frota demanda. 
+ 
+1.5 Problemas.
+1.5.1 No momento a empresa constatou os seguintes problemas: 
+	Perdas e custo
+•	Apesar da empresa realizar inventários semestrais, há um problema recorrente com o controle de estoque. Muitas vezes, quando uma peça é retirada do almoxarifado, a baixa correspondente não é registrada no sistema. Isso acontece em média 25 vezes por mês, resultando na compra de peças de última hora e aumentando os custos em até 20%. Considerando que o valor médio das peças é de R$ 400,00, o prejuízo mensal chega a aproximadamente R$ 2.000,00. Essa situação demanda uma revisão urgente dos procedimentos de controle de estoque para minimizar essas perdas financeiras.
+Retiradas de estoque
+•	A retirada de peças do almoxarifado muitas vezes é realizada pelo próprio mecânico responsável pelos reparos nos veículos. A urgência em liberar os veículos rapidamente pode levar o mecânico a esquecer de informar o responsável do almoxarifado ou realizar a baixa no sistema. Com uma frequência de 20 vezes ao mês, e considerando que há um responsável pelo almoxarifado, isso resulta em uma margem de erro de 40%. Essa margem de erro, devido à correria do dia a dia, gera um prejuízo mensal de R$ 640,00. É crucial implementar medidas para garantir a comunicação eficiente entre os mecânicos e o almoxarifado, a fim de reduzir essas perdas e melhorar o controle de estoque.
+Falta de ferramentas tecnológicas 
+•	Além das questões relacionadas às baixas não registradas no sistema, o almoxarifado enfrenta desafios adicionais por não contar com ferramentas tecnológicas para suas atividades. Todas as anotações de entrada e saída são feitas manualmente em papel, o que aumenta o risco de perdas. Em média, 13% dessas anotações são perdidas a cada mês, resultando em um prejuízo médio de R$ 1.000,00. A falta de um sistema automatizado de gestão de estoque contribui para essas perdas e destaca a necessidade urgente de modernizar os processos de controle de estoque na empresa.
+Controle de entradas e saídas
+•	A falta de um controle rigoroso das entradas e saídas no almoxarifado abre margem para possíveis extravios de peças e equipamentos valiosos. Estes produtos, que possuem um custo médio de R$ 900,00 por unidade, estão sujeitos a perdas estimadas em 30 unidades por mês, resultando em um prejuízo de R$ 27.000,00. Essas perdas representam um impacto significativo nas finanças da empresa e evidenciam a necessidade urgente de implementar medidas eficazes para o controle e segurança do estoque. 
+Processos e padronização
+•	Complementando as questões encontradas no almoxarifado, o setor responsável pelas manutenções enfrenta desafios adicionais devido à falta de padronização nos processos. A variação frequente em relação ao padrão ocorre cerca de 12 vezes por mês. Essa falta de padronização impacta diretamente na eficiência e qualidade das manutenções, acarretando prejuízos relacionados ao retrabalho e possíveis danos aos veículos. Embora seja complexo estimar um valor exato, considerando custos médios de R$ 600,00 por veículo afetado, o prejuízo mensal pode chegar a R$ 7.200,00. Essa situação ressalta a importância de estabelecer procedimentos padronizados e eficazes para as manutenções, visando melhorar a eficiência operacional e reduzir custos desnecessários.
+Pontos de dificuldades
+•	Um ponto que mais dificulta essas manutenções é que não há um controle das manutenções realizadas na frota da empresa, não sendo realizado qualquer forma de anotações no que diz respeito, o que foi substituído nos veículos, frequência de 7 vezes por mês. 
+Prejuízo estimado: Difícil de quantificar, mas considere os custos associados a falhas não documentadas.
+Lembrando que esses valores são estimativas com base nas frequências supostas. Recomenda-se uma análise mais detalhada e a implementação de soluções para mitigar esses prejuízos.
+ 
+1.6 Objetivo do sistema 
+ 
+1.6.1 Melhorar a gestão da frota 
+Por esses motivos citados, que a empresa Varejista LTDA, vem buscando melhorias em nossos processos, como a empresa busca se expandir em breve, realizamos buscas por empresas que realizam a construção de sistemas informatizados, e a empresa Five Software, nos foi recomendada, para resolver esse problema em nosso setor de manutenção. 
+ 
+Eis abaixo algumas das funções que o sistema deverá possuir para atender as necessidades da 
+Varejista LTDA: 
+
+1.7 Funcionalidades do sistema. 
+1.7.1 Cadastro de Usuários:
+		O cadastro de usuários é fundamental para garantir a segurança, controle, personalização e eficiência do sistema da Varejista LTDA, além de facilitar a comunicação interna e o gerenciamento de treinamento e suporte.
+1.7.2 Registro dos veículos de sua manutenção: 
+Com o controle da manutenção dos veículos da frota é um processo fundamental para garantir a segurança e confiabilidade na operação da frota. O principal objetivo é garantir que os veículos sejam mantidos em boas condições de funcionamento, evitando falhas e paradas indesejadas. 
+O objetivo é ter um registro com o histórico completo de todas as peças que foram substituídas, incluindo a data da troca, a quilometragem do veículo, a marca e modelo da peça, o número de série, o motivo da troca e o custo da peça e data da próxima revisão. Cada veículo deverá possuir um cadastro de todas as atividades mencionadas anteriormente, proporcionando verificar todas as informações de manutenção, desde a entrada, até sua liberação, para que o responsável pelo setor de manutenção possa acompanhar o andamento da manutenção. Com essas informações será possível emitir documentos com o que foi realizado no veículo. 
+No caso de veículo novos que serão adquiridos, deveram constar o período da garantia que o fabricante fornece, pois se o veículo apresentar algum problema durante a vigência da garantia, será de responsabilidade da concessionária efetuar os devidos reparos. 
+1.7.3 Controle de estoque: 
+O sistema deverá possuir um controle de entrada e saída de peças, possuir também um “endereço” onde está armazenado no estoque, facilitando sua retirada pelo responsável do almoxarifado sem que haja perda de tempo na busca da peça desejada. 
+Monitorar e reduzir as perdas ou o excesso de produtos ou até mesmo a falta de peças no estoque, assim garantindo que sempre esteja atualizado. 
+O sistema devera possuir uma espécie de alerta, avisando o funcionário de que o produto, está com o estoque em baixa. 
+1.7.4 Aplicativo de checklist:  
+Desenvolver um aplicativo de checklist, para os funcionários de manutenção, neste checklist, os funcionários deverão realizar o procedimento averiguando o estado do veículo, 
+como possíveis avarias, tanto externa, como interna e o estado mecânico do veículo. Assim facilitando a previsão de agendamento do veículo para realizar os devidos reparos necessários. 
+1.7.5 Cronograma de manutenção:  
+Desenvolver um sistema que permita um agendamento automático do veículo com base no histórico de manutenção que será aplicado no Registro e controle da manutenção, para que haja uma manutenção preditiva conforme a quilometragem ou o tempo de uso do veículo, também notificar alertas sobre possíveis manutenções vencidas. Com isso será possível manter os veículos da frota sempre com a manutenção em dia e em um bom estado para uso dos funcionários da Varejista LTDA. 
+
+1.8 Próximos passos 
+1.8.1 Contato da Five Software 
+A Varejista LTDA, aguarda o contato da empresa Five Software, com as devidas etapas do projeto, como: implantação do sistema, valores, treinamento de funcionários.  
+ 
+  
+ 
+ 
+
+Atenciosamente 
+
+
+
+
+
+ 
+Sr. João Pinho 
+Presidente da Varejista LTDA
+ 
+2.	Fase da pesquisa
+2.1 Introdução 
+Na atualidade a Varejista LTDA possui 4 pontos em suas operações, como: duas fabricas, um depósito e uma loja. Todo os transportes de mercadorias são realizados pela frota da Varejista LTDA entre as unidades que a empresa possui, qualquer problema de manutenção nos veículos que possa surgir na frota, ocasiona um grande problema, interrompendo as atividades, tanto nas fabricas, como na loja e o não atendimento aos clientes.
+
+2.2 Áreas afetados 
+A área de manutenção de frota da Varejista LTDA, se tornou a área de maior gargalo da empresa, os veículos que vão para esta área, ficam parados por um longo período, ocasionando problemas em toda cadeia da Varejista LTDA.
+O ocorrido envolve as áreas abaixo:
+
+  
+
+
+Figura 1: áreas afetadas pela manutenção de frota.
+
+
+2.3 Agenda das entrevistas
+Data	Entrevistado	Setor	Resultado esperado
+08/04/2024
+8:30 - 9:30	João
+Gerente de manutenção de frota	
+Administrativo	Coletar informações administrativas e funcionamento
+da área de manutenção.
+09/04/2024
+10:00 -11:00	Pedro
+Almoxarife	
+Estoque	Entender as etapas do processo de armazenagem.
+10/04/2024
+08:30 -9:30	José
+Lider de manutenção	
+Manutenção	Obter informações das etapas de manutenção.
+ 
+Tabela 1.
+
+2.4 Entrevistas
+Gerente de manutenção
+Pergunta: Considerando que a empresa não possui ferramentas tecnológicas para o controle de estoque e gestão de manutenção da frota, como são abordados os principais problemas nesses setores?
+Resposta: Apesar da falta de ferramentas tecnológicas, a empresa procura adotar estratégias manuais para resolver os problemas. Isso inclui a realização de inventários, revisões periódicas dos procedimentos de controle de estoque, procura implementar padrões de manutenção. Essas abordagens visam minimizar as perdas, melhorar a eficiência operacional e reduzir os custos associados aos problemas de estoque e manutenção da frota. 
+
+Setor de estoque
+Pergunta: Quais dados são necessários para realizar a solicitação de compras de peças para a frota?
+Resposta: São necessários dados como quantidade, tipo, marca, modelo, referências das peças, valores por unidade, e prioridade de compra baseada no inventário semestral, com esses dados em mãos, é preenchido uma solicitação de compra e enviada aos fornecedores.
+
+Setor de estoque
+Pergunta: Como é o procedimento da empresa com relação ao registro e armazenamento das informações do estoque?
+Resposta: O controle é feito por meio de uma planilha de Excel, ali consta a entrada a saída, a quantidade de cada peça que consta no estoque, com suas devidas informações.
+
+Pergunta: Como é o procedimento para a realização do inventário de peças em estoque?
+Resposta: O inventário é realizado a cada semestre, primeiramente o almoxarifado é fechado, para que não entre e não saia nada que ali esteja, com uma lista impressa da quantidade e tipo das peças, o almoxarife realiza a primeira contagem contando manualmente cada peça presente no almoxarifado. Depois dessa primeira contagem é realizada uma segunda, feita por outro funcionário que não trabalha nesta área, com uma nova lista, semelhante a primeira, se as duas contagens não coincidirem, é realizada uma terceira contagem, feita pelo encarregado da manutenção, se nenhuma delas baterem as quantidades das peças, a terceira contagem fica sendo como a oficial. E será feita uma investigação sobre o desaparecimento das peças faltantes.
+
+Setor de Manutenção
+Pergunta: Como são calculados os custos das manutenções realizadas na frota?
+Resposta: Os custos são calculados com base nas peças substituídas, mão-de-obra e, ocasionalmente, custos adicionais devido a compras de última hora.
+
+Pergunta: Como funciona o fluxo das atividades diariamente?
+Resposta: Não há um processo padronizado, ocasionando variações e ineficiências na realização das manutenções. Apenas registramos em uma agenda o que ocorre diariamente.
+
+Pergunta: Como o sistema atual lida com a garantia dos veículos novos e suas manutenções?
+Resposta: Atualmente, não há um controle eficiente para isso, mas o novo sistema deverá incluir registros de garantia e manutenções obrigatórias durante a vigência dela.
+
+Processos Operacionais
+Pergunta: Qual é o procedimento para o recebimento e armazenamento (localização) de novas peças no almoxarifado?
+Resposta: O recebimento envolve o envio da nota fiscal para controle fiscal e armazenamento das peças é realizado em prateleiras, conforme o tamanho da peça as maiores na parte inferior e as menores e mais leves são armazenadas na parte superior dessas prateleiras, contendo um código de identificação nesta prateleira para facilitar sua procura.  
+
+Pergunta: Como é realizada a solicitação de manutenção de um veículo dentro da frota?
+Resposta: Atualmente o processo não é padronizado, porém é feito da seguinte forma. O solicitante deve ir falar com o Gerente da Manutenção o Sr João, se assim ele autorizar e levado ao barracão de manutenção sem o conhecimento prévio do Sr José o que resulta em ineficiências e falta de controle. Após chegar na manutenção, o mecânico anota as seguintes informações com a pessoa que está solicitando, qual veículo, problema que o veículo apresenta e a quilometragem.   
+
+Pergunta: Como é registrado a manutenção, para saber quando um serviço foi feito e quais peças forma substituídas?
+Resposta: Atualmente nosso controle de manutenção é realizado e depois de concluído, é registrado na planilha de Excel a data, a operação feita, e as peças trocadas afins.
+
+Pergunta: Como é controlado manutenções em garantia?
+Resposta: Os veículos ainda assegurados pela montadora devem ser submetidos a um tratamento diferente, eles sendo marcados nos arquivos de Excel como veículos “especiais”, quando estão prestes a vencer alguma quilometragem ou troca de óleo necessária, ele é tirado da circulação durante o dia para poder ser levado por alguém da manutenção até a oficina mecânica da montadora.
+
+Pergunta: Como é controlado a agenda de manutenções atualmente?
+Resposta: É controlado através de uma revisão periódica que é realizado a cada 15 dias.
+
+Monitoramento e Controle
+Pergunta: Considerando a ausência de sistemas de informação na oficina, como os procedimentos atuais de manutenção de veículos são monitorados?
+Resposta: Na falta de sistemas de informação, os procedimentos de manutenção dos veículos são monitorados através de métodos manuais. Isso inclui a utilização de registros em papel para anotar informações sobre os veículos, que foram coletados quando o veículo entra na área de manutenção e após sua saída, como o que foi trocado no veículo, para comparar com o que foi retirado do estoque, o tempo que o veículo permaneceu em manutenção.
+
+Essas perguntas e respostas foram elaboradas para cobrir aspectos chave identificados no documento, desde procedimentos administrativos até a implementação tecnológica, garantindo uma compreensão abrangente dos desafios e soluções propostas para o sistema de controle de frota da Varejista LTDA.
+
+
+
+
+
+
+
+
+
+
+
+3. Situação atual
+3.1 Descrição
+Conforme foram decorrendo as perguntas com os respectivos responsáveis das áreas de manutenção da frota, foram coletadas informações a respeito dos procedimentos de trabalho da equipe de manutenção.
+Na (figura 2), está exemplificado uma tabela de cadastro de veículos pertencente a empresa, nela contém informações referentes aos veículos, como: número do veículo, marca/modelo, ano e placa, data de aquisição e de garantia, este cadastro é realizado pelo setor de patrimônio e repassado para a gerência do setor de manutenção, para se ter uma noção dos veículos pertencentes a frota.
+
+ 
+Figura: 2
+
+Já na (figura 3), constam as datas das revisões que cada veículo passou e a data da próxima revisão, sempre que o veículo passa pela revisão, o funcionário já preenche a data de retorno da próxima revisão.
+
+ 
+Figura: 3
+
+Como a gerência responsável pelo setor de manutenção da empresa, possui as informações, referentes os veículos cadastrados na empresa, é possível informar quais peças são necessárias o estoque possuir.
+Já na área do estoque, que é responsável pelo controle de entrada e saída de peças, este é realizado com a ajuda de uma planilha de Excel, que contém as informações referentes aos tipos de peças, suas quantidades e suas localizações dentro do almoxarifado, figura (4).
+
+ 
+Figura 4.
+Se o almoxarife verifica que certo tipo de peça está em baixa no estoque, ele faz um pedido de compra com os itens necessários como; quantidade, modelo, fabricante, e repassa essas informações preenchendo uma requisição de compra para que o setor responsável da empresa providencie as devidas peças para repor o que foi retirado.
+
+Quando um veículo da frota necessita de manutenções, este é direcionado para a área de manutenção, o usuário descreve o que percebeu de errado no veículo ao encarregado da área, este por sua vez, repassa ao mecânico que irá realizar o reparo do veículo da frota, após término desta etapa, o mecânico registra o que foi realizado, que tipo de peças foram substituídas e informações adicionais, se necessário, conforme (figura 5).
+ 
+Figura 5.
+Já os veículos que ainda estão na garantia do fabricante, que são indicados na (figura 2), e porventura necessite de manutenções, o gerente da área de manutenção faz uma solicitação via e-mail para a concessionária, (figura 6), relatando os problemas do veículo, e agendando uma data para o conserto junto a concessionária. Recebendo um ok (figura 7), o veículo é enviado a concessionária onde foi comprado para os devidos reparos.
+
+ 
+Figura: 6.
+ 
+Figura: 7.
+
+Quando o veículo retorna da concessionária para a empresa, as informações referentes ao conserto realizado são registradas no cadastro do veículo pelo encarregado de manutenção, para que se tenha as informações do histórico referente ao veículo, mais atualizada possível, (figura 8).
+
+ 
+Figura: 8.
+
+Conforme o veículo passa pela etapa de manutenção, desde sua entrada até sua saída da área de manutenção, até sua devolução para a frota, são relatados o que foi feito ao veículo que percorreu a área de manutenção. A descrição é feita pelo mecânico, (figura 9), colocando o código do veículo, placa, descrição do que foi feito a data da entrada e saída, e entregue ao encarregando.
+
+ 
+Figura: 9.
+A cada encerramento diário, o encarregado pela área de manutenção, preenche um formulário informando todos os serviços e peças que foram utilizados durante o dia (figura 10). Com essas informações repassadas a gerência é possível ter um histórico de cada veículo no que diz respeito a o que foi trocado e as peças utilizadas, também um certo controle do que está sendo retirado e utilizado pela área de manutenção, sem contar que há um controle razoável pelo almoxarifado.  
+
+Ordem de serviço Nº 072                        ITÚ, SP, 07 de fevereiro de 2024.
+Data            Placa               Km         Peça                       Quantidade                 Responsável    
+07/02          QWE8956       56870     Rolamento                         2                                José
+07/02           ASD7412       45890     Filtro de óleo                     1                                João
+07/02           ZXC1234       75210     Amortecedor diante.          2                                Francisco
+Figura: 10.
+
+Todo o procedimento de pedido das peças ao almoxarifado que o mecânico irá necessitar é realizado com o preenchimento de solicitação com as peças necessárias para o reparo do veículo, para que se tenha o mínimo de controle do que entra e saí do almoxarifado (figuras 11, 12, 13).           
+
+
+Requisição Nº 043                        
+Data            Peça                       Quantidade                 Solicitante                        Responsável área  
+07/02          Rolamento diant.              2                               José                                           Pedro
+07/02          Filtro de óleo                    1                               José                                           Pedro
+07/02          Amortecedor diant.           2                               José                                           Pedro
+Figura: 11.
+
+Requisição Nº 044                        
+Data            Peça                       Quantidade                 Solicitante                        Responsável área  
+07/02          Joga velas                         1                               João                                           Pedro
+07/02          Filtro de ar                        1                               João                                           Pedro
+07/02          Amortecedor traseiro        2                               João                                           Pedro
+Figura: 12.
+
+
+
+Requisição Nº 045                       
+Data            Peça                       Quantidade                 Solicitante                        Responsável área  
+07/02          Aditivo                             1                               Francisco                                   Pedro
+07/02          Filtro de óleo                    1                               Francisco                                   Pedro
+07/02          Óleo Motor                       4                               Francisco                                   Pedro
+Figura: 13.
+
+3.2 Problemas e prejuízos 
+3.2.1 Perdas e custo 
+As falhas no controle de estoque não apenas geram prejuízos financeiros diretos para a empresa, como também impactam negativamente os reparos automotivos, aumentando custos, atrasando entregas e gerando insatisfação junto a gerência geral da empresa.
+Além dos prejuízos já descritos, a falha no controle de estoque também afeta negativamente os reparos automotivos:
+•	Aumento do custo de reparos: A necessidade de compras emergenciais de peças eleva o custo total do reparo em até 20%. 
+•	Atrasos na entrega do veículo: A indisponibilidade de peças no estoque gera atrasos na entrega do veículo reparado, causando transtornos e insatisfação. 
+•	Custos adicionais com mão de obra: O tempo de espera do mecânico pela chegada da peça impacta diretamente no custo da mão de obra, já que o profissional ganha por hora trabalhada (R$ 10,00).
+Periodicidade: Diariamente
+Descrição: Imagine que uma peça com valor médio de R$ 400,00 precise ser comprada de última hora devido à falha no controle de estoque. O acréscimo de 20% no valor da peça eleva o custo para R$ 480,00. Se o mecânico precisar esperar 1 hora pela peça, o custo adicional com mão de obra será de R$ 10,00.
+Prejuízo = R$ 480,00 (peça) + R$ 10,00 (mão de obra) = R$ 490,00
+
+3.2.2 Falhas na comunicação causam prejuízos 
+Um dos principais motivos para as falhas no registro de baixas no sistema é a falta de comunicação eficiente entre os mecânicos e o almoxarifado:
+Pressão por agilidade: Na pressa para liberar os veículos reparados, os mecânicos muitas vezes esquecem de informar o responsável do almoxarifado sobre a retirada de peças ou de realizar o preenchimento da ficha de requisição.
+Falta de processos padronizados: A ausência de procedimentos claros e padronizados para a comunicação entre os setores geram falhas e inconsistências no controle de estoque.
+Falta de integração: A falta de integração entre o controle de estoque e a área de manutenção dificulta o registro e das baixas, aumentando a margem de erro.
+Prejuízo: Com uma frequência de 20 erros por mês, e considerando o valor médio de R$ 400,00 por peça, o prejuízo mensal chega a R$ 640,00. 
+Descrição
+Ineficiência operacional e a falta de controle preciso do estoque dificulta o planejamento de compras, a organização do almoxarifado e a tomada de decisões estratégicas. 
+A discrepância entre o estoque físico e o registrado aumenta o risco de rupturas de estoque, afetando a produção e a satisfação dos clientes.
+
+3.2.3 Entradas e saídas 
+A falta de um controle rigoroso das entradas e saídas no almoxarifado pode acarretar diversos pontos negativos para a empresa. Um dos principais problemas é a abertura de margem para possíveis extravios de peças e equipamentos valiosos. Esses extravios não apenas impactam diretamente as finanças da empresa, mas também evidenciam a falta de controle e segurança do estoque. Além do aspecto financeiro, as perdas frequentes também podem gerar atrasos nos reparos, falta de disponibilidade de peças para manutenções urgentes e até mesmo insatisfação por parte dos usuários devido a atrasos na entrega dos veículos.
+Descrição
+Essa situação demonstra a necessidade urgente de implementar medidas eficazes para o controle e segurança do almoxarifado. A falta de um controle adequado das entradas e saídas não apenas compromete a eficiência operacional da empresa, mas também afeta diretamente sua saúde financeira e sua reputação. Portanto, é fundamental investir em sistemas e processos que garantam a rastreabilidade e a segurança dos produtos armazenados, minimizando assim os riscos de perdas e extravios.
+
+Prejuízo: Esses produtos, que possuem um custo médio de R$ 900,00 por unidade, estão sujeitos a perdas estimadas em 30 unidades por mês. Essas perdas mensais representam um prejuízo significativo de R$ 27.000,00 para a empresa.
+
+
+3.2.4 Falta de tecnologia amplia prejuízos
+Falta de tecnologia e a falta de um sistema automatizado dificulta o acompanhamento preciso do estoque, impedindo a empresa de ter uma visão completa da quantidade de peças disponíveis e das necessidades de compra. A lentidão e a falta de confiabilidade dos processos manuais reduzem a eficiência operacional do almoxarifado, aumentando o tempo gasto em tarefas repetitivas e diminuindo a produtividade da equipe. A falta de dados precisos sobre o estoque dificulta a tomada de decisões estratégicas relacionadas à compra de peças e à gestão dos recursos da empresa.
+Descrição:
+As falhas no controle de estoque não se limitam à falta de registro de baixas:
+• Falta de ferramentas tecnológicas: O almoxarifado opera sem ferramentas tecnológicas adequadas, utilizando anotações manuais em papel para registrar entradas e saídas de peças. 
+• Risco de perdas: A falta de automatização aumenta o risco de perdas de anotações, com uma média de 13% das anotações sendo perdidas a cada mês. 
+
+Prejuízo: As perdas de anotações geram um prejuízo médio de R$ 1.000,00 mensais, impactando diretamente os resultados da empresa.
+
+3.2.5 Processos sem padronização
+Além dos problemas no almoxarifado, o setor de manutenções também enfrenta desafios que impactam negativamente a empresa:
+•	Falta de padronização nos processos: A variação frequente nos procedimentos de manutenção, ocorrendo cerca de 12 vezes por mês, gera diversos problemas:
+•	Ineficiência operacional: A falta de padronização aumenta o tempo gasto em cada manutenção, reduzindo a produtividade da equipe e aumentando os custos com mão de obra.
+•	Risco de erros: A variabilidade nos procedimentos aumenta o risco de erros durante as manutenções, o que pode levar a retrabalho, danos aos veículos e até mesmo acidentes.
+•	Dificuldade de controle de qualidade: A falta de padronização dificulta a avaliação da qualidade das manutenções, impedindo a empresa de identificar e corrigir falhas nos processos.
+Descrição
+Consequências da falta de padronização causam retrabalho e a necessidade de refazer serviços por causa de erros nas manutenções gerando custos adicionais com mão de obra, materiais e tempo.  Danos aos veículos ocasionados pelos erros nas manutenções podem danificar os veículos, o que impacta negativamente a imagem da área de manutenção e pode gerar custos extras com reparos, e insatisfação dos usuários pela baixa qualidade das manutenções realizadas.
+Prejuízo: Estima-se que a falta de padronização gere um prejuízo mensal de R$ 7.200,00, considerando um custo médio de R$ 600,00 por veículo afetado pelo retrabalho ou danos.
+A empresa precisa tomar medidas urgentes para corrigir as falhas no controle de estoque e padronizar os processos de manutenção. Ao investir na modernização dos processos e na capacitação dos colaboradores, a empresa poderá reduzir custos, aumentar a eficiência operacional, melhorar a qualidade dos serviços e garantir a satisfação dos usuários.
+4. Prototipação
+Desenvolvendo este documento, idealizamos um sistema que atenda as necessidades da empresa contratante a Varejista LTDA no que compete ao controle de frota e sua organização nesse âmbito. Foi realizado conversas e entrevistas para que fosse compreendido o que é a Varejista LTDA, sua área de atuação, sua história e a forma com o qual trabalham atualmente.
+Durante essas discussões preliminares, identificamos uma série de questões que precisavam ser abordadas no novo sistema. Uma das principais preocupações era garantir que o registro das manutenções dos veículos fosse completo e detalhado. Isso incluía a necessidade de registrar todas as peças substituídas, com informações como data da troca, quilometragem do veículo, marca e modelo da peça, número de série, motivo da troca e custo da peça. Além disso, era essencial garantir que cada veículo tivesse um histórico completo de todas as atividades de manutenção, desde a entrada até a liberação, para permitir o acompanhamento detalhado do andamento das manutenções pelo responsável do setor. Era necessário para garantir a integridade dos veículos que os funcionários da manutenção realizassem checklists diários, permitindo que realizem verificações do estado dos veículos, identificando possíveis avarias externas e internas, bem como problemas mecânicos. Isso facilita o agendamento de manutenções necessárias e contribui para a segurança e confiabilidade na operação dos veículos.
+Além disso, desenvolvemos funcionalidades para monitorar e reduzir as perdas no estoque, bem como alertas automáticos para notificar os funcionários quando o estoque estiver baixo em determinado item. Isso ajuda a garantir que o estoque esteja sempre atualizado e que não faltem peças importantes para as manutenções dos veículos.
+Por fim, implementamos um sistema de cronograma de manutenção que utiliza o histórico de manutenções dos veículos para agendar automaticamente as próximas revisões com base na quilometragem ou tempo de uso. Além disso, o sistema emite alertas sobre possíveis manutenções vencidas, garantindo que os veículos da frota estejam sempre em bom estado para uso dos funcionários da Varejista LTDA.
+Ao longo de todo o processo de desenvolvimento, nossa meta foi criar um sistema sob medida que não apenas solucionasse os problemas enfrentados pela Varejista LTDA, mas também atendesse plenamente às suas necessidades específicas, proporcionando maior eficiência, organização e segurança em suas operações.
+
+4.1 Requisitos não funcionais
+
+Com base no quadro de requisitos não funcionais de Sommerville, podemos identificar os seguintes requisitos não funcionais para o sistema de controle de frota e gerenciamento de estoque de peças para manutenção da Varejista LTDA:
+
+Produto:
+•	O sistema deve ser responsivo e rápido, temos uma expectativa que com treinamentos aos usuários(funcionários), estes não cadastrem informações com tempo maior a 4 minutos, e que tenham tempos de resposta curtos para todas as operações, incluindo o registro de manutenções, consulta de estoque e geração de relatórios. 
+•	O tempo de carregamento do aplicativo de checklist para os funcionários da manutenção deve ser mínimo, garantindo que eles possam realizar suas verificações de forma eficiente.
+
+•	O sistema deve estar disponível e operacional 24 horas por dia de segunda-feira a sexta-feira, com o tempo de inatividade será planejado para manutenção e atualizações.
+•	Os dados do sistema devem ser consistentes e precisos, garantindo que as informações sobre manutenção de veículos e estoque de peças para manutenção sejam confiáveis para tomada de decisões.
+•	A interface do usuário deve ser intuitiva e fácil de usar, com navegação clara e funcionalidades bem-organizadas para que os usuários possam realizar suas tarefas sem dificuldades.
+•	O aplicativo de checklist para os funcionários da manutenção deve ser simples e direto, permitindo que eles realizem suas verificações de forma eficiente e sem complicações.
+•	O sistema deve funcionar nos computadores e celulares que a fábrica disponibilizara aos funcionários
+
+Portabilidade:
+•	Os computadores e celulares serão respectivamente Windows e Android.
+
+Organizacionais: 
+•	A entrega do software será mediante a um dispositivo móvel de armazenamento.
+•	Será instalado em computadores para o acesso do gerente de manutenção e cadastro de manutenção.
+•	Será instalado em celulares para os funcionários da manutenção conseguirem realizar checklists diários.
+•	A tela do programa será modelada da mesma forma
+•	Na tela principal terá a logo da empresa varejista no banner, no rodapé terá os direitos resguardados o nome e logo da empresa contratada, ano de atividade.
+•	Será utilizada no formato de abas, para pesquisa de estoque, cadastro de serviço de manutenção, cronograma de manutenção, checklist e pesquisa de veículos com informações pertinentes.
+
+
+
+Externo:
+•	Todas as informações sensíveis, como dados dos veículos, histórico de manutenção e registros de estoque, devem ser protegidas por medidas de segurança robustas, incluindo criptografia de dados e controle de acesso baseado em função.
+•	O sistema deve cumprir os padrões de segurança e privacidade de dados exigidos pelas regulamentações locais e internacionais, como a Lei Geral de Proteção de Dados (LGPD) no Brasil ou o Regulamento Geral de Proteção de Dados (GDPR) na União Europeia.
+•	O sistema construído terá de se conectar as informações do estoque que estão colocados em planilhas de Excel.
+•	O sistema terá 3 versões, versão smartphone, versão gerência e versão funcionário.
+•	Versão smartphone terá acesso apenas ao checklist.
+•	No desktop poderá ser acessado a versão gerência onde ele vai ter login e senha para acessar sua conta, e terá acesso especial de cadastrar novos usuários(funcionários), controlar e consultar estoque da manutenção podendo mandar um formulário de compra ao setor de almoxarife da empresa, cadastrar e consultar ordens de serviços de manutenção, cadastrar cronogramas de manutenção e consultar checklist.
+•	No desktop poderá ser acessado a versão funcionário, onde cada funcionário receberá login e senha para acessar sua conta, podendo cadastrar ordem de serviço, cadastrar cronogramas de manutenção e consultar estoque de manutenção.
+
+4.2 Requisitos Funcionais
+
+Nas imagens abaixo, vemos a parte inicial do nosso sistema com a tela de login e senha e senha do usuário. O login será o CPF de cada usuário e a senha padrão inicial os 6 primeiros dígitos do CPF.
+ 
+Versão Desktop (Figura 14)
+ 
+Versão Smartphone (Figura 15)
+
+Tela de início do sistema com seu estilo, logo e informações. Uma aba de aplicações de acordo com seu nível de login. Abaixo no rodapé aparecerá o nome da pessoa de acordo com o CPF cadastrado.
+ 
+Versão Gerência (Figura 16)
+ 
+Versão Funcionário (Figura17)
+
+Nesta próxima tela, a parte de cadastramento de novos usuários via login gerência, pois o login que tem a opção de cadastrar novos usuários (Funcionários) são os do nível gerência.
+
+ 
+ 
+Tela de cadastramento de novos funcionários (Figura 18)
+
+A tela de checklist que será acessada pelo funcionário via smartphone. Onde terá de ser colocado as informações do veículo, tipo de veículo e seu estado físico tanto internamente como externamente.
+ 
+ 
+ 
+Tela de Checklist (Figura 19)
+
+Tela de cadastramento de ordens de serviço no sistema, contendo informações importantes sobre o veículo, descrição do problema, o que precisa ser trocado e botão de salvar e gerar relatório para imprimir e para posteriormente ser acessado pelo gerente.
+ 
+Tela de cadastramento de ordem de serviço (Figura 20)
+
+Tela de cadastramento de cronogramas de manutenção, contendo as informações dos veículos, periodicidade com que irá passar por manutenção, tipo da manutenção, descrição sobre a manutenção realizada, verificando seu manual de instruções. Ter uma opção de cadastrar veículo como “Em Garantia”, assim esse veículo quando atingir certa periodicidade terá de ser levado a mecânica da garantia.
+ 
+Tela de cadastramento de cronogramas de manutenção (Figura 22)
+
+Tela de cadastramento de peças no estoque da Manutenção, terá informações como tipo e quantidade das peças e código interno da peça.
+ 
+Tela de cadastramento de peças no estoque da Manutenção (Figura 22)
+ 
+Tela de consulta das peças na manutenção (Figura 23).
+
+
+
+
+
+
+
+
+
+
+
+
+
