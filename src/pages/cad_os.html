@@ -5,45 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro de Ordem de Serviço</title>
   <link href="/src/style/reset.css" rel="stylesheet">
-  <link href='/src/style/styles.css' rel='stylesheet'>
+  <link href="/src/style/styles.css" rel="stylesheet">
 </head>
 <body>
- <div class="container">
-  <div class="header">
-    <div class="logo">
-      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+      </div>
+      <div class="title">
+        <h1>Cadastro de Ordem de Serviço</h1>
+      </div>
     </div>
-    <div class="title">
-      <h1>Cadastro de Ordem de Serviço</h1>
+    <div class="main">
+      <div class="nav">
+        <div class="forms">
+          <div class="form-cadastro">
+            <form id="formCadastroOS" action="#" method="post">
+              <label for="numeroOS">Número da OS:</label>
+              <input type="text" id="numeroOS" name="numeroOS" required>
+
+              <label for="dataAbertura">Data de Abertura:</label>
+              <input type="date" id="dataAbertura" name="dataAbertura" required>
+
+              <label for="veiculo">Veículo:</label>
+              <select id="veiculo" name="veiculo">
+                </select>
+
+              <label for="solicitante">Solicitante:</label>
+              <input type="text" id="solicitante" name="solicitante" required>
+
+              <label for="descricaoProblema">Descrição do Problema:</label>
+              <textarea id="descricaoProblema" name="descricaoProblema"></textarea>
+
+              <label for="statusOS">Status:</label>
+              <select id="statusOS" name="statusOS">
+                <option value="aberta">Aberta</option>
+                <option value="andamento">Em Andamento</option>
+                <option value="concluida">Concluída</option>
+              </select>
+
+              <button class="enter_button" type="submit">Cadastrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
     </div>
   </div>
-  <div class="main">
-    <div class="content">
-      <form action="/submit_ordem_servico" method="post">
-        <label for="veiculo">Veículo:</label>
-        <input type="text" id="veiculo" name="veiculo" required>
-  
-        <label for="data_os">Data da Ordem de Serviço:</label>
-        <input type="date" id="data_os" name="data_os" required>
-  
-        <label for="descricao">Descrição:</label>
-        <input type="text" id="descricao" name="descricao" rows="4" cols="50" required></textarea>
-  
-        <button class="submit_button" type="submit">Cadastrar</button>
-      </form>
-    </div>
-  </div>
-  <div class="footer">
-    <button class="footer_return_button">Voltar</button>
-    <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
- </div>
-</div>
- <script> 
- const footer_return_button = document.querySelector('.footer_return_button');
- footer_return_button.addEventListener('click', () => {
-   window.history.back();
- });
- </script>
- </div>
+  <script>
+    const footer_return_button = document.querySelector('.footer_return_button');
+    footer_return_button.addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
 </body>
 </html>

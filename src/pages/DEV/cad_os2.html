@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio</title>
+  <title>Cadastro de Ordem de Serviço</title>
   <link href="/src/style/reset.css" rel="stylesheet">
   <link href='/src/style/styles.css' rel='stylesheet'>
 </head>
@@ -14,28 +14,24 @@
       <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
     </div>
     <div class="title">
-      <h1>Painel Operacional</h1>
+      <h1>Cadastro de Ordem de Serviço</h1>
     </div>
   </div>
   <div class="main">
-      <div class="content">
-        <div class="menu">
-          <ul class="menu-list">
-            <li>
-              <button onclick="window.location.href='/src/pages/cad_os.html'">Cadastrar OS</button>
-            </li>
-            <li>
-              <button onclick="window.location.href='/src/pages/consulta_estoque.html'">Consultar Estoque</button>
-            </li>
-            <li>
-              <button onclick="window.location.href='/src/pages/consulta_manutencao_pendente.html'">Consultar Manutenções Pendentes</button>
-            </li>
-            <li>
-              <button onclick="window.location.href='/src/pages/exe_os-mecanico.html'">Executar Ordem de Serviço</button>
-            </li>
-          </ul>
-        </div>  
-      </div>
+    <div class="content">
+      <form action="/submit_ordem_servico" method="post">
+        <label for="veiculo">Veículo:</label>
+        <input type="text" id="veiculo" name="veiculo" required>
+  
+        <label for="data_os">Data da Ordem de Serviço:</label>
+        <input type="date" id="data_os" name="data_os" required>
+  
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" rows="4" cols="50" required></textarea>
+  
+        <button class="submit_button" type="submit">Cadastrar</button>
+      </form>
+    </div>
   </div>
   <div class="footer">
     <button class="footer_return_button">Voltar</button>
@@ -48,5 +44,6 @@
    window.history.back();
  });
  </script>
+ </div>
 </body>
 </html>
