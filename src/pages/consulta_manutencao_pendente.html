@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Consulta de Veículos com Manutenção Pendente</title>
+  <title>Consulta de Veículos para Manutenção</title>
   <link href="/src/style/reset.css" rel="stylesheet">
   <link href="/src/style/styles.css" rel="stylesheet">
 </head>
@@ -14,23 +14,46 @@
         <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
       </div>
       <div class="title">
-        <h1>Consulta de Veículos com Manutenção Pendente</h1>
+        <h1>Consulta de Veículos para Manutenção</h1>
       </div>
     </div>
     <div class="main">
       <div class="content">
+        <div class="filtros">
+          <label for="filtroPlaca">Placa:</label>
+          <input type="text" id="filtroPlaca" name="filtroPlaca">
+
+          <label for="filtroModelo">Modelo:</label>
+          <input type="text" id="filtroModelo" name="filtroModelo">
+
+          <label for="filtroStatus">Status da Manutenção:</label>
+          <select id="filtroStatus" name="filtroStatus">
+            <option value="">Todos</option>
+            <option value="pendente">Pendente</option>
+            <option value="em_andamento">Em Andamento</option>
+            <option value="concluida">Concluída</option>
+          </select>
+
+          <button class="enter_button" type="button" onclick="aplicarFiltros()">Aplicar Filtros</button>
+        </div>
+
         <table>
           <thead>
             <tr>
               <th>Placa</th>
               <th>Modelo</th>
               <th>Próxima Manutenção</th>
+              <th>Quilometragem</th>
               <th>Status</th>
+              <th>Ações</th>
             </tr>
           </thead>
-          <tbody>
-            </tbody>
+          <tbody id="tabelaVeiculos">
+            <!-- Linhas da tabela serão adicionadas aqui via JavaScript -->
+          </tbody>
         </table>
+        <button class="enter_button" type="button" onclick="gerarRelatorio()">Gerar Relatório</button>
+
       </div>
     </div>
     <div class="footer">
@@ -43,6 +66,49 @@
     footer_return_button.addEventListener('click', () => {
       window.history.back();
     });
+
+    // Função para aplicar filtros (substitua pelos seus dados reais)
+    function aplicarFiltros() {
+      // Lógica para filtrar os dados da tabela
+      // ...
+    }
+
+    // Função para gerar relatório (implemente a lógica de geração)
+    function gerarRelatorio() {
+      // Lógica para gerar o relatório
+      // ...
+    }
+
+    // Dados dos veículos (substitua pelos seus dados reais)
+    const dadosVeiculos = [
+      { placa: "ABC1234", modelo: "Gol", proximaManutencao: "2024-06-15", quilometragem: "60000", status: "pendente" },
+      { placa: "DEF5678", modelo: "Palio", proximaManutencao: "2024-07-20", quilometragem: "75000", status: "em_andamento" },
+      // ... adicione mais veículos aqui
+    ];
+
+    // Função para preencher a tabela
+    function preencherTabela() {
+      const tabelaVeiculos = document.getElementById("tabelaVeiculos");
+      dadosVeiculos.forEach(veiculo => {
+        const linha = tabelaVeiculos.insertRow();
+        linha.insertCell().textContent = veiculo.placa;
+        linha.insertCell().textContent = veiculo.modelo;
+        linha.insertCell().textContent = veiculo.proximaManutencao;
+        linha.insertCell().textContent = veiculo.quilometragem;
+        linha.insertCell().textContent = veiculo.status;
+        const celulaAcoes = linha.insertCell();
+        const botaoDetalhes = document.createElement("button");
+        botaoDetalhes.textContent = "Detalhes";
+        botaoDetalhes.addEventListener('click', () => {
+          // Lógica para exibir detalhes do veículo
+          // ...
+        });
+        celulaAcoes.appendChild(botaoDetalhes);
+      });
+    }
+
+    // Chame a função para preencher a tabela ao carregar a página
+    preencherTabela();
   </script>
 </body>
 </html>

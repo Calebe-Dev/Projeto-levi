@@ -22,15 +22,121 @@ body {
 
 @media screen and (min-width: 769px) {
   .container {
-      flex-direction: row;
-      width: 50%;
-      height: 40%;
-      flex-wrap: wrap;
-      justify-content: space-around;
+    flex-direction: row;
+    width: 50%;
+    height: 40%;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }
 
-/* Estilos para o header */
+/*-------|Componentes|----------*/
+
+/*-- Logo --*/
+.logo {
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 200px;
+}
+
+/*-- Títulos --*/
+.title {
+  background-color: #333;
+  color: #f1f1f1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  width: 100%;
+  border-radius: 0;
+  border: 12px;
+  padding: 15px 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 769px) {
+  .container .title{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 55px;
+  }
+}
+
+
+/*-- Tabelas --*/
+table {
+  width: 100%;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px 5px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/*-- Forms --*/
+#formulario {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f6f6f6;
+}
+
+.campo {
+  margin-bottom: 15px;
+}
+
+.campo-manutenção {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: start;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.item{
+  display: flex;
+  padding: 12px;
+}
+
+.fuel_label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+/*-------|Seções|----------*/
+
+/*-- Header --*/
 .header {
   display: flex;
   flex-direction: column;
@@ -42,15 +148,7 @@ body {
   border-radius: 10px;
 }
 
-.logo {
-  margin: 0 auto;
-}
-
-.logo img {
-  width: 200px;
-}
-
-/* Estilos para o main */
+/*-- Main --*/
 .main {
   display: flex;
   flex-direction: column;
@@ -62,8 +160,7 @@ body {
   border-radius: 10px;
 }
 
-/*Estilo para content*/
-
+/*-- Content --*/
 .content {
     display: flex;
     justify-content: center;
@@ -74,35 +171,25 @@ body {
     border-radius: 10px;
 }
 
-/* Estilos para titulo */
-  .container .title {
-    background-color: #333;
-    color: #f1f1f1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    font-family: Arial, sans-serif;
-    width: 100%;
-    border-radius: 0;
-    border: 12px;
-    padding: 15px 10px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
+/*-- Footer --*/
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(9px);
+}
 
-  @media screen and (min-width: 769px) {
-    .container .title{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 15px 55px;
-    }
-  }
+/*-------|Elementos de UI|----------*/
 
-/* Estilos para botões */
-
-
-.menu button{
+/*-- Botões --*/
+button{
  /*Design*/
     background-color: #006400;
     color: white;
@@ -120,15 +207,15 @@ body {
     border-radius: 12px;
 }
 
-.menu button:hover{
+button:hover{
   background-color: #0056b3;
 }
 
-.menu button:active{
+button:active{
   background-color: #003366;
 }
 
-.menu button:disabled{
+button:disabled{
   background-color: #ccc;
   cursor: not-allowed;
 }
@@ -156,50 +243,6 @@ body {
   cursor: pointer;
 }
 
-
-
-/* Estilos para campos de entrada */
-input[type="text"],
-input[type="password"],input[type="number"],
-input[type="date"],
-input[type="email"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  box-shadow: #003366;
-  font-size: 16px;
-}
-
-.fuel_label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-select {
-  width: 100%;
-  padding: 12px 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  background-color: #fff;
-}
-
-select option {
-  background-color: #f2f2f2;
-  color: #333;
-}
-
-select option:hover {
-  background-color: #e6e6e6;
-}
-
-
-
-/* Estilos para botões de entrada */
 .enter_button {
   margin-top: 10px;
   font-size: 16px;
@@ -228,7 +271,6 @@ select option:hover {
   cursor: not-allowed;
 }
 
-/* Estilos para botões de saída */
 .out_button {
   margin-top: 10px;
   font-size: 16px;
@@ -257,7 +299,6 @@ select option:hover {
   cursor: not-allowed;
 }
 
-/*Botoes de envio*/
 .submit_button {
   margin-top: 10px;
   font-size: 16px;
@@ -278,36 +319,67 @@ select option:hover {
   background-color: #003366;
 }
 
+.footer_out_button{
+  background-color: #eb2a04;
+  color: #fff;
+  width: 20%;;
+  border-radius: 15px;
+  border: none;
+  box-shadow: #eb2a04;
+  padding: 10px;
+}
 
+.footer_out_button:hover{
+  background-color: #660e00;
+}
 
+.footer_return_button {
+  background-color: #007bff;
+  color: #F5F5F5;
+  width: 20%;;
+  border-radius: 15px;
+  border: none;
+  box-shadow: #003366;
+  padding: 10px;
+}
 
-/* Estilos para tabelas */
-.content table {
+/*-- Inputs --*/
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="email"] {
   width: 100%;
-  margin-bottom: 10px;
-  border-collapse: collapse;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: #003366;
+  font-size: 16px;
 }
 
-.content table th,
-.content table td {
-  padding: 10px 5px;
-  text-align: center;
-  border: 1px solid #ddd;
+/*-- Selects --*/
+select {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
 }
 
-.content table th {
+select option {
   background-color: #f2f2f2;
+  color: #333;
 }
 
-.content table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+select option:hover {
+  background-color: #e6e6e6;
 }
 
-.content table tbody tr:hover {
-  background-color: #f1f1f1;
-}
 
-/* Estilos para o menu */
+/*-- Menu --*/
 .menu {
   background-color: #333;
   display: flex;
@@ -347,77 +419,8 @@ select option:hover {
   color: #000;
 }
 
-/* Todos os direitos reservados*/
-.direitos {
-  margin-top: 20px; /* Espaçamento acima dos direitos reservados */
-  text-align: center; /* Centraliza o texto */
-  font-size: 12px; /* Tamanho da fonte menor para os direitos reservados */
-  color: #777; /* Cor de texto mais clara */
-}
 
-
-
-/* Estilos para o footer */
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-color: rgba(18, 18, 18, 0.8);
-  backdrop-filter: blur(9px);
-}
-
-.footer_out_button{
-  background-color: #eb2a04;
-  color: #fff;
-  width: 20%;;
-  border-radius: 15px;
-  border: none;
-  box-shadow: #eb2a04;
-  padding: 10px;
-}
-
-.footer_out_button:hover{
-  background-color: #660e00;
-}
-
-.footer_return_button {
-  background-color: #007bff;
-  color: #F5F5F5;
-  width: 20%;;
-  border-radius: 15px;
-  border: none;
-  box-shadow: #003366;
-  padding: 10px;
-}
-
-
-/*-------|Pag consulta cheklist|----------*/
-
-
-
-
-#formulario {
-  width: 70%;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #f6f6f6;
-}
-
-
-
-/* Estilos para os campos de entrada */
-.campo {
-  margin-bottom: 15px;
-}
+/*-------|Utilitários|----------*/
 
 .title_cheklist{
   background-color: #003366;
@@ -426,34 +429,21 @@ select option:hover {
   border-radius: 15px;
 }
 
-.campo-manutenção {
-  width: 80%;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  align-items: start;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.item{
-    display: flex;
-    padding: 12px;
-}
-
-/*
-label[for="oleoMotor"],
-label[for="filtroOleo"],
-label[for="filtroAr"],
-label[for="pneus"] {
+.cheklist_name {
   display: inline-block;
   margin-right: 10px;
 }
 
-*/
+.cheklist_checkbox {
+  display: inline-block;
+  margin-right: 10px;
+}
 
 
+/* Todos os direitos reservados*/
+.direitos {
+  margin-top: 20px; /* Espaçamento acima dos direitos reservados */
+  text-align: center; /* Centraliza o texto */
+  font-size: 12px; /* Tamanho da fonte menor para os direitos reservados */
+  color: #777; /* Cor de texto mais clara */
+}

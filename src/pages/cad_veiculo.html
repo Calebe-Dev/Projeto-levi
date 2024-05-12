@@ -18,38 +18,40 @@
       </div>
     </div>
     <div class="main">
-      <div class="nav">
-        <div class="forms">
-          <div class="form-cadastro">
-            <form id="formCadastroVeiculo" action="#" method="post">
-              <label for="placa">Placa:</label>
-              <input type="text" id="placa" name="placa" required>
+      <div class="content">
+        <form id="formCadastroVeiculo" action="#" method="post">
+          <label for="placa">Placa:</label>
+          <input type="text" id="placa" name="placa" required>
 
-              <label for="modelo">Modelo:</label>
-              <input type="text" id="modelo" name="modelo" required>
+          <label for="modelo">Modelo:</label>
+          <input type="text" id="modelo" name="modelo" required>
 
-              <label for="ano">Ano:</label>
-              <input type="number" id="ano" name="ano" required>
+          <label for="ano">Ano:</label>
+          <input type="number" id="ano" name="ano" required>
 
-              <label for="tipoCombustivel" class="fuel_label">Tipo de Combustível:</label>
-              <select id="tipoCombustivel" name="tipoCombustivel">
-                <option value="gasolina">Gasolina</option>
-                <option value="alcool">Álcool</option>
-                <option value="diesel">Diesel</option>
-                <option value="flex">Flex</option>
-              </select>
-              
+          <label for="tipoCombustivel" class="fuel_label">Tipo de Combustível:</label>
+          <select id="tipoCombustivel" name="tipoCombustivel">
+            <option value="gasolina">Gasolina</option>
+            <option value="alcool">Álcool</option>
+            <option value="diesel">Diesel</option>
+            <option value="flex">Flex</option>
+          </select>
 
-              <label for="chassi">Número do Chassi:</label>
-              <input type="text" id="chassi" name="chassi" required>
+          <label for="chassi">Número do Chassi:</label>
+          <input type="text" id="chassi" name="chassi" required>
 
-              <label for="odometro">Odômetro Inicial (km):</label>
-              <input type="number" id="odometro" name="odometro" required>
+          <label for="odometro">Odômetro Inicial (km):</label>
+          <input type="number" id="odometro" name="odometro" required>
 
-              <button class="enter_button" type="submit">Cadastrar</button>
-            </form>
-          </div>
-        </div>
+          <label for="status">Status:</label>
+          <select id="status" name="status">
+            <option value="ativo">Ativo</option>
+            <option value="inativo">Inativo</option>
+          </select>
+
+          <button class="enter_button" type="submit">Salvar</button>
+          <button class="out_button" type="reset">Limpar</button>
+        </form>
       </div>
     </div>
     <div class="footer">

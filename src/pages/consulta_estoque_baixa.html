@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Consulta de Estoque com Peças em Baixa</title>
+  <title>Alertas de Estoque Baixo</title>
   <link href="/src/style/reset.css" rel="stylesheet">
   <link href="/src/style/styles.css" rel="stylesheet">
 </head>
@@ -14,7 +14,7 @@
         <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
       </div>
       <div class="title">
-        <h1>Consulta de Estoque com Peças em Baixa</h1>
+        <h1>Alertas de Estoque Baixo</h1>
       </div>
     </div>
     <div class="main">
@@ -22,15 +22,18 @@
         <table>
           <thead>
             <tr>
-              <th>Nome da Peça</th>
+              <th>Peça</th>
               <th>Código</th>
-              <th>Quantidade em Estoque</th>
-              <th>Fornecedor</th>
+              <th>Estoque Atual</th>
+              <th>Mínimo</th>
+              <th>Status</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="tabelaAlertas">
+            <!-- Linhas da tabela serão adicionadas aqui via JavaScript -->
           </tbody>
         </table>
+        <button class="enter_button" type="button" onclick="gerarRelatorio()">Gerar Relatório</button>
       </div>
     </div>
     <div class="footer">
@@ -43,6 +46,35 @@
     footer_return_button.addEventListener('click', () => {
       window.history.back();
     });
+
+    // Função para gerar relatório (implemente a lógica de geração)
+    function gerarRelatorio() {
+      // Lógica para gerar o relatório
+      // ...
+    }
+
+    // Dados de peças com estoque baixo (substitua pelos seus dados reais)
+    const dadosAlertas = [
+      { peca: "Filtro de Óleo", codigo: "FO-123", estoqueAtual: 5, minimo: 10, status: "Alerta" },
+      { peca: "Pastilha de Freio", codigo: "PF-456", estoqueAtual: 2, minimo: 5, status: "Crítico" },
+      // ... adicione mais peças aqui
+    ];
+
+    // Função para preencher a tabela
+    function preencherTabela() {
+      const tabelaAlertas = document.getElementById("tabelaAlertas");
+      dadosAlertas.forEach(alerta => {
+        const linha = tabelaAlertas.insertRow();
+        linha.insertCell().textContent = alerta.peca;
+        linha.insertCell().textContent = alerta.codigo;
+        linha.insertCell().textContent = alerta.estoqueAtual;
+        linha.insertCell().textContent = alerta.minimo;
+        linha.insertCell().textContent = alerta.status;
+      });
+    }
+
+    // Chame a função para preencher a tabela ao carregar a página
+    preencherTabela();
   </script>
 </body>
 </html>

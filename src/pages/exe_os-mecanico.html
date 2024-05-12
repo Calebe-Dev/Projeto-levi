@@ -18,26 +18,32 @@
       </div>
     </div>
     <div class="main">
-      <div class="nav">
-        <div class="forms">
-          <div class="form-cadastro">
-            <form id="formExecucaoOS" action="#" method="post">
-              <label for="numeroOS">Número da OS:</label>
-              <input type="text" id="numeroOS" name="numeroOS" readonly>
+      <div class="content">
+        <form id="formExecucaoOS" action="#" method="post">
+          <label for="numeroOS">Número da OS:</label>
+          <input type="text" id="numeroOS" name="numeroOS" readonly>
 
-              <label for="servicosRealizados">Serviços Realizados:</label>
-              <input type="text" id="servicosRealizados" name="servicosRealizados">
+          <label for="veiculo">Veículo:</label>
+          <input type="text" id="veiculo" name="veiculo" readonly>
 
-              <label for="pecasUtilizadas">Peças Utilizadas:</label>
-              <input type="text" id="pecasUtilizadas" name="pecasUtilizadas">
+          <label for="dataAbertura">Data de Abertura:</label>
+          <input type="date" id="dataAbertura" name="dataAbertura" readonly>
 
-              <label for="observacoes">Observações:</label>
-              <input type="text" id="observacoes" name="observacoes">
+          <label for="descricaoProblema">Descrição do Problema:</label>
+          <textarea id="descricaoProblema" name="descricaoProblema" readonly></textarea>
 
-              <button class="enter_button" type="submit">Finalizar OS</button>
-            </form>
-          </div>
-        </div>
+          <label for="servicosRealizados">Serviços Realizados:</label>
+          <textarea id="servicosRealizados" name="servicosRealizados"></textarea>
+
+          <label for="pecasUtilizadas">Peças Utilizadas:</label>
+          <textarea id="pecasUtilizadas" name="pecasUtilizadas"></textarea>
+
+          <label for="observacoes">Observações:</label>
+          <textarea id="observacoes" name="observacoes"></textarea>
+
+          <button class="enter_button" type="submit">Salvar</button>
+          <button class="out_button" type="button" onclick="finalizarOS()">Finalizar OS</button>
+        </form>
       </div>
     </div>
     <div class="footer">
@@ -50,6 +56,20 @@
     footer_return_button.addEventListener('click', () => {
       window.history.back();
     });
+
+    // Função para finalizar a OS (implemente a lógica)
+    function finalizarOS() {
+      // Lógica para finalizar a OS
+      // ...
+    }
+
+    // Exemplo de como preencher os dados da OS (substitua pelos dados reais)
+    const urlParams = new URLSearchParams(window.location.search);
+    const numeroOS = urlParams.get('numeroOS'); // Supondo que o número da OS seja passado como parâmetro na URL
+    document.getElementById("numeroOS").value = numeroOS;
+    document.getElementById("veiculo").value = "ABC1234 - Gol";
+    document.getElementById("dataAbertura").value = "2024-06-10";
+    document.getElementById("descricaoProblema").value = "Barulho estranho na roda dianteira esquerda.";
   </script>
 </body>
 </html>

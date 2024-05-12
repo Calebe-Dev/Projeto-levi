@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulta de Meus Checklists</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href="/src/style/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+      </div>
+      <div class="title">
+        <h1>Consulta de Meus Checklists</h1>
+      </div>
+    </div>
+    <div class="main">
+      <div class="content">
+        <div class="filtros">
+          <label for="filtroData">Data:</label>
+          <input type="date" id="filtroData" name="filtroData">
+
+          <label for="filtroPlaca">Placa:</label>
+          <input type="text" id="filtroPlaca" name="filtroPlaca">
+
+          <button class="enter_button" type="button" onclick="aplicarFiltros()">Aplicar Filtros</button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Placa</th>
+              <th>Tipo</th>
+              <th>Descrição</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaChecklists">
+            <!-- Linhas da tabela serão adicionadas aqui via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+  <script>
+    const footer_return_button = document.querySelector('.footer_return_button');
+    footer_return_button.addEventListener('click', () => {
+      window.history.back();
+    });
+
+    // Função para aplicar filtros (substitua pelos seus dados reais)
+    function aplicarFiltros() {
+      // Lógica para filtrar os dados da tabela
+      // ...
+    }
+
+    // Dados dos checklists (substitua pelos seus dados reais)
+    const dadosChecklists = [
+      { data: "2024-06-08", placa: "ABC1234", tipo: "Carro", descricao: "Pneus desgastados, arranhão na porta.", status: "Aprovado" },
+      { data: "2024-06-09", placa: "DEF5678", tipo: "Caminhão", descricao: "Farol quebrado, vazamento de óleo.", status: "Reprovado" },
+      // ... adicione mais checklists aqui
+    ];
+
+    // Função para preencher a tabela
+    function preencherTabela() {
+      const tabelaChecklists = document.getElementById("tabelaChecklists");
+      dadosChecklists.forEach(checklist => {
+        const linha = tabelaChecklists.insertRow();
+        linha.insertCell().textContent = checklist.data;
+        linha.insertCell().textContent = checklist.placa;
+        linha.insertCell().textContent = checklist.tipo;
+        linha.insertCell().textContent = checklist.descricao;
+        linha.insertCell().textContent = checklist.status;
+      });
+    }
+
+    // Chame a função para preencher a tabela ao carregar a página
+    preencherTabela();
+  </script>
+</body>
+</html>
