@@ -127,12 +127,20 @@ label {
   padding: 12px;
 }
 
+.table{
+  display: flex;
+  height: 50%;
+  justify-content: center;
+  size: 30%;
+  flex-direction: column;
+  align-items: center;
+}
+
 .fuel_label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
-
 
 /*-------|Seções|----------*/
 
@@ -393,11 +401,22 @@ select option:hover {
 }
 
 @media screen and (min-width: 769px) {
+  .container{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+ 
   .container {
       flex-direction: row;
       flex-wrap: wrap;
       padding: 5px;
       width: 80%;
+  }
+
+  .menu { 
+    padding: 1%;
+    width: 40%;
   }
 }
 
@@ -446,4 +465,31 @@ select option:hover {
   text-align: center; /* Centraliza o texto */
   font-size: 12px; /* Tamanho da fonte menor para os direitos reservados */
   color: #777; /* Cor de texto mais clara */
+}
+
+
+table {
+  width: 180%; /* A tabela ocupa 100% da largura do contêiner pai */
+  table-layout: fixed; /* Distribui espaço igualmente entre as colunas */
+  border-collapse: collapse; /* Remove o espaço entre as bordas das células */
+}
+
+td, th {
+  word-wrap: break-word; /* Permite que o conteúdo das células quebre para a próxima linha */
+  overflow-wrap: break-word; /* Suporte para navegadores mais antigos */
+  padding: 10px; /* Espaçamento entre o conteúdo e a borda da célula */
+  border: 1px solid #ddd; /* Borda da célula */
+  text-align: left; /* Alinhamento do texto */
+}
+
+@media screen and (min-width: 769px) {
+  .table{
+    padding: 40px 5px;
+  }
+
+  table {
+    width: 170%; /* A tabela ocupa 100% da largura do contêiner pai */
+    table-layout: fixed; /* Distribui espaço igualmente entre as colunas */
+    border-collapse: none; /* Remove o espaço entre as bordas das células */
+  }
 }
