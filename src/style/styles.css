@@ -312,7 +312,7 @@ button:disabled{
   font-size: 16px;
   padding: 20px;
   border-radius: 15px;
-  background-color: #007BFF;
+  background-color: #006400;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -416,7 +416,7 @@ select option:hover {
 
   .menu { 
     padding: 1%;
-    width: 40%;
+    width: 25%;
   }
 }
 
@@ -494,6 +494,9 @@ td, th {
 
 @media screen and (min-width: 769px) {
 
+  .menu{
+    padding: 12px 5px;
+  }
   .menu_on_page{
     padding: 0% 8% 0% 0%;
   }
@@ -513,7 +516,7 @@ td, th {
 
   .main{
     padding: 0%;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
