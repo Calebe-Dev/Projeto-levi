@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerenciar Estoque - Painel de Administração</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho (header) já definido no HTML principal -->
+
+    <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+
+    <div class="title">
+        <h1>Configurações Administrador</h1>
+    </div>
+
+    <div class="main">
+      <!-- Menu (menu) já definido no HTML principal -->
+
+      <div class="content">
+        <h2>Gerenciar Estoque</h2>
+
+        <button class="enter_button" onclick="window.location.href='/src/pages/admin_nova_peca.html'">Nova Peça</button>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Quantidade</th>
+              <th>Preço Unitário</th>
+              <th>Última Atualização</th>
+              <th>Fornecedor</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Linhas com dados das peças -->
+            <tr>
+              <td>001</td>
+              <td>Peça A</td>
+              <td>Descrição da peça A</td>
+              <td>100</td>
+              <td>R$ 10,00</td>
+              <td>10/05/2024</td>
+              <td>Fornecedor X</td>
+              <td>
+                <button class="edit_button">Editar</button>
+                <button class="delete_button">Excluir</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+</body>
+</html>

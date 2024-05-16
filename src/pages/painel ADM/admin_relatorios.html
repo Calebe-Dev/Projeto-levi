@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análise de Dados - Painel de Administração</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho (header) já definido no HTML principal -->
+
+    <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+
+    <div class="title">
+        <h1>Configurações Administrador</h1>
+    </div>
+
+    <div class="main">
+      <!-- Menu (menu) já definido no HTML principal -->
+
+      <div class="content">
+        <h1>Análise de Dados</h1>
+
+      <div class="relatorios">
+        <h2><br>Relatório de Custo Total de Manutenção por Veículo <br><br></h2>
+
+        <!-- Filtros -->
+        <div class="campo">
+          <label for="dataInicio">Data Inicial:</label>
+          <input type="date" id="dataInicio" name="dataInicio">
+        </div>
+        <div class="campo">
+          <label for="dataFim">Data Final:</label>
+          <input type="date" id="dataFim" name="dataFim">
+        </div>
+
+        <!-- Tabela -->
+        <table>
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Modelo</th>
+              <th>Custo Total (R$)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Linhas com dados de cada veículo -->
+            <tr>
+              <td>ABC-1234</td>
+              <td>Carro X</td>
+              <td>1000,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="relatorios">
+        <h2><br><br>Relatório de Quantidade de Peças em Estoque</h2>
+
+        <!-- Filtros -->
+        <div class="campo">
+          <label for="fornecedor">Fornecedor:</label>
+          <select id="fornecedor" name="fornecedor">
+            <!-- Opções de fornecedores -->
+          </select>
+        </div>
+      
+        <!-- Tabela -->
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Quantidade</th>
+              <th>Preço Unitário (R$)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Linhas com dados de cada peça -->
+            <tr>
+              <td>001</td>
+              <td>Peça A</td>
+              <td>Descrição da peça A</td>
+              <td>100</td>
+              <td>10,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="relatorios">
+        <h2><br>Relatório de Número de OSs por Veículo</h2>
+
+        <!-- Filtros -->
+        <div class="campo">
+          <label for="dataInicio">Data Inicial:</label>
+          <input type="date" id="dataInicio" name="dataInicio">
+        </div>
+        <div class="campo">
+          <label for="dataFim">Data Final:</label>
+          <input type="date" id="dataFim" name="dataFim">
+        </div>
+
+        <!-- Tabela -->
+        <table>
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Modelo</th>
+              <th>Número de OSs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Linhas com dados de cada veículo -->
+            <tr>
+              <td>ABC-1234</td>
+              <td>Carro X</td>
+              <td>5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="relatorios">
+        <h2>Gráfico de Custo Total de Manutenção por Período</h2>
+
+        <!-- Filtros -->
+        <div class="campo">
+          <label for="dataInicio">Data Inicial:</label>
+          <input type="date" id="dataInicio" name="dataInicio">
+        </div>
+        <div class="campo">
+          <label for="dataFim">Data Final:</label>
+          <input type="date" id="dataFim" name="dataFim">
+        </div>
+
+        <!-- Canvas para o gráfico -->
+        <canvas id="graficoCustoManutencao"></canvas>
+      </div>
+
+        <script>
+          // Dados do gráfico (obtidos do backend)
+          const data = {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+            datasets: [{
+              label: 'Custo Total (R$)',
+              data: [1000, 1200, 800, 1500, 900, 1100],
+              backgroundColor: 'rgba(54, 162, 235, 0.2)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1
+            }]
+          };
+
+          // Cria o gráfico
+          const myChart = new Chart(document.getElementById('graficoCustoManutencao'), {
+            type: 'bar',
+            data: data,
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
+
+      
+
+
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+</body>
+</html>

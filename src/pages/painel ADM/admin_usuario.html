@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novo Usuário - Painel de Administração</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho (header) já definido no HTML principal -->
+
+    <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+
+    <div class="title">
+        <h1>Configurações Administrador</h1>
+    </div>
+
+    <div class="main">
+      <!-- Menu (menu) já definido no HTML principal -->
+
+      <div class="content">
+        <h2>Novo Usuário</h2>
+
+        <form id="formNovoUsuario" action="#" method="post">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" name="cpf" required>
+
+          <label for="login">Login:</label>
+          <input type="text" id="login" name="login" required>
+
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required>
+
+          <label for="tipoAcesso">Tipo de Acesso:</label>
+          <select id="tipoAcesso" name="tipoAcesso">
+            <option value="gerente">Gerente</option>
+            <option value="funcionario">Funcionário</option>
+          </select>
+
+          <button class="enter_button" type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+</body>
+</html>

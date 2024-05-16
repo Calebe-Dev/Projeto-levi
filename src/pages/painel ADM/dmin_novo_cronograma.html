@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novo Cronograma - Painel de Administração</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho (header) já definido no HTML principal -->
+
+    <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+
+    <div class="title">
+        <h1>Configurações Administrador</h1>
+    </div>
+
+    <div class="main">
+      <!-- Menu (menu) já definido no HTML principal -->
+
+      <div class="content">
+        <h2>Novo Cronograma</h2>
+
+        <form id="formNovoCronograma" action="#" method="post">
+          <label for="veiculo">Veículo:</label>
+          <select id="veiculo" name="veiculo">
+            <!-- Opções com os veículos cadastrados -->
+          </select>
+
+          <label for="tipoManutencao">Tipo de Manutenção:</label>
+          <select id="tipoManutencao" name="tipoManutencao">
+            <option value="revisaoGeral">Revisão Geral</option>
+            <option value="trocaOleo">Troca de Óleo</option>
+            <option value="freios">Freios</option>
+            <!-- Outras opções -->
+          </select>
+
+          <label for="dataManutencao">Data da Próxima Manutenção:</label>
+          <input type="date" id="dataManutencao" name="dataManutencao" required>
+
+          <label for="descricao">Descrição:</label>
+          <textarea id="descricao" name="descricao"></textarea>
+
+          <button class="enter_button" type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+</body>
+</html>
