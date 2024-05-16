@@ -16,19 +16,19 @@
     </div>
 
     <div class="title">
-        <h1>>Análise de Dados</h1>
+        <h1>Análise de Dados</h1>
     </div>
 
     <div class="main">
       <!-- Menu (menu) já definido no HTML principal -->
 
       <div class="content">
-        <h1>Análise de Dados</h1>
 
       <div class="relatorios">
         <h2><br>Relatório de Custo Total de Manutenção por Veículo <br><br></h2>
 
         <!-- Filtros -->
+        <div class="filtros">
         <div class="campo">
           <label for="dataInicio">Data Inicial:</label>
           <input type="date" id="dataInicio" name="dataInicio">
@@ -37,7 +37,7 @@
           <label for="dataFim">Data Final:</label>
           <input type="date" id="dataFim" name="dataFim">
         </div>
-
+       </div>
         <!-- Tabela -->
         <table>
           <thead>
@@ -62,13 +62,14 @@
         <h2><br><br>Relatório de Quantidade de Peças em Estoque</h2>
 
         <!-- Filtros -->
+        <div class="filtros">
         <div class="campo">
           <label for="fornecedor">Fornecedor:</label>
           <select id="fornecedor" name="fornecedor">
             <!-- Opções de fornecedores -->
           </select>
         </div>
-      
+      </div>
         <!-- Tabela -->
         <table>
           <thead>
@@ -97,6 +98,7 @@
         <h2><br>Relatório de Número de OSs por Veículo</h2>
 
         <!-- Filtros -->
+        <div class="filtros">
         <div class="campo">
           <label for="dataInicio">Data Inicial:</label>
           <input type="date" id="dataInicio" name="dataInicio">
@@ -105,7 +107,7 @@
           <label for="dataFim">Data Final:</label>
           <input type="date" id="dataFim" name="dataFim">
         </div>
-
+        </div>
         <!-- Tabela -->
         <table>
           <thead>
@@ -130,6 +132,7 @@
         <h2>Gráfico de Custo Total de Manutenção por Período</h2>
 
         <!-- Filtros -->
+        <div class="filtros">
         <div class="campo">
           <label for="dataInicio">Data Inicial:</label>
           <input type="date" id="dataInicio" name="dataInicio">
@@ -138,11 +141,16 @@
           <label for="dataFim">Data Final:</label>
           <input type="date" id="dataFim" name="dataFim">
         </div>
-
+        </div>
         <!-- Canvas para o gráfico -->
         <canvas id="graficoCustoManutencao"></canvas>
       </div>
 
+
+      <div class="direitos">
+        © 2024 Five Software e Varejista Ltda. Todos os direitos reservados.
+      </div>
+      
         <script>
           // Dados do gráfico (obtidos do backend)
           const data = {
@@ -169,10 +177,6 @@
             }
           });
         </script>
-
-      
-
-
       </div>
     </div>
     <div class="footer">
