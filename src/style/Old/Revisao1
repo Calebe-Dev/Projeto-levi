@@ -1,6 +1,17 @@
+/* Variáveis de tamanho de fonte */
+:root {
+  --fonte-pequena: 14px;
+  --fonte-media: 16px;
+  --fonte-grande: 20px;
+  --fonte-extra-grande: 24px;
+}
+
 /* Estilos gerais */
 body {
   background-color: #7CBBBD;
+  font-family: Arial, sans-serif;
+  font-size: var(--fonte-media);
+  color: #333;
 }
 
 .container {
@@ -15,19 +26,6 @@ body {
   padding: 20px 10px;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #333;
-}
-
-@media screen and (min-width: 769px) {
-  .container {
-    flex-direction: row;
-    width: 50%;
-    height: 40%;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
 }
 
 /*-------|Componentes|----------*/
@@ -51,21 +49,11 @@ body {
   border-radius: 0;
   border: 12px;
   padding: 15px 10px;
-  font-size: 24px;
+  font-size: var(--fonte-extra-grande);
   font-weight: bold;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-@media screen and (min-width: 769px) {
-  .container .title{
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 15px 55px;
-  }
-}
-
 
 /*-- Tabelas --*/
 table {
@@ -251,19 +239,22 @@ button:disabled{
   cursor: pointer;
 }
 
-.enter_button {
-  margin-top: 10px;
-  font-size: 16px;
+.enter_button, .out_button, .submit_button {
+  font-size: var(--fonte-media);
   font-weight: bold;
   text-align: center;
-  padding: 15px 25px;
-  background-color: #008000;
-  color: #fff;
   border: none;
-  border-radius: 10px;
   cursor: pointer;
   box-shadow: #003366;
   transition: background-color 0.3s ease;
+}
+
+.enter_button {
+  margin-top: 10px;
+  padding: 15px 25px;
+  background-color: #008000;
+  color: #fff;
+  border-radius: 10px;
 }
 
 .enter_button:hover {
@@ -281,17 +272,10 @@ button:disabled{
 
 .out_button {
   margin-top: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
   padding: 15px 15px;
   background-color: #eb2a04;
   color: #fff;
-  border: none;
   border-radius: 10px;
-  cursor: pointer;
-  box-shadow: #003366;
-  transition: background-color 0.3s ease;
 }
 
 .out_button:hover {
@@ -309,14 +293,10 @@ button:disabled{
 
 .submit_button {
   margin-top: 10px;
-  font-size: 16px;
   padding: 20px;
   border-radius: 15px;
   background-color: #006400;
   color: #fff;
-  border: none;
-  cursor: pointer;
-  box-shadow: #003366
 }
 
 .submit_button:hover {
@@ -364,7 +344,7 @@ input[type="email"] {
   border: 1px solid #ccc;
   border-radius: 12px;
   box-shadow: #003366;
-  font-size: 16px;
+  font-size: var(--fonte-media);
 }
 
 /*-- Selects --*/
@@ -373,7 +353,7 @@ select {
   padding: 12px 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: var(--fonte-media);
   background-color: #fff;
 }
 
@@ -398,26 +378,6 @@ select option:hover {
   justify-content: center;
   align-items: center;
   box-shadow: #003366;
-}
-
-@media screen and (min-width: 769px) {
-  .container{
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-  }
- 
-  .container {
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding: 5px;
-      width: 80%;
-  }
-
-  .menu { 
-    padding: 1%;
-    width: 25%;
-  }
 }
 
 .menu-list {
@@ -483,35 +443,35 @@ td, th {
 }
 
 
+/* Media Queries */
 @media screen and (max-width: 768px) {
   .menu_on_page {
     display: none;
   }
 }
 
-
-
-
 @media screen and (min-width: 769px) {
-
-  .menu{
-    padding: 12px 5px;
-  }
-  .menu_on_page{
-    padding: 0% 8% 0% 0%;
-  }
-  .menu-list-on-page{
-    background-color: #333;
-    border-radius: 10px; 
-    padding: 2%;
-  }
-
   .container {
     flex-direction: row; /* Makes elements row-based on large screens */
     align-items: center; /* Aligns content vertically within the container */
     .form-cadastro {
       margin: 0 auto; /* Centers the form horizontally */
     }
+  }
+
+  .menu{
+    padding: 12px 5px;
+    width: 25%;
+  }
+  
+  .menu_on_page{
+    padding: 0% 8% 0% 0%;
+  }
+  
+  .menu-list-on-page{
+    background-color: #333;
+    border-radius: 10px; 
+    padding: 2%;
   }
 
   .main{
@@ -531,6 +491,12 @@ td, th {
     border-collapse: none; /* Remove o espaço entre as bordas das células */
   }
 
+  .container .title{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 55px;
+  }
 }
 
 .relatorios {
@@ -564,9 +530,3 @@ h2{
   box-shadow: #003366;
 }
 }
-
-
-
-
-
-
