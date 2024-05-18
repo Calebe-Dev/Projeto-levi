@@ -14,7 +14,7 @@
         <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
       </div>
       <div class="title">
-        <h1>Cadastro de Ordem de Serviço</h1>
+        <h1>Requisisão de manutenção</h1>
       </div>
     </div>
     <div class="main">
@@ -22,28 +22,18 @@
         <div class="forms">
           <div class="form-cadastro">
             <form id="formCadastroOS" action="#" method="post">
-              <label for="numeroOS">Número da OS:</label>
-              <input type="text" id="numeroOS" name="numeroOS" required>
+            <div class="alto_preenchido">
+              <label for="numeroOS">Número da OS:   01289309.1</label>
+              <label for="dataAbertura">Data de Abertura:     27/04 9:48pm</label>
+              <label for="veiculo">Veículo:     Gol 97</label>
+              <label for="solicitante">Solicitante:   Jose Carlos <br></label>
+            </div>
 
-              <label for="dataAbertura">Data de Abertura:</label>
-              <input type="date" id="dataAbertura" name="dataAbertura" required>
-
-              <label for="veiculo">Veículo:</label>
-              <select id="veiculo" name="veiculo">
-                </select>
-
-              <label for="solicitante">Solicitante:</label>
-              <input type="text" id="solicitante" name="solicitante" required>
-
-              <label for="descricaoProblema">Descrição do Problema:</label>
+              <label for="descricaoProblema">Descrição Detalhada do Problema:</label>
               <input type="text" id="descricaoProblema" name="descricaoProblema">
 
-              <label for="statusOS">Status:</label>
-              <select id="statusOS" name="statusOS">
-                <option value="aberta">Aberta</option>
-                <option value="andamento">Em Andamento</option>
-                <option value="concluida">Concluída</option>
-              </select>
+              <label for="requisitosPecas">Requerimento de peças/produtos:</label>
+              <textarea id="requisitosPecas" name="requisitosPecas" rows="4"></textarea>  <label for="statusOS">Status:</label>
 
               <button class="enter_button" type="submit">Cadastrar</button>
             </form>
