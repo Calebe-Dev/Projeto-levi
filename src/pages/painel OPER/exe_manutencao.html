@@ -6,11 +6,6 @@
   <title>Execução de Manutenção</title>
   <link href="/src/style/reset.css" rel="stylesheet">
   <link href="/src/style/styles.css" rel="stylesheet">
-  <style>
-
- 
-
-  </style>
 </head>
 <body>
   <div class="container">
@@ -21,97 +16,103 @@
       <h1>Execução de Manutenção</h1>
     </div>
     <div class="form-container">
-      <form id="execucao-manutencao-form">
-        <!-- Informações do mecânico -->
-        <div class="campo">
-          <label for="mecanicoResponsavel">Mecânico Responsável:</label>
-          <input type="text" id="mecanicoResponsavel" name="mecanicoResponsavel" required>
-        </div>
+      <!-- Campos do veículo -->
+      <div class="veiculo-info">
+        <h3>Exemplo de Veículo</h3>
+        <p><strong>Modelo:</strong> Golf</p>
+        <p><strong>Placa:</strong> ABC-1234</p>
+        <p><strong>Marca:</strong> Volkswagen</p>
+        <p><strong>Ano:</strong> 2020</p>
+        <p><strong>Última Manutenção:</strong> 10/05/2024</p>
+        <p><strong>Última Vistoria:</strong> 20/04/2024</p>
+        <p><strong>Observação da Última Manutenção:</strong> Troca de óleo e filtro</p>
+      </div>
+      
+      <!-- Informações do mecânico -->
+      <div class="campo">
+        <label for="mecanicoResponsavel">Mecânico Responsável:</label>
+        <input type="text" id="mecanicoResponsavel" name="mecanicoResponsavel" required>
+      </div>
+      <div class="campo">
+        <label for="cpfMecanico">CPF do Mecânico:</label>
+        <input type="text" id="cpfMecanico" name="cpfMecanico" required>
+      </div>
 
-        <!-- Campo para o mecânico digitar seu CPF -->
-        <div class="campo">
-          <label for="cpfMecanico">CPF do Mecânico:</label>
-          <input type="text" id="cpfMecanico" name="cpfMecanico" required>
+      <!-- Alertas de itens necessários -->
+      <div class="alertas-container">
+        <h3>Itens Necessários:</h3>
+        <div class="alerta-item">
+          Necessário trocar óleo (5 dias e 2000km para vencimento) - Urgente
+          <button class="visto-button">Visto</button>
         </div>
+        <div class="alerta-item">
+          Verificar fluido do radiador (verificado 15 dias atrás - Recomendado)
+          <button class="visto-button">Visto</button>
+        </div>
+      </div>
 
-        <!-- Alertas de itens necessários -->
-        <div class="alertas-container">
-          <h3>Itens Necessários:</h3>
-          <div class="alerta-item">
-            Necessário trocar óleo (5 dias e 2000km para vencimento) - Urgente
-            <button class="visto-button">Visto</button>
-          </div>
-          <div class="alerta-item">
-            Verificar fluido do radiador (verificado 15 dias atrás - Recomendado)
-            <button class="visto-button">Visto</button>
-          </div>
-        </div>
+      <!-- Checklist de itens -->
+      <div class="title_checklist">
+        <h2>Itens Periódicos Trocados</h2>
+      </div>
+      <div class="item">
+        <label class="checklist_name" for="oleoMotor">Óleo do Motor:</label>
+        <input class="checklist_checkbox" type="checkbox" id="oleoMotor" name="oleoMotor">
+      </div>
+      <div class="item">
+        <label class="checklist_name" for="filtroOleo">Filtro de Óleo:</label>
+        <input class="checklist_checkbox" type="checkbox" id="filtroOleo" name="filtroOleo">
+      </div>
+      <div class="item">
+        <label class="checklist_name" for="filtroAr">Filtro de Ar:</label>
+        <input class="checklist_checkbox" type="checkbox" id="filtroAr" name="filtroAr">
+      </div>
+      <div class="item">
+        <label class="checklist_name" for="fluidoFreio">Fluido de Freio:</label>
+        <input class="checklist_checkbox" type="checkbox" id="fluidoFreio" name="fluidoFreio">
+      </div>
+      <div class="item">
+        <label class="checklist_name" for="pastilhasFreio">Pastilhas de Freio:</label>
+        <input class="checklist_checkbox" type="checkbox" id="pastilhasFreio" name="pastilhasFreio">
+      </div>
+      <div class="item">
+        <label class="checklist_name" for="filtroCombustivel">Filtro de Combustível:</label>
+        <input class="checklist_checkbox" type="checkbox" id="filtroCombustivel" name="filtroCombustivel">
+      </div>
+      <div class="item">
+        <label class="checklist_name" for="correiaDentada">Correia Dentada/Corrente de Comando:</label>
+        <input class="checklist_checkbox" type="checkbox" id="correiaDentada" name="correiaDentada">
+      </div>
+      <div class="item">
+        <label class="checklist_name" for="filtroCabine">Filtro de Cabine (Ar Condicionado):</label>
+        <input class="checklist_checkbox" type="checkbox" id="filtroCabine" name="filtroCabine">
+      </div>
+      <div class="item">
+        <label class="checklist_name" for="kitSuspensao">Kit Suspensão:</label>
+        <input class="checklist_checkbox" type="checkbox" id="kitSuspensao" name="kitSuspensao">
+      </div>
 
-        <!-- Checklist de itens -->
-        <div class="title_checklist">
-          <h2>Itens Periódicos Trocados</h2>
-        </div>
-        <div class="item">
-          <label class="checklist_name" for="oleoMotor">Óleo do Motor:</label>
-          <input class="checklist_checkbox" type="checkbox" id="oleoMotor" name="oleoMotor">
-        </div>
-        <div class="item">
-          <label class="checklist_name" for="filtroOleo">Filtro de Óleo:</label>
-          <input class="checklist_checkbox" type="checkbox" id="filtroOleo" name="filtroOleo">
-        </div>
-        <div class="item">
-          <label class="checklist_name" for="filtroAr">Filtro de Ar:</label>
-          <input class="checklist_checkbox" type="checkbox" id="filtroAr" name="filtroAr">
-        </div>
-        <div class="item">
-          <label class="checklist_name" for="fluidoFreio">Fluido de Freio:</label>
-          <input class="checklist_checkbox" type="checkbox" id="fluidoFreio" name="fluidoFreio">
-        </div>
-        <div class="item">
-          <label class="checklist_name" for="pastilhasFreio">Pastilhas de Freio:</label>
-          <input class="checklist_checkbox" type="checkbox" id="pastilhasFreio" name="pastilhasFreio">
-        </div>
-        <div class="item">
-          <label class="checklist_name" for="filtroCombustivel">Filtro de Combustível:</label>
-          <input class="checklist_checkbox" type="checkbox" id="filtroCombustivel" name="filtroCombustivel">
-        </div>
-        <div class="item">
-          <label class="checklist_name" for="correiaDentada">Correia Dentada/Corrente de Comando:</label>
-          <input class="checklist_checkbox" type="checkbox" id="correiaDentada" name="correiaDentada">
-        </div>
-        <div class="item">
-          <label class="checklist_name" for="filtroCabine">Filtro de Cabine (Ar Condicionado):</label>
-          <input class="checklist_checkbox" type="checkbox" id="filtroCabine" name="filtroCabine">
-        </div>
-        <div class="item">
-          <label class="checklist_name" for="kitSuspensao">Kit Suspensão:</label>
-          <input class="checklist_checkbox" type="checkbox" id="kitSuspensao" name="kitSuspensao">
-        </div>
-
-        <!-- Detalhes da manutenção e observações -->
-        <div class="campo">
-          <label for="detalhesManutencao">Detalhes da Manutenção:</label>
-          <textarea id="detalhesManutencao" name="detalhesManutencao" required></textarea>
-        </div>
-        <div class="campo">
-          <label for="observacoes">Observações:</label>
-          <textarea id="observacoes" name="observacoes"></textarea>
-        </div>
-
-        <!-- Botões de ação -->
-        <button class="submit_button" type="submit">Concluir Manutenção</button>
-      </form>
-    </div>
-    <div class="footer">
-      <button class="footer_return_button">Voltar</button>
-      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
-    </div>
+      <div class="campo">
+        <label for="detalhesManutencao">Detalhes da Manutenção:</label>
+        <textarea id="detalhesManutencao" name="detalhesManutencao" required></textarea>
+      </div>
+      <div class="campo">
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" name="observacoes"></textarea>
+      </div>
+      <button class="submit_button" type="submit">Concluir Manutenção</button>
+    </form>
   </div>
-  <script>
-    const footer_return_button = document.querySelector('.footer_return_button');
-    footer_return_button.addEventListener('click', () => {
-      window.history.back();
-    });
-  </script>
+  <div class="footer">
+    <button class="footer_return_button">Voltar</button>
+    <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+  </div>
+</div>
+<script>
+  const footer_return_button = document.querySelector('.footer_return_button');
+  footer_return_button.addEventListener('click', () => {
+    window.history.back();
+  });
+</script>
 </body>
 </html>
