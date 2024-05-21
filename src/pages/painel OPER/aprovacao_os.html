@@ -3,48 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Execução da OS</title>
+  <title>Verificação de Ordem de Serviço</title>
   <link href="/src/style/reset.css" rel="stylesheet">
   <link href="/src/style/styles.css" rel="stylesheet">
+  <style>
+    .container {
+      width: 80%;
+      margin: auto;
+    }
+    .logo img {
+      width: 150px;
+      display: block;
+      margin: 20px auto;
+    }
+    .title h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .table-container {
+      margin: 20px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    .status-approved {
+      background-color: #d4edda;
+    }
+    .status-pending {
+      background-color: #fff3cd;
+    }
+    .status-rejected {
+      background-color: #f8d7da;
+    }
+    .execute-button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+    }
+    .execute-button:hover {
+      background-color: #0056b3;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer button {
+      margin: 5px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <div class="logo">
-        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
-      </div>
-      <div class="title">
-        <h1>Execução da OS</h1>
-      </div>
+    <div class="logo">
+      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
     </div>
-    <div class="main">
-      <div class="content">
-        <form id="formExecucaoOS" action="#" method="post">
-          <label for="numeroOS">Número da OS:</label>
-          <input type="text" id="numeroOS" name="numeroOS" readonly>
-
-          <label for="veiculo">Veículo:</label>
-          <input type="text" id="veiculo" name="veiculo" readonly>
-
-          <label for="dataAbertura">Data de Abertura:</label>
-          <input type="date" id="dataAbertura" name="dataAbertura" readonly>
-
-          <label for="descricaoProblema">Descrição do Problema:</label>
-          <textarea id="descricaoProblema" name="descricaoProblema" readonly></textarea>
-
-          <label for="servicosRealizados">Serviços Realizados:</label>
-          <textarea id="servicosRealizados" name="servicosRealizados"></textarea>
-
-          <label for="pecasUtilizadas">Peças Utilizadas:</label>
-          <textarea id="pecasUtilizadas" name="pecasUtilizadas"></textarea>
-
-          <label for="observacoes">Observações:</label>
-          <textarea id="observacoes" name="observacoes"></textarea>
-
-          <button class="enter_button" type="submit">Salvar</button>
-          <button class="out_button" type="button" onclick="finalizarOS()">Finalizar OS</button>
-        </form>
-      </div>
+    <div class="title">
+      <h1>Verificação de Ordem de Serviço</h1>
+    </div>
+    <div class="table-container">
+      <h2>Ordens de Serviço</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Veículo</th>
+            <th>Data</th>
+            <th>Descrição do Serviço</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="status-approved">
+            <td>1</td>
+            <td>Carro X</td>
+            <td>10/05/2024</td>
+            <td>Troca de Óleo e Filtro de Ar</td>
+            <td>Aprovada</td>
+            <td><button class="execute-button" onclick="window.location.href='/src/pages/exe_manutencao.html?id=1'">Executar Manutenção</button></td>
+          </tr>
+          <tr class="status-pending">
+            <td>2</td>
+            <td>Carro Y</td>
+            <td>15/05/2024</td>
+            <td>Substituição de Pastilhas de Freio</td>
+            <td>Aguardando Execução</td>
+            <td></td>
+          </tr>
+          <tr class="status-rejected">
+            <td>3</td>
+            <td>Carro Z</td>
+            <td>20/05/2024</td>
+            <td>Revisão Completa</td>
+            <td>Reprovada</td>
+            <td></td>
+          </tr>
+          <tr class="status-approved">
+            <td>4</td>
+            <td>Carro W</td>
+            <td>25/05/2024</td>
+            <td>Alinhamento e Balanceamento</td>
+            <td>Aprovada</td>
+            <td><button class="execute-button" onclick="window.location.href='/src/pages/exe_manutencao.html?id=4'">Executar Manutenção</button></td>
+          </tr>
+          <tr class="status-pending">
+            <td>5</td>
+            <td>Carro V</td>
+            <td>30/05/2024</td>
+            <td>Substituição de Filtro de Combustível</td>
+            <td>Aguardando Execução</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class="footer">
       <button class="footer_return_button">Voltar</button>
@@ -56,20 +145,6 @@
     footer_return_button.addEventListener('click', () => {
       window.history.back();
     });
-
-    // Função para finalizar a OS (implemente a lógica)
-    function finalizarOS() {
-      // Lógica para finalizar a OS
-      // ...
-    }
-
-    // Exemplo de como preencher os dados da OS (substitua pelos dados reais)
-    const urlParams = new URLSearchParams(window.location.search);
-    const numeroOS = urlParams.get('numeroOS'); // Supondo que o número da OS seja passado como parâmetro na URL
-    document.getElementById("numeroOS").value = numeroOS;
-    document.getElementById("veiculo").value = "ABC1234 - Gol";
-    document.getElementById("dataAbertura").value = "2024-06-10";
-    document.getElementById("descricaoProblema").value = "Barulho estranho na roda dianteira esquerda.";
   </script>
 </body>
 </html>
