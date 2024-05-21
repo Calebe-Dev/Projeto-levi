@@ -27,7 +27,7 @@
         <p><strong>Última Vistoria:</strong> 20/04/2024</p>
         <p><strong>Observação da Última Manutenção:</strong> Troca de óleo e filtro</p>
       </div>
-      
+
       <!-- Informações do mecânico -->
       <div class="campo">
         <label for="mecanicoResponsavel">Mecânico Responsável:</label>
@@ -36,6 +36,16 @@
       <div class="campo">
         <label for="cpfMecanico">CPF do Mecânico:</label>
         <input type="text" id="cpfMecanico" name="cpfMecanico" required>
+      </div>
+
+      <!-- Data da manutenção e quilometragem -->
+      <div class="campo">
+        <label for="dataManutencao">Data da Manutenção:</label>
+        <input type="datetime-local" id="dataManutencao" name="dataManutencao" required>
+      </div>
+      <div class="campo">
+        <label for="quilometragemVeiculo">Quilometragem do Veículo:</label>
+        <input type="number" id="quilometragemVeiculo" name="quilometragemVeiculo" required>
       </div>
 
       <!-- Alertas de itens necessários -->
@@ -113,6 +123,9 @@
   footer_return_button.addEventListener('click', () => {
     window.history.back();
   });
+
+  // Preenche automaticamente a data da manutenção com a data atual
+  document.getElementById('dataManutencao').valueAsDate = new Date();
 </script>
 </body>
 </html>
