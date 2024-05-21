@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes do Veículo</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href="/src/style/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+    <div class="title">
+      <h1>Detalhes do Veículo</h1>
+    </div>
+    <div class="main">
+      <div class="vehicle-details">
+        <h2>Informações do Veículo</h2>
+        <p><strong>Placa:</strong> ABC-1234</p>
+        <p><strong>Modelo:</strong> Carro X</p>
+        <p><strong>Ano:</strong> 2020</p>
+        <p><strong>Combustível:</strong> Flex</p>
+        <p><strong>Status:</strong> Ativo</p>
+        <p><strong>Última Manutenção:</strong> 10/05/2024</p>
+        <p><strong>Próxima Manutenção:</strong> 10/06/2024</p>
+      </div>
+      <div class="maintenance-history">
+        <h2>Histórico de Manutenção</h2>
+        <ul>
+          <li>
+            <strong>Data:</strong> 02/05/2024<br>
+            <strong>Descrição:</strong> Troca de Óleo<br>
+            <strong>Itens Trocados:</strong> Óleo do Motor, Filtro de Óleo<br>
+            <strong>Observações:</strong> Troca realizada conforme especificações do fabricante.
+          </li>
+          <li>
+            <strong>Data:</strong> 15/04/2024<br>
+            <strong>Descrição:</strong> Troca de Filtro de Ar<br>
+            <strong>Itens Trocados:</strong> Filtro de Ar<br>
+            <strong>Observações:</strong> Filtro de ar original da marca XYZ.
+          </li>
+          <li>
+            <strong>Data:</strong> 20/03/2024<br>
+            <strong>Descrição:</strong> Troca de Pastilhas de Freio<br>
+            <strong>Itens Trocados:</strong> Pastilhas de Freio<br>
+            <strong>Observações:</strong> Pastilhas de freio semi-metálicas.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+  <script>
+    const footer_return_button = document.querySelector('.footer_return_button');
+    footer_return_button.addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
