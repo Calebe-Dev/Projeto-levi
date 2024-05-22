@@ -57,16 +57,6 @@ body {
   color: var(--font-color);
 }
 
-@media screen and (min-width: 769px) {
-  .container {
-    flex-direction: row;
-    width: 50%;
-    height: 40%;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-}
-
 .logo img {
   width: 200px;
   margin: 0 auto;
@@ -82,15 +72,6 @@ body {
   font-weight: bold;
   text-align: center;
   text-shadow: var(--title-shadow);
-}
-
-@media screen and (min-width: 769px) {
-  .title {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 15px 55px;
-  }
 }
 
 table {
@@ -302,20 +283,6 @@ select option:hover {
   box-shadow: var(--menu-shadow);
 }
 
-@media screen and (min-width: 769px) {
-  .menu {
-    padding: 1%;
-    width: 25%;
-  }
-
-  .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 5px;
-    width: 80%;
-  }
-}
-
 .menu-list {
   display: flex;
   padding: 0;
@@ -350,10 +317,6 @@ select option:hover {
   font-size: var(--direitos-font-size);
   color: var(--direitos-font-color);
 }
-
-
-<style>
-
 
 .table-container {
   margin: 20px 0;
@@ -403,4 +366,57 @@ th {
 .footer button {
   margin: 5px;
 }
-</style>
+
+.acoes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cronograma {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha os itens à esquerda */
+}
+
+.cronograma p {
+  margin-bottom: 5px;
+}
+
+.vehicle-details {
+  margin-bottom: 20px;
+}
+
+.vehicle-details p {
+  margin-bottom: 5px;
+}
+
+/* Responsividade */
+
+
+
+
+
+
+
+@media screen and (min-width: 769px) {
+  .container {
+    flex-direction: row;
+    width: 50%;
+    height: 40%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .menu {
+    padding: 1%;
+    width: 25%;
+  }
+
+  .title {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 55px;
+  }
+}
