@@ -418,6 +418,12 @@ th {
     width: 25%;
   }
 
+
+.relatorios {
+  display: flex;
+  flex-direction: column;
+}
+
   .title {
     flex-direction: row;
     flex-wrap: wrap;
@@ -427,10 +433,6 @@ th {
 }
 
 
-.relatorios {
-  display: flex;
-  flex-direction: column;
-}
 
 @media screen and (min-width: 769px) {
   .container {
@@ -439,6 +441,12 @@ th {
     height: 80%; 
     flex-wrap: wrap;
   }
+
+
+.relatorios {
+  display: flex;
+  flex-direction: column;
+}
 
   .title {
     width: 94%;
