@@ -3,27 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gerenciar Veículos - Painel de Administração</title>
+  <title>Inicio</title>
   <link href="/src/style/reset.css" rel="stylesheet">
   <link href='/src/style/styles.css' rel='stylesheet'>
 </head>
 <body>
-  <div class="container">
-    <!-- Cabeçalho (header) já definido no HTML principal -->
-
-    <div class="logo">
-        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+ <div class="container">
+  <div class="header">
+    <div class="head-logo"> 
+      <div class="logo">
+      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+      </div>
     </div>
-
     <div class="title">
-        <h1>Gerenciar Veiculos</h1>
+      <h1>Consultar Veiculo</h1>
     </div>
-
-    <div class="main">
-      <!-- Menu (menu) já definido no HTML principal -->
-
+  </div>
+  <div class="main">
       <div class="content">
-        <h2>Gerenciar Veículos</h2>
 
         <div class="search-filters">
           <input type="text" id="searchPlaca" placeholder="Placa">
@@ -31,7 +28,6 @@
           <input type="date" id="searchAno" placeholder="Ano">
           <button class="search_button" onclick="filtrarVeiculos()">Consultar</button>
         </div>
-
         <table>
           <thead>
             <tr>
@@ -113,6 +109,7 @@
 
       </div>
     </div>
+
     <div class="footer">
       <button class="footer_return_button">Voltar</button>
       <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
