@@ -426,6 +426,12 @@ th {
   }
 }
 
+
+.relatorios {
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (min-width: 769px) {
   .container {
     flex-direction: row;
