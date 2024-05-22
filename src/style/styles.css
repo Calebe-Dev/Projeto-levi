@@ -38,6 +38,7 @@
 
 body {
   background-color: var(--bg-color);
+  font-family: var(--font-family);
 }
 
 .container {
@@ -52,7 +53,6 @@ body {
   padding: 20px 10px;
   border-radius: var(--container-radius);
   box-shadow: var(--container-shadow);
-  font-family: var(--font-family);
   font-size: var(--font-size-base);
   color: var(--font-color);
 }
@@ -67,26 +67,16 @@ body {
   }
 }
 
-/*-------|Componentes|----------*/
-
-/*-- Logo --*/
-.logo {
+.logo img {
+  width: 200px;
   margin: 0 auto;
 }
 
-.logo img {
-  width: 200px;
-}
-
-/*-- Títulos --*/
 .title {
   background-color: var(--title-bg-color);
   color: var(--title-color);
   box-shadow: var(--container-shadow);
-  font-family: var(--font-family);
   width: 100%;
-  border-radius: 0;
-  border: 12px;
   padding: var(--title-padding);
   font-size: var(--title-font-size);
   font-weight: bold;
@@ -95,7 +85,7 @@ body {
 }
 
 @media screen and (min-width: 769px) {
-  .container .title {
+  .title {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -103,34 +93,31 @@ body {
   }
 }
 
-/*-- Tabelas --*/
 table {
   width: 100%;
   margin-bottom: 10px;
   border-collapse: collapse;
 }
 
-table th,
-table td {
+th, td {
   padding: 10px 5px;
   text-align: center;
   border: 1px solid var(--border-color);
 }
 
-table th {
+th {
   background-color: #f2f2f2;
 }
 
-table tbody tr:nth-child(even) {
+tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-table tbody tr:hover {
+tbody tr:hover {
   background-color: #f1f1f1;
 }
 
-/*-- Forms --*/
-#formulario {
+#formulario, .campo-manutenção {
   width: 70%;
   margin: 0 auto;
   padding: 20px;
@@ -144,15 +131,6 @@ table tbody tr:hover {
   margin-bottom: 15px;
 }
 
-.campo-manutenção {
-  width: 80%;
-  padding: 20px;
-  border: 1px solid var(--border-color);
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  align-items: start;
-}
-
 label {
   display: block;
   margin-bottom: 5px;
@@ -163,13 +141,13 @@ label {
   padding: 12px;
 }
 
-.table {
+.table, .relatorios {
   display: flex;
-  height: 50%;
   justify-content: center;
-  size: 30%;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
 }
 
 .fuel_label {
@@ -178,48 +156,18 @@ label {
   font-weight: bold;
 }
 
-/*-------|Seções|----------*/
-
-/*-- Header --*/
-.header {
+.header, .main, .content {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 10px 50px;
-  border-radius: 10px;
-}
-
-/*-- Main --*/
-.main {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 20px;
   border-radius: 10px;
 }
 
-/*-- Content --*/
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 60%;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/*-- Footer --*/
 .footer {
   display: flex;
-  flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -230,25 +178,17 @@ label {
   backdrop-filter: blur(9px);
 }
 
-/*-------|Elementos de UI|----------*/
-
-/*-- Botões --*/
 button {
-  /* Design */
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
   font: var(--font-size-base) var(--font-family);
   border: none;
   cursor: pointer;
-
-  /* Positioning */
   width: 100%;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   margin: 4px 2px;
   padding: 10px 10px;
-  border-radius: 12px;
+  border-radius: var(--input-radius);
 }
 
 button:hover {
@@ -264,134 +204,68 @@ button:disabled {
   cursor: not-allowed;
 }
 
-.edit_button {
-  background-color: var(--edit-button-bg-color);
+.edit_button, .delete_button, .enter_button, .out_button, .submit_button, .footer_out_button, .footer_return_button {
   color: var(--button-text-color);
-  padding: 5px 10px;
   border: none;
-  border-radius: var(--border-radius);
   cursor: pointer;
+  border-radius: var(--border-radius);
+  padding: 10px;
 }
 
-.edit_button:hover {
-  background-color: #660e00;
+.edit_button {
+  background-color: var(--edit-button-bg-color);
 }
 
 .delete_button {
   background-color: var(--delete-button-bg-color);
-  color: var(--button-text-color);
-  padding: 5px 10px;
-  border: none;
-  border-radius: var(--border-radius);
-  cursor: pointer;
+}
+
+.enter_button, .out_button {
+  font-size: var(--font-size-base);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: #003366;
+  transition: background-color 0.3s ease;
 }
 
 .enter_button {
-  margin-top: 10px;
-  font-size: var(--font-size-base);
-  font-weight: bold;
-  text-align: center;
   padding: 15px 25px;
   background-color: var(--enter-button-bg-color);
-  color: var(--button-text-color);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: #003366;
-  transition: background-color 0.3s ease;
-}
-
-.enter_button:hover {
-  background-color: var(--button-hover-bg-color);
-}
-
-.enter_button:active {
-  background-color: var(--button-active-bg-color);
-}
-
-.enter_button:disabled {
-  background-color: var(--button-disabled-bg-color);
-  cursor: not-allowed;
 }
 
 .out_button {
-  margin-top: 10px;
-  font-size: var(--font-size-base);
-  font-weight: bold;
-  text-align: center;
   padding: 15px 15px;
   background-color: var(--out-button-bg-color);
-  color: var(--button-text-color);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: #003366;
-  transition: background-color 0.3s ease;
-}
-
-.out_button:hover {
-  background-color: #660e00;
-}
-
-.out_button:active {
-  background-color: var(--button-active-bg-color);
-}
-
-.out_button:disabled {
-  background-color: var(--button-disabled-bg-color);
-  cursor: not-allowed;
 }
 
 .submit_button {
-  margin-top: 10px;
-  font-size: var(--font-size-base);
   padding: 20px;
   border-radius: 15px;
   background-color: var(--button-bg-color);
-  color: var(--button-text-color);
-  border: none;
-  cursor: pointer;
-  box-shadow: #003366;
-}
-
-.submit_button:hover {
-  background-color: var(--button-hover-bg-color);
-}
-
-.submit_button:active {
-  background-color: var(--button-active-bg-color);
 }
 
 .footer_out_button {
-  background-color: var(--out-button-bg-color);
-  color: var(--button-text-color);
   width: 20%;
-  border-radius: 15px;
-  border: none;
   box-shadow: #eb2a04;
-  padding: 10px;
-}
-
-.footer_out_button:hover {
-  background-color: #660e00;
 }
 
 .footer_return_button {
   background-color: #007bff;
-  color: var(--container-bg-color);
   width: 20%;
-  border-radius: 15px;
-  border: none;
   box-shadow: var(--menu-shadow);
-  padding: 10px;
 }
 
-/*-- Inputs --*/
+footer button:hover, .enter_button:hover, .out_button:hover {
+  background-color: #660e00;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="number"],
 input[type="date"],
-input[type="email"] {
+input[type="email"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -402,13 +276,7 @@ input[type="email"] {
   font-size: var(--font-size-base);
 }
 
-/*-- Selects --*/
 select {
-  width: 100%;
-  padding: 12px 20px;
-  border: var(--input-border);
-  border-radius: var(--border-radius);
-  font-size: var(--font-size-base);
   background-color: var(--select-bg-color);
 }
 
@@ -421,13 +289,12 @@ select option:hover {
   background-color: var(--select-option-hover-bg-color);
 }
 
-/*-- Menu --*/
 .menu {
   background-color: var(--menu-bg-color);
   display: flex;
   width: 30%;
   height: 40%;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px;
   flex-direction: column;
   border-radius: 15px;
   justify-content: center;
@@ -436,10 +303,9 @@ select option:hover {
 }
 
 @media screen and (min-width: 769px) {
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
+  .menu {
+    padding: 1%;
+    width: 25%;
   }
 
   .container {
@@ -447,11 +313,6 @@ select option:hover {
     flex-wrap: wrap;
     padding: 5px;
     width: 80%;
-  }
-
-  .menu {
-    padding: 1%;
-    width: 25%;
   }
 }
 
@@ -473,134 +334,27 @@ select option:hover {
   color: var(--font-color);
 }
 
-/*-------|Utilitários|----------*/
-
 .title_cheklist {
   background-color: #003366;
   color: var(--button-text-color);
-  padding: 20px;
-  border-radius: 15px;
-}
-
-.cheklist_name {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.cheklist_checkbox {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-/* Todos os direitos reservados */
-.direitos {
-  margin-top: 20px; /* Espaçamento acima dos direitos reservados */
-  text-align: center; /* Centraliza o texto */
-  font-size: var(--direitos-font-size); /* Tamanho da fonte menor para os direitos reservados */
-  color: var(--direitos-font-color); /* Cor de texto mais clara */
-}
-
-table {
-  width: 180%; /* A tabela ocupa 100% da largura do contêiner pai */
-  table-layout: fixed; /* Distribui espaço igualmente entre as colunas */
-  border-collapse: collapse; /* Remove o espaço entre as bordas das células */
-}
-
-td, th {
-  word-wrap: break-word; /* Permite que o conteúdo das células quebre para a próxima linha */
-  overflow-wrap: break-word; /* Suporte para navegadores mais antigos */
-  padding: 10px; /* Espaçamento entre o conteúdo e a borda da célula */
-  border: 1px solid var(--border-color); /* Borda da célula */
-  text-align: left; /* Alinhamento do texto */
-}
-
-@media screen and (max-width: 768px) {
-  .menu_on_page {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .menu {
-    padding: 12px 5px;
-  }
-
-  .menu_on_page {
-    padding: 0% 8% 0% 0%;
-  }
-
-  .menu-list-on-page {
-    background-color: var(--menu-bg-color);
-    border-radius: 10px;
-    padding: 2%;
-  }
-
-  .container {
-    flex-direction: row; /* Makes elements row-based on large screens */
-    align-items: center; /* Aligns content vertically within the container */
-  }
-
-  .main {
-    padding: 0%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .table {
-    padding: 40px 5px;
-  }
-
-  table {
-    width: 170%; /* A tabela ocupa 100% da largura do contêiner pai */
-    table-layout: fixed; /* Distribui espaço igualmente entre as colunas */
-    border-collapse: none; /* Remove o espaço entre as bordas das células */
-  }
-}
-
-.relatorios {
-  display: flex;
-  border: #000;
-  border-width: 2px;
-  flex-direction: column;
-  padding: 20px 0px;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  table-layout: fixed; /* Distribui espaço igualmente entre as colunas */
-  border-collapse: collapse; /* Remove o espaço entre as bordas das células */
-}
-
-.filtros {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.campo {
-  padding: 20px;
-}
-
-h2 {
-  display: flex;
+  box-shadow: var(--container-shadow);
+  width: 100%;
+  padding: var(--title-padding);
+  font-size: 18px;
+  font-weight: bold;
   text-align: center;
-  font-size: 30px;
-  color: #3;
-  padding: 10px;
-  border-radius: 15px;
-  border: #000;
-  box-shadow: #003366;
+  text-shadow: var(--title-shadow);
+}
+
+.direitos {
+  font-size: var(--direitos-font-size);
+  color: var(--direitos-font-color);
 }
 
 
-
-------------------
 <style>
 
-.title h1 {
-  text-align: center;
-  margin: 20px 0;
-}
+
 .table-container {
   margin: 20px 0;
 }
@@ -650,59 +404,3 @@ th {
   margin: 5px;
 }
 </style>
-
-
-.form-container {
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.campo {
-  margin-bottom: 15px;
-}
-.campo label {
-  display: block;
-  margin-bottom: 5px;
-}
-.campo input[type="text"],
-.campo textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-.alertas-container {
-  float: right;
-  width: 30%;
-  margin-top: -15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-.alerta-item {
-  margin-bottom: 5px;
-}
-.visto-button {
-  margin-left: 10px;
-}
-.title_checklist {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.item {
-  margin-bottom: 10px;
-}
-.checklist_name {
-  display: inline-block;
-  width: 60%;
-}
-.checklist_checkbox {
-  display: inline-block;
-}
-
-}
-.footer button:hover {
-  background-color: #0056b3;
-}
