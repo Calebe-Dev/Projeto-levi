@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Histórico do Veículo</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+    <div class="title">
+      <h1>Histórico do Veículo</h1>
+    </div>
+    <div class="main">
+      <div class="vehicle-details">
+        <h2>Informações do Veículo</h2>
+        <p><strong>Placa:</strong> ABC-1234</p>
+        <p><strong>Modelo:</strong> Gol 1.0</p>
+        <p><strong>Ano:</strong> 2020</p>
+        <p><strong>Combustível:</strong> Flex</p>
+        <p><strong>Chassi:</strong> 1234567890123456</p>
+        <p><strong>Odômetro:</strong> 100000 km</p>
+        <p><strong>Status:</strong> Ativo</p>
+        <p><strong>Última Manutenção:</strong> 10/05/2024</p>
+        <p><strong>Próxima Manutenção:</strong> 10/06/2024 (110.000 km)</p>
+        <p><strong>Tipo de Óleo:</strong> Sintético 5W30</p>
+        <p><strong>KM para Troca de Óleo:</strong> 10.000 km</p>
+        <p><strong>Tempo para Troca de Óleo:</strong> 6 meses</p>
+      </div>
+      <div class="maintenance-history">
+        <h2>Histórico de Manutenção</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Descrição</th>
+              <th>Tipo</th>
+              <th>Origem</th>
+              <th>Itens Trocados</th>
+              <th>Observações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>02/05/2024</td>
+              <td>Troca de Óleo</td>
+              <td>Periódica</td>
+              <td>Interna</td>
+              <td>Óleo do Motor, Filtro de Óleo</td>
+              <td>Troca realizada conforme especificações do fabricante.</td>
+            </tr>
+            <tr>
+              <td>15/04/2024</td>
+              <td>Troca de Filtro de Ar</td>
+              <td>Periódica</td>
+              <td>Interna</td>
+              <td>Filtro de Ar</td>
+              <td>Filtro de ar original da marca XYZ.</td>
+            </tr>
+            <tr>
+              <td>20/03/2024</td>
+              <td>Troca de Pastilhas de Freio</td>
+              <td>Periódica</td>
+              <td>Interna</td>
+              <td>Pastilhas de Freio</td>
+              <td>Pastilhas de freio semi-metálicas.</td>
+            </tr>
+            <!-- Exemplo de manutenção externa -->
+            <tr>
+              <td>10/02/2024</td>
+              <td>Manutenção Externa</td>
+              <td>Corretiva</td>
+              <td>Externa</td>
+              <td>-</td>
+              <td>Realizada na oficina XYZ. Substituição da peça ABC conforme orçamento anexado.</td>
+            </tr>
+            <!-- Exemplo de recall -->
+            <tr>
+              <td>25/01/2024</td>
+              <td>Recall - Troca de Bomba de Combustível</td>
+              <td>Corretiva</td>
+              <td>Externa (Recall)</td>
+              <td>Bomba de Combustível</td>
+              <td>Troca realizada na concessionária.</td>
+            </tr>
+            <!-- Exemplo de sinistro -->
+            <tr>
+              <td>12/12/2023</td>
+              <td>Sinistro - Reparo de Amortecedor Dianteiro</td>
+              <td>Corretiva</td>
+              <td>Externa (Sinistro)</td>
+              <td>Amortecedor Dianteiro</td>
+              <td>Reparo realizado pela seguradora.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+  <script>
+    const footer_return_button = document.querySelector('.footer_return_button');
+    footer_return_button.addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>

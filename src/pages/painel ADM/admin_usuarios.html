@@ -22,9 +22,7 @@
       <!-- Menu (menu) já definido no HTML principal -->
 
       <div class="content">
-        <h2>Gerenciar Usuários</h2>
-
-        <button class="enter_button" onclick="window.location.href='/src/pages/admin_novo_usuario.html'">Novo Usuário</button>
+        <h2>Usuários Cadastrados</h2>
 
         <table>
           <thead>
@@ -40,10 +38,43 @@
           <tbody>
             <!-- Linhas com dados dos usuários -->
             <tr>
-              <td>Fulano de Tal</td>
+              <td>João da Silva</td>
               <td>123.456.789-00</td>
-              <td>fulano</td>
+              <td>joao.silva</td>
               <td>Gerente</td>
+              <td>Ativo</td>
+              <td>
+                <button class="edit_button">Editar</button>
+                <button class="delete_button">Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Maria Pereira</td>
+              <td>456.789.012-00</td>
+              <td>maria.pereira</td>
+              <td>Mecânico</td>
+              <td>Ativo</td>
+              <td>
+                <button class="edit_button">Editar</button>
+                <button class="delete_button">Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Pedro Santos</td>
+              <td>789.012.345-00</td>
+              <td>pedro.santos</td>
+              <td>Operador</td>
+              <td>Inativo</td>
+              <td>
+                <button class="edit_button">Editar</button>
+                <button class="delete_button">Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Ana Oliveira</td>
+              <td>012.345.678-00</td>
+              <td>ana.oliveira</td>
+              <td>Administrador</td>
               <td>Ativo</td>
               <td>
                 <button class="edit_button">Editar</button>
@@ -52,6 +83,9 @@
             </tr>
           </tbody>
         </table>
+
+        <button class="enter_button" onclick="window.location.href='/src/pages/painel ADM/admin_novo_usuario.html'">Novo Usuário</button>
+
       </div>
     </div>
     <div class="footer">
@@ -59,5 +93,11 @@
       <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
     </div>
   </div>
+  <script> 
+  const footer_return_button = document.querySelector('.footer_return_button');
+  footer_return_button.addEventListener('click', () => {
+    window.history.back();
+  });
+  </script>
 </body>
 </html>

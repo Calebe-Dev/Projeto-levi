@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Veículo - Painel de Administração</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href='/src/style/styles.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho (header) já definido no HTML principal -->
+
+    <div class="logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+
+    <div class="title">
+        <h1>Editar Veículo</h1>
+    </div>
+
+    <div class="main">
+      <!-- Menu (menu) já definido no HTML principal -->
+
+      <div class="content">
+        <h2>Editar Veículo</h2>
+
+        <form id="formEditarVeiculo" action="#" method="post">
+          <div class="campo">
+            <label for="placa">Placa:</label>
+            <input type="text" id="placa" name="placa" value="ABC-1234" required>
+          </div>
+          <div class="campo">
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" value="Gol 1.0" required>
+          </div>
+          <div class="campo">
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" name="ano" value="2020" required>
+          </div>
+          <div class="campo">
+            <label for="combustivel">Combustível:</label>
+            <select id="combustivel" name="combustivel" required>
+              <option value="gasolina" selected>Gasolina</option>
+              <option value="flex">Flex</option>
+              <option value="diesel">Diesel</option>
+              <option value="eletrico">Elétrico</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="chassi">Chassi:</label>
+            <input type="text" id="chassi" name="chassi" value="1234567890123456" required>
+          </div>
+          <div class="campo">
+            <label for="odometro">Odômetro (KM):</label>
+            <input type="number" id="odometro" name="odometro" value="100000" required>
+          </div>
+          <div class="campo">
+            <label for="tipoOleo">Tipo de Óleo:</label>
+            <select id="tipoOleo" name="tipoOleo" required>
+              <option value="mineral">Mineral</option>
+              <option value="sintetico" selected>Sintético</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="kmTrocaOleo">Próxima Troca de Óleo (KM):</label>
+            <input type="number" id="kmTrocaOleo" name="kmTrocaOleo" value="110000" required>
+          </div>
+          <div class="campo">
+            <label for="tempoTrocaOleo">Próxima Troca de Óleo (Tempo):</label>
+            <input type="number" id="tempoTrocaOleo" name="tempoTrocaOleo" value="6" required placeholder="Meses">
+          </div>
+          <div class="campo">
+            <button class="enter_button" type="submit">Salvar Alterações</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+  </div>
+  <script>
+    const footer_return_button = document.querySelector('.footer_return_button');
+    footer_return_button.addEventListener('click', () => {
+      window.history.back();
+    });
+
+    const formEditarVeiculo = document.getElementById('formEditarVeiculo');
+    formEditarVeiculo.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Obter os dados do formulário
+      const placa = document.getElementById('placa').value;
+      const modelo = document.getElementById('modelo').value;
+      const ano = document.getElementById('ano').value;
+      const combustivel = document.getElementById('combustivel').value;
+      const chassi = document.getElementById('chassi').value;
+      const odometro = document.getElementById('odometro').value;
+      const tipoOleo = document.getElementById('tipoOleo').value;
+      const kmTrocaOleo = document.getElementById('kmTrocaOleo').value;
+      const tempoTrocaOleo = document.getElementById('tempoTrocaOleo').value;
+
+      // Aqui você deve enviar os dados para o backend para atualizar o veículo no banco de dados
+      // Exemplo usando alert para simular a ação:
+      alert(`Veículo atualizado com sucesso!
+      Placa: ${placa}
+      Modelo: ${modelo}
+      Ano: ${ano}
+      Combustível: ${combustivel}
+      Chassi: ${chassi}
+      Odômetro: ${odometro}
+      Tipo de Óleo: ${tipoOleo}
+      Próxima Troca de Óleo (KM): ${kmTrocaOleo}
+      Próxima Troca de Óleo (Tempo): ${tempoTrocaOleo} meses`);
+
+      // Limpar o formulário
+      formEditarVeiculo.reset();
+    });
+  </script>
+</body>
+</html>

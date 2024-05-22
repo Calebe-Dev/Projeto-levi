@@ -16,7 +16,7 @@
     </div>
 
     <div class="title">
-        <h1>Gerenciar Veiculos</h1>
+        <h1>Gerenciar Veículos</h1>
     </div>
 
     <div class="main">
@@ -33,30 +33,107 @@
               <th>Placa</th>
               <th>Modelo</th>
               <th>Ano</th>
-              <th>Combustivel</th>
+              <th>Combustível</th>
               <th>Chassi</th>
               <th>Odômetro</th>
               <th>Status</th>
               <th>Última Manutenção</th>
-              <th>Próxima Manutenção</th>
+              <th>Próxima Manutenção (KM)</th>
+              <th>Próxima Manutenção (Tempo)</th>
+              <th>Tipo de Óleo</th>
+              <th>KM para Troca de Óleo</th>
+              <th>Tempo para Troca de Óleo</th>
               <th>Ações</th>
+              <th>Cronograma</th>
             </tr>
           </thead>
           <tbody>
             <!-- Linhas com dados dos veículos -->
             <tr>
               <td>ABC-1234</td>
-              <td>Carro X</td>
+              <td>Gol 1.0</td>
               <td>2020</td>
               <td>Flex</td>
               <td>1234567890123456</td>
               <td>100000</td>
               <td>Ativo</td>
               <td>10/05/2024</td>
+              <td>110.000 km</td>
               <td>10/06/2024</td>
+              <td>Sintético 5W30</td>
+              <td>10.000 km</td>
+              <td>6 meses</td>
               <td>
                 <button class="edit_button">Editar</button>
                 <button class="delete_button">Excluir</button>
+                <button class="enter_button" onclick="window.location.href='/src/pages/painel ADM/historico_veiculo.html'">Histórico</button>
+              </td>
+              <td>
+                <div class="cronograma">
+                  <h3>Próxima Manutenção</h3>
+                  <p>Data: 10/06/2024</p>
+                  <p>Kilometragem: 110.000 km</p>
+                  <p>Tipo: Revisão Geral</p>
+                  <p>Descrição: Troca de óleo, filtros, etc.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>DEF-5678</td>
+              <td>Voyage 1.6</td>
+              <td>2018</td>
+              <td>Gasolina</td>
+              <td>9876543210123456</td>
+              <td>120000</td>
+              <td>Ativo</td>
+              <td>15/04/2024</td>
+              <td>130.000 km</td>
+              <td>15/05/2024</td>
+              <td>Mineral 10W40</td>
+              <td>5.000 km</td>
+              <td>3 meses</td>
+              <td>
+                <button class="edit_button">Editar</button>
+                <button class="delete_button">Excluir</button>
+                <button class="enter_button" onclick="window.location.href='/src/pages/painel ADM/historico_veiculo.html'">Histórico</button>
+              </td>
+              <td>
+                <div class="cronograma">
+                  <h3>Próxima Manutenção</h3>
+                  <p>Data: 15/05/2024</p>
+                  <p>Kilometragem: 130.000 km</p>
+                  <p>Tipo: Troca de Pneus</p>
+                  <p>Descrição: Troca dos quatro pneus.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>GHI-9012</td>
+              <td>Polo 1.0 TSI</td>
+              <td>2022</td>
+              <td>Flex</td>
+              <td>7890123456789012</td>
+              <td>50000</td>
+              <td>Ativo</td>
+              <td>20/03/2024</td>
+              <td>60.000 km</td>
+              <td>20/04/2024</td>
+              <td>Sintético 0W20</td>
+              <td>10.000 km</td>
+              <td>6 meses</td>
+              <td>
+                <button class="edit_button">Editar</button>
+                <button class="delete_button">Excluir</button>
+                <button class="enter_button" onclick="window.location.href='/src/pages/painel ADM/historico_veiculo.html'">Histórico</button>
+              </td>
+              <td>
+                <div class="cronograma">
+                  <h3>Próxima Manutenção</h3>
+                  <p>Data: 20/04/2024</p>
+                  <p>Kilometragem: 60.000 km</p>
+                  <p>Tipo: Revisão Geral</p>
+                  <p>Descrição: Troca de óleo, filtros, etc.</p>
+                </div>
               </td>
             </tr>
           </tbody>
@@ -68,5 +145,11 @@
       <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
     </div>
   </div>
+  <script> 
+  const footer_return_button = document.querySelector('.footer_return_button');
+  footer_return_button.addEventListener('click', () => {
+    window.history.back();
+  });
+  </script>
 </body>
 </html>
