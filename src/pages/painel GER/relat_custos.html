@@ -25,19 +25,20 @@
       <div class="content">
 
       <div class="relatorios">
-        <h2><br>Relatório de Custo Total de Manutenção por Veículo <br><br></h2>
+        <h2>Relatório de Custo Total de Manutenção por Veículo</h2>
 
         <!-- Filtros -->
         <div class="filtros">
-        <div class="campo">
-          <label for="dataInicio">Data Inicial:</label>
-          <input type="date" id="dataInicio" name="dataInicio">
+          <div class="campo">
+            <label for="dataInicio">Data Inicial:</label>
+            <input type="date" id="dataInicio" name="dataInicio">
+          </div>
+          <div class="campo">
+            <label for="dataFim">Data Final:</label>
+            <input type="date" id="dataFim" name="dataFim">
+          </div>
         </div>
-        <div class="campo">
-          <label for="dataFim">Data Final:</label>
-          <input type="date" id="dataFim" name="dataFim">
-        </div>
-       </div>
+
         <!-- Tabela -->
         <table>
           <thead>
@@ -48,28 +49,40 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Linhas com dados de cada veículo -->
             <tr>
               <td>ABC-1234</td>
-              <td>Carro X</td>
-              <td>1000,00</td>
+              <td>Gol 1.0</td>
+              <td>1.500,00</td>
+            </tr>
+            <tr>
+              <td>DEF-5678</td>
+              <td>Voyage 1.6</td>
+              <td>800,00</td>
+            </tr>
+            <tr>
+              <td>GHI-9012</td>
+              <td>Polo 1.0 TSI</td>
+              <td>2.200,00</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div class="relatorios">
-        <h2><br><br>Relatório de Quantidade de Peças em Estoque</h2>
+        <h2>Relatório de Peças em Estoque</h2>
 
         <!-- Filtros -->
         <div class="filtros">
-        <div class="campo">
-          <label for="fornecedor">Fornecedor:</label>
-          <select id="fornecedor" name="fornecedor">
-            <!-- Opções de fornecedores -->
-          </select>
+          <div class="campo">
+            <label for="fornecedor">Fornecedor:</label>
+            <select id="fornecedor" name="fornecedor">
+              <option value="">Todos</option>
+              <option value="Fornecedor A">Fornecedor A</option>
+              <option value="Fornecedor B">Fornecedor B</option>
+            </select>
+          </div>
         </div>
-      </div>
+
         <!-- Tabela -->
         <table>
           <thead>
@@ -82,32 +95,46 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Linhas com dados de cada peça -->
             <tr>
               <td>001</td>
-              <td>Peça A</td>
-              <td>Descrição da peça A</td>
+              <td>Lâmpada Farol (Halógena)</td>
+              <td>Lâmpada farol halógena para carros populares</td>
               <td>100</td>
-              <td>10,00</td>
+              <td>25,00</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Óleo de Motor 5W30 (Sintético)</td>
+              <td>Óleo de motor sintético 5W30 para motores a gasolina</td>
+              <td>50</td>
+              <td>60,00</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Filtro de Ar do Motor</td>
+              <td>Filtro de ar do motor para carros populares</td>
+              <td>75</td>
+              <td>30,00</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div class="relatorios">
-        <h2><br>Relatório de Número de OSs por Veículo</h2>
+        <h2>Relatório de OSs por Veículo</h2>
 
         <!-- Filtros -->
         <div class="filtros">
-        <div class="campo">
-          <label for="dataInicio">Data Inicial:</label>
-          <input type="date" id="dataInicio" name="dataInicio">
+          <div class="campo">
+            <label for="dataInicio">Data Inicial:</label>
+            <input type="date" id="dataInicio" name="dataInicio">
+          </div>
+          <div class="campo">
+            <label for="dataFim">Data Final:</label>
+            <input type="date" id="dataFim" name="dataFim">
+          </div>
         </div>
-        <div class="campo">
-          <label for="dataFim">Data Final:</label>
-          <input type="date" id="dataFim" name="dataFim">
-        </div>
-        </div>
+
         <!-- Tabela -->
         <table>
           <thead>
@@ -118,11 +145,20 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Linhas com dados de cada veículo -->
             <tr>
               <td>ABC-1234</td>
-              <td>Carro X</td>
+              <td>Gol 1.0</td>
               <td>5</td>
+            </tr>
+            <tr>
+              <td>DEF-5678</td>
+              <td>Voyage 1.6</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>GHI-9012</td>
+              <td>Polo 1.0 TSI</td>
+              <td>2</td>
             </tr>
           </tbody>
         </table>
@@ -133,24 +169,24 @@
 
         <!-- Filtros -->
         <div class="filtros">
-        <div class="campo">
-          <label for="dataInicio">Data Inicial:</label>
-          <input type="date" id="dataInicio" name="dataInicio">
+          <div class="campo">
+            <label for="dataInicio">Data Inicial:</label>
+            <input type="date" id="dataInicio" name="dataInicio">
+          </div>
+          <div class="campo">
+            <label for="dataFim">Data Final:</label>
+            <input type="date" id="dataFim" name="dataFim">
+          </div>
         </div>
-        <div class="campo">
-          <label for="dataFim">Data Final:</label>
-          <input type="date" id="dataFim" name="dataFim">
-        </div>
-        </div>
+
         <!-- Canvas para o gráfico -->
         <canvas id="graficoCustoManutencao"></canvas>
       </div>
 
-
       <div class="direitos">
         © 2024 Five Software e Varejista Ltda. Todos os direitos reservados.
       </div>
-      
+
         <script>
           // Dados do gráfico (obtidos do backend)
           const data = {

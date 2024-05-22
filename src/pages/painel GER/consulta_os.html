@@ -3,63 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Consulta de Ordens de Serviço</title>
+  <title>Aprovação de Ordens de Serviço</title>
   <link href="/src/style/reset.css" rel="stylesheet">
-  <link href='/src/style/styles.css' rel='stylesheet'>
+  <link href="/src/style/styles.css" rel="stylesheet">
 </head>
 <body>
- <div class="container">
-  <div class="header">
+  <div class="container">
+    <!-- Cabeçalho (header) já definido no HTML principal -->
+
     <div class="logo">
-      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+        <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
     </div>
+
     <div class="title">
-      <h1>Consulta de Ordens de Serviço</h1>
+        <h1>Aprovação de Ordens de Serviço</h1>
+    </div>
+
+    <div class="main">
+      <!-- Menu (menu) já definido no HTML principal -->
+
+      <div class="content">
+
+        <div class="alertas">
+          <h2>As OSs concluídas permanecem visíveis por 3 dias após a execução para aprovação.</h2>
+        </div>
+
+        <div class="relatorios">
+          <h2>Ordens de Serviço Abertas</h2>
+
+          <!-- Tabela -->
+          <table>
+            <thead>
+              <tr>
+                <th>Número da OS</th>
+                <th>Data de Abertura</th>
+                <th>Placa</th>
+                <th>Modelo</th>
+                <th>Kilometragem</th>
+                <th>Motivo da Manutenção</th>
+                <th>Itens Trocados</th>
+                <th>Tipo de Manutenção</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OS-001</td>
+                <td>2024-03-15</td>
+                <td>ABC-1234</td>
+                <td>Gol 1.0</td>
+                <td>100.000 km</td>
+                <td>Manutenção preventiva (6 meses)</td>
+                <td>Óleo do motor, filtro de óleo, filtro de ar</td>
+                <td>Interna</td>
+                <td>
+                  <div class="acoes">
+                    <button class="enter_button">Aprovar</button>
+                    <button class="out_button">Negar</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>OS-002</td>
+                <td>2024-03-18</td>
+                <td>DEF-5678</td>
+                <td>Voyage 1.6</td>
+                <td>120.000 km</td>
+                <td>Troca de pneus (40.000 km)</td>
+                <td>Pneus dianteiros e traseiros</td>
+                <td>Garantia</td>
+                <td>
+                  <div class="acoes">
+                    <button class="enter_button">Aprovar</button>
+                    <button class="out_button">Negar</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>OS-003</td>
+                <td>2024-03-22</td>
+                <td>GHI-9012</td>
+                <td>Polo 1.0 TSI</td>
+                <td>80.000 km</td>
+                <td>Vazamento de óleo - Substituição de junta de cárter</td>
+                <td>Junta de cárter, óleo do motor</td>
+                <td>Seguro</td>
+                <td>
+                  <div class="acoes">
+                    <button class="enter_button">Aprovar</button>
+                    <button class="out_button">Negar</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
     </div>
   </div>
-  <div class="main">
-    <div class="content">
-      <table>
-        <thead>
-          <tr>
-            <th>Número da OS</th>
-            <th>Veículo</th>
-            <th>Data de Abertura</th>
-            <th>Descrição</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>001</td>
-            <td>Veículo A</td>
-            <td>01/05/2024</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-            <td>Em andamento</td>
-          </tr>
-          <tr>
-            <td>002</td>
-            <td>Veículo B</td>
-            <td>10/05/2024</td>
-            <td>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-            <td>Concluída</td>
-          </tr>
-          <!-- Adicione mais linhas conforme necessário -->
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="footer">
-    <button class="footer_return_button">Voltar</button>
-    <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
- </div>
-</div>
- <script> 
- const footer_return_button = document.querySelector('.footer_return_button');
- footer_return_button.addEventListener('click', () => {
-   window.history.back();
- });
- </script>
- </div>
+  <script> 
+  const footer_return_button = document.querySelector('.footer_return_button');
+  footer_return_button.addEventListener('click', () => {
+    window.history.back();
+  });
+  </script>
 </body>
 </html>

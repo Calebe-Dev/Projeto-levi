@@ -22,22 +22,115 @@
         <div class="forms">
           <div class="form-cadastro">
             <form id="formManutencaoExterna" action="#" method="post">
-              <label for="dataManutencao">Data da Manutenção:</label>
-              <input type="date" id="dataManutencao" name="dataManutencao" required>
-
-              <label for="oficina">Oficina:</label>
-              <input type="text" id="oficina" name="oficina" required>
-
-              <label for="valorTotal">Valor Total:</label>
-              <input type="number" id="valorTotal" name="valorTotal" required>
-
-              <label for="descricaoServicos">Descrição dos Serviços:</label>
-              <textarea id="descricaoServicos" name="descricaoServicos"></textarea>
-
-              <label for="pecasUtilizadas">Peças Utilizadas:</label>
-              <textarea id="pecasUtilizadas" name="pecasUtilizadas"></textarea>
-
-              <button class="enter_button" type="submit">Registrar</button>
+              <div class="campo">
+                <label for="dataManutencao">Data da Manutenção:</label>
+                <input type="date" id="dataManutencao" name="dataManutencao" required>
+              </div>
+              <div class="campo">
+                <label for="placaVeiculo">Placa do Veículo:</label>
+                <input type="text" id="placaVeiculo" name="placaVeiculo" required>
+              </div>
+              <div class="campo">
+                <label for="modeloVeiculo">Modelo do Veículo:</label>
+                <input type="text" id="modeloVeiculo" name="modeloVeiculo" required>
+              </div>
+              <div class="campo">
+                <label for="kilometragem">Kilometragem:</label>
+                <input type="number" id="kilometragem" name="kilometragem" required>
+              </div>
+              <div class="campo">
+                <label for="tipoManutencao">Tipo de Manutenção:</label>
+                <select id="tipoManutencao" name="tipoManutencao" required>
+                  <option value="recall">Recall</option>
+                  <option value="sinistro">Sinistro</option>
+                  <option value="manutencao">Manutenção Externa</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="motivo">Motivo da Manutenção:</label>
+                <textarea id="motivo" name="motivo" required></textarea>
+              </div>
+              <div class="campo-manutenção">
+                <div class="title_checklist">
+                  <h2>Itens Trocados/Reparados:</h2>
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="oleoMotor">Óleo do Motor:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="oleoMotor" name="oleoMotor"> 
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="filtroOleo">Filtro de Óleo:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="filtroOleo" name="filtroOleo">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="filtroAr">Filtro de Ar:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="filtroAr" name="filtroAr">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="oleoTransmissao">Óleo de Transmissão/Câmbio:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="oleoTransmissao" name="oleoTransmissao">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="fluidoFreio">Fluido de Freio:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="fluidoFreio" name="fluidoFreio">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="pastilhasFreio">Pastilhas de Freio:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="pastilhasFreio" name="pastilhasFreio">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="filtroCombustivel">Filtro de Combustível:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="filtroCombustivel" name="filtroCombustivel">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="correiaDentada">Correia Dentada/Corrente de Comando:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="correiaDentada" name="correiaDentada">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="filtroCabine">Filtro de Cabine (Ar Condicionado):</label>
+                  <input class="checklist_checkbox" type="checkbox" id="filtroCabine" name="filtroCabine">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="kitSuspensao">Kit Suspensão:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="kitSuspensao" name="kitSuspensao">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="discoFreio">Disco de Freio:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="discoFreio" name="discoFreio">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="funilariaDianteira">Dianteira:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="funilariaDianteira" name="funilariaDianteira">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="funilariaLateralDireita">Lateral Direita:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="funilariaLateralDireita" name="funilariaLateralDireita">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="funilariaLateralEsquerda">Lateral Esquerda:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="funilariaLateralEsquerda" name="funilariaLateralEsquerda">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="funilariaTraseira">Traseira:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="funilariaTraseira" name="funilariaTraseira">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="funilariaTeto">Teto:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="funilariaTeto" name="funilariaTeto">
+                </div>
+                <div class="item">
+                  <label class="checklist_name" for="funilariaInterior">Interior do Veículo:</label>
+                  <input class="checklist_checkbox" type="checkbox" id="funilariaInterior" name="funilariaInterior">
+                </div>
+                <!-- Adicione mais itens conforme necessário -->
+              </div>
+              <div class="campo">
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes" name="observacoes"></textarea>
+              </div>
+              <div class="campo">
+                <button class="enter_button" type="submit">Registrar</button>
+              </div>
             </form>
           </div>
         </div>
@@ -52,6 +145,42 @@
     const footer_return_button = document.querySelector('.footer_return_button');
     footer_return_button.addEventListener('click', () => {
       window.history.back();
+    });
+
+    const formManutencaoExterna = document.getElementById('formManutencaoExterna');
+    formManutencaoExterna.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Obter os dados do formulário
+      const dataManutencao = document.getElementById('dataManutencao').value;
+      const placaVeiculo = document.getElementById('placaVeiculo').value;
+      const modeloVeiculo = document.getElementById('modeloVeiculo').value;
+      const kilometragem = document.getElementById('kilometragem').value;
+      const tipoManutencao = document.getElementById('tipoManutencao').value;
+      const motivo = document.getElementById('motivo').value;
+      const observacoes = document.getElementById('observacoes').value;
+
+      // Criar um array com os itens trocados/reparados
+      const itensTrocados = [];
+      const checkboxes = document.querySelectorAll('.checklist_checkbox:checked');
+      checkboxes.forEach(checkbox => {
+        itensTrocados.push(checkbox.id);
+      });
+
+      // Aqui você deve enviar os dados para o backend para salvar no histórico do veículo
+      // Exemplo usando alert para simular a ação:
+      alert(`Manutenção externa registrada com sucesso!
+      Data: ${dataManutencao}
+      Placa: ${placaVeiculo}
+      Modelo: ${modeloVeiculo}
+      Kilometragem: ${kilometragem}
+      Tipo: ${tipoManutencao}
+      Motivo: ${motivo}
+      Itens Trocados: ${itensTrocados.join(', ')}
+      Observações: ${observacoes}`);
+
+      // Limpar o formulário
+      formManutencaoExterna.reset();
     });
   </script>
 </body>

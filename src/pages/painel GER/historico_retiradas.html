@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Histórico de Retiradas de Peças</title>
+  <link href="/src/style/reset.css" rel="stylesheet">
+  <link href="/src/style/styles.css" rel="stylesheet">
+</head>
+<body>
+ <div class="container">
+  <div class="header">
+    <div class="logo">
+      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+    </div>
+    <div class="title">
+      <h1>Histórico de Retiradas de Peças</h1>
+    </div>
+  </div>
+  <div class="main">
+    <div class="content">
+      <table>
+        <thead>
+          <tr>
+            <th>Data da Retirada</th>
+            <th>Número da OS</th>
+            <th>Peça</th>
+            <th>Quantidade</th>
+            <th>Responsável</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2024-03-15</td>
+            <td>OS-001</td>
+            <td>Lâmpada Farol (Halógena)</td>
+            <td>2</td>
+            <td>João Silva</td>
+          </tr>
+          <tr>
+            <td>2024-03-18</td>
+            <td>OS-002</td>
+            <td>Óleo de Motor 5W30 (Sintético)</td>
+            <td>4</td>
+            <td>Maria Santos</td>
+          </tr>
+          <tr>
+            <td>2024-03-22</td>
+            <td>OS-003</td>
+            <td>Filtro de Ar do Motor</td>
+            <td>1</td>
+            <td>Pedro Rodrigues</td>
+          </tr>
+          <tr>
+            <td>2024-03-25</td>
+            <td>OS-004</td>
+            <td>Filtro de Óleo do Motor</td>
+            <td>3</td>
+            <td>Ana Oliveira</td>
+          </tr>
+          <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+     <button class="footer_return_button">Voltar</button>
+     <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+  </div>
+ </div>
+  <script> 
+  const footer_return_button = document.querySelector('.footer_return_button');
+  footer_return_button.addEventListener('click', () => {
+    window.history.back();
+  });
+  </script>
+</body>
+</html>
