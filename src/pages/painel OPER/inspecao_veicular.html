@@ -24,48 +24,95 @@
             <form id="formulario">
                 <div class="campo">
                     <label for="nome">Responsável pela inspeção:</label>
-                    <input type="text" id="nome" name="nome" required>
+                    <br>
+                    <p style="color: black;" ><b>José Carlos Carneiro</b></p>
+                    <br>
+                    <!-- <input type="text" value="José Carlos Carneiro" id="nome" name="nome" required>-->
                 </div>
         
                 <div class="campo">
                     <label for="cpf">CPF Responsável:</label>
-                    <input type="number" id="cpf" name="cpf" required>
+                    <br>
+                    <p style="color: black;" ><b>464.548.297-07</b></p>
+                    <br>
+
+                   <!--  <input type="text" id="cpf" name="cpf" required>-->
                 </div>
+                <div class="campo">
+                    <label for="data">Data da inspeção:</label>
+                    <br>
+                    <p style="color: black;" ><b>03/06/2024     07:10</b></p>
+                    <br>
+                   <!--  <input type="datetime-local" id="data" name="data" required>-->
+                </div>
+
+                <div class="campo">
+                <label for="Marca">Marca:</label>
+                <input class="marca1" placeholder="Selecione a Marca" type="text" list="opcoes">
+                <datalist id="opcoes">
+                    <option value="Chevrolet"></option>
+                    <option value="Renault"></option>
+                    <option value="Volkswagen"></option>
+                    <option value="Honda"></option>
+                    <option value="Iveco"></option>
+                </datalist>
+            </div>
         
                 <div class="campo">
                     <label for="modelo">Modelo:</label>
-                    <input type="text" id="modelo" name="modelo" required>
+                    <input class="marca1" placeholder="Selecione o Modelo" type="text" list="modelo">
+                    <datalist id="modelo">
+                        <option value="Onix"></option>
+                        <option value="Kwid"></option>
+                        <option value="Gol"></option>
+                        <option value="Titan 160"></option>
+                        <option value="520H"></option>
+                    </datalist>
                 </div>
         
                 <div class="campo">
                     <label for="placa">Placa:</label>
-                    <input type="text" id="placa" name="placa" required>
+                    <input class="marca1" placeholder="Selecione a Placa" type="text" list="placas">
+                    <datalist id="placas">
+                        <option value="ABC-1234"></option>
+                        <option value="DEF-5678"></option>
+                        <option value="GHI-9101"></option>
+                        <option value="JKL-1213"></option>
+                        <option value="MNO-1415"></option>
+                        <option value="PQR-1617"></option>
+                    </datalist>
                 </div>
         
                 <div class="campo">
-                    <label for="kilometragem">Kilometragem:</label>
-                    <input type="number" id="kilometragem" name="kilometragem" required>
+                    <label for="kilometragem">Km atual:</label>
+                    <input type="text" id="kilometragem" name="kilometragem" required>
                 </div>
         
-                <div class="campo">
-                    <label for="data">Data:</label>
-                    <input type="date" id="data" name="data" required>
-                </div>
 
                 <div class="campo">
                     <label for="dataUltimaManutencao">Data da última manutenção:</label>
-                    <input type="date" id="dataUltimaManutencao" name="dataUltimaManutencao" required>
+                    <!--<input type="date" id="dataUltimaManutencao" name="dataUltimaManutencao" required>-->
+                    <br>
+                    <p style="color: black;" ><b>03/06/2024</b></p>
+                    <br>
                 </div>
 
                 <div class="campo">
-                    <label for="kmUltimaManutencao">KM da última manutenção:</label>
-                    <input type="number" id="kmUltimaManutencao" name="kmUltimaManutencao" required>
+                    <label for="kmUltimaManutencao">Km da última manutenção:</label>
+                    <br>
+                    <p style="color: black;" ><b>95.000</b> </p>
+                    <br>
+                    <!--<input type="text" id="kmUltimaManutencao" name="kmUltimaManutencao" required>-->
                 </div>
+                <br>
 
-                <div class="campo-manutenção">
-                    <div class="title_checklist">
-                        <h2>Itens de Manutenção Periódica</h2>
-                    </div>
+                <div style="text-align: center;" class="title_checklist">
+                    <h2>Itens de Manutenção Periódica</h2>
+                </div> 
+                <br>
+
+                <div class="itensp">
+
                     <div class="item">
                         <label class="checklist_name" for="oleoMotor">Óleo do Motor:</label>
                         <input class="checklist_checkbox" type="checkbox" id="oleoMotor" name="oleoMotor"> 
@@ -102,28 +149,21 @@
                         <label class="checklist_name" for="filtroCabine">Filtro de Cabine (Ar Condicionado):</label>
                         <input class="checklist_checkbox" type="checkbox" id="filtroCabine" name="filtroCabine">
                     </div>
-                    <div class="item">
+                     <div class="item">
                         <label class="checklist_name" for="kitSuspensao">Kit Suspensão:</label>
                         <input class="checklist_checkbox" type="checkbox" id="kitSuspensao" name="kitSuspensao">
                     </div>
                 </div>
+                <br><br>
 
 
             <div class="campo-manutencao">
-                <div class="campo">
-                    <label for="problemaIdentificado">Relato de problema identificado (se houver):</label>
-                    <textarea id="problemaIdentificado" name="problemaIdentificado"></textarea>
-                </div>
+                <h2 style="text-align: center;" >Checklist de Funilaria</h2>
+                <br>
 
-                <div class="campo">
-                    <label for="observacoes">Observações:</label>
-                    <textarea id="observacoes" name="observacoes"></textarea>
-                </div>
 
-                <div class="campo-funilaria">
-                    <div class="title_checklist">
-                        <h2>Checklist de Funilaria</h2>
-                    </div>
+                <div class="itensp">
+
                     <div class="item">
                         <label class="checklist_name" for="funilariaDianteira">Dianteira:</label>
                         <input class="checklist_checkbox" type="checkbox" id="funilariaDianteira" name="funilariaDianteira">
@@ -149,27 +189,26 @@
                         <input class="checklist_checkbox" type="checkbox" id="funilariaInterior" name="funilariaInterior">
                     </div>
                 </div>
+                <br><br>
 
-                <div class="campo">
-                    <label for="problemasEletricos">Relato sobre problemas elétricos e intermitentes:</label>
-                    <textarea id="problemasEletricos" name="problemasEletricos"></textarea>
-                </div>
 
-                <div class="campo">
+                <div class="campo1">
                     <label for="previsaoProximaManutencao">Previsão de próxima manutenção:</label>
                     <input type="date" id="previsaoProximaManutencao" name="previsaoProximaManutencao" required>
+                    <label for="previsaoProximaManutencao">km:</label>
+                    <input type="text" id="previsaoProximaManutencao" name="previsaoProximaManutencao" required>
                 </div>
-
                 <div class="campo">
                     <label for="veiculoPodeRodar">O veículo pode rodar?</label>
+                    <br>
                     <select id="veiculoPodeRodar" name="veiculoPodeRodar" required>
                         <option value="sim">Sim</option>
                         <option value="nao">Não</option>
                     </select>
                 </div>
 
-                <div class="campo">
-                    <div class="title_checklist">
+                <div class="manutencaoex" >
+                    <div class="title_checklist" >
                         <h2>Em caso de manutenção externa:</h2>
                     </div>
                     <div class="item">
@@ -190,8 +229,8 @@
 
 
                 <div class="campo">
-                    <button onclick="window.location.href='/src/pages/painel OPER/detalhes_veiculo.html'">Salvar em Historico</button>
-                    <button onclick="window.location.href='/src/pages/painel OPER/sol_manutencao.html'">Solicitar Manutenção</button>
+                    <button style="width: 200px;" onclick="window.location.href='/src/pages/painel OPER/detalhes_veiculo.html'">Salvar em Historico</button>
+                    <button style="width: 200px;"  onclick="window.location.href='/src/pages/painel OPER/sol_manutencao.html'">Requerimento de peças</button>
                 </div>
             </form>
 

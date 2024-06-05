@@ -16,8 +16,15 @@
       </div>
     </div>
     <div class="title">
-      <h1>Ordens de Serviço</h1>
+      <h1>Agenda de Manutenção</h1>
     </div>
+  </div>
+  <div class="pesquisa-pecas" >
+    <h2>pesquisar por data</h2>
+    <input style="width: 330px; display: block;" type="date" >
+    <p>Até</p>
+    <input style="width: 330px; display: block;" type="date" >
+    <button style="width: 200px; " >Pesquisar</button>
   </div>
     <div class="table-container">
       <table>
@@ -34,42 +41,43 @@
         <tbody>
           <tr class="status-approved">
             <td>1</td>
-            <td>Carro X</td>
+            <td><strong>Onix</strong></td>
             <td>10/05/2024</td>
-            <td>Troca de Óleo e Filtro de Ar</td>
-            <td>Aprovada</td>
+            <td>Manutenção Corretiva</td>
+            <td>Aguardando Manuntenção</td>
             <td><button class="execute-button" onclick="window.location.href='/src/pages/painel OPER/exe_manutencao.html?id=1'">Executar Manutenção</button></td>
           </tr>
-          <tr class="status-pending">
+          <tr   class="status-approved">
             <td>2</td>
-            <td>Carro Y</td>
+            <td><strong>Uno</strong></td>
             <td>15/05/2024</td>
-            <td>Substituição de Pastilhas de Freio</td>
-            <td>Aguardando Execução</td>
-            <td></td>
-          </tr>
-          <tr class="status-rejected">
-            <td>3</td>
-            <td>Carro Z</td>
-            <td>20/05/2024</td>
-            <td>Revisão Completa</td>
-            <td>Reprovada</td>
+            <td>Manutenção Periódica</td>
+            <td><b>Em Execução</b></td>
             <td></td>
           </tr>
           <tr class="status-approved">
+            <td>3</td>
+            <td><strong>S-10</strong></td>
+            <td>20/05/2024</td>
+            <td>Revisão Completa</td>
+            <td>Aguardando Manuntenção</td>
+            <td><button class="execute-button" onclick="window.location.href='/src/pages/painel OPER/exe_manutencao.html?id=1'">Executar Manutenção</button></td>
+            <td></td>
+          </tr>
+          <tr  class="status-approved">
             <td>4</td>
-            <td>Carro W</td>
+            <td><strong>Kwid</strong></td>
             <td>25/05/2024</td>
             <td>Alinhamento e Balanceamento</td>
-            <td>Aprovada</td>
+            <td>Aguardando Manuntenção</td>
             <td><button class="execute-button" onclick="window.location.href='/src/pages/painel OPER/exe_manutencao.html?id=4'">Executar Manutenção</button></td>
           </tr>
-          <tr class="status-pending">
+          <tr class="status-approved">
             <td>5</td>
-            <td>Carro V</td>
+            <td><strong>Onix</strong></td>
             <td>30/05/2024</td>
             <td>Substituição de Filtro de Combustível</td>
-            <td>Aguardando Execução</td>
+            <td><b>Em Execução</b></td>
             <td></td>
           </tr>
         </tbody>

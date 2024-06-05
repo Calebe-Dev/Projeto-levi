@@ -38,7 +38,7 @@
 
 body {
   background-color: var(--bg-color);
-  font-family: var(--font-family);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -73,6 +73,13 @@ body {
   text-align: center;
   text-shadow: var(--title-shadow);
 }
+.marca1{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Define a imagem de fundo como a seta para baixo */
+  background-repeat: no-repeat;
+  background-position: right center; /* Posição da imagem de fundo */
+  background-size: 16px 16px; /* Tamanho da imagem de fundo */
+}
+
 
 table {
   width: 100%;
@@ -98,7 +105,8 @@ tbody tr:hover {
   background-color: #f1f1f1;
 }
 
-#formulario, .campo-manutenção {
+#formulario{
+  text-align: center;
   width: 70%;
   margin: 0 auto;
   padding: 20px;
@@ -108,9 +116,34 @@ tbody tr:hover {
   background-color: #f6f6f6;
 }
 
-.campo {
-  margin-bottom: 15px;
+.itensp{
+  position: relative;
+  height: 140px;
+  overflow:auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  
 }
+
+
+
+.campo {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 30%;
+  text-align: start;
+}
+.campo1 {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 30%;
+  text-align: start;
+  margin-right: 100px;
+}
+
+
 
 label {
   display: block;
@@ -151,9 +184,29 @@ label {
   width: none;
 }
 
+.tabela1{
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+ /* border: 1px solid ;*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f6f6f6;
+  height: 300px;
+  overflow: auto;
+}
+.campo1{
+  margin-left: 20%;
+  display: block;
+}
+
+.pesquisa-pecas
+{
+  text-align: center;
+}
 .footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -196,6 +249,7 @@ button:disabled {
   cursor: pointer;
   border-radius: var(--border-radius);
   padding: 10px;
+  width: 100px;
 }
 
 .edit_button {
@@ -217,6 +271,7 @@ button:disabled {
 
 .enter_button {
   padding: 15px 25px;
+  width: 105px;
   background-color: var(--enter-button-bg-color);
 }
 
@@ -232,13 +287,13 @@ button:disabled {
 }
 
 .footer_out_button {
-  width: 20%;
-  box-shadow: #eb2a04;
+  width: 15%;
+  background-color: #eb2a04;
 }
 
 .footer_return_button {
   background-color: #007bff;
-  width: 20%;
+  width: 15%;
   box-shadow: var(--menu-shadow);
 }
 
@@ -325,6 +380,14 @@ select option:hover {
 
 .table-container {
   margin: 20px 0;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f6f6f6;
 }
 table {
   width: 100%;
@@ -342,7 +405,7 @@ th {
   background-color: #f4f4f4;
 }
 .status-approved {
-  background-color: #d4edda;
+  
 }
 .status-pending {
   background-color: #fff3cd;
@@ -351,7 +414,7 @@ th {
   background-color: #f8d7da;
 }
 .execute-button {
-  background-color: #007bff;
+  background-color: #008000;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -395,6 +458,7 @@ th {
 .vehicle-details p {
   margin-bottom: 5px;
 }
+
 
 /* Responsividade */
 
@@ -464,15 +528,19 @@ th {
     display: flex;
     flex-direction: row;
     justify-content: center; /* Centraliza as notificações */
-    align-items: flex-start; /* Alinha as notificações ao topo */
+    align-items: center; /* Alinha as notificações ao topo */
   }
 
   .alertas {
-    width: 100%;
-    height: 100%;
+    margin-left:20%;
+    border-radius: 20px;
+    width: 50%;
+    height: center;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+    align-items: center;
+    padding: 5px;
+    background-color: red;
+    color: #000;
   }
 }
