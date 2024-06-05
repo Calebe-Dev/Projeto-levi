@@ -3,78 +3,373 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio</title>
+  <title>Requerimento de Peças</title>
   <link href="/src/style/reset.css" rel="stylesheet">
   <link href='/src/style/styles.css' rel='stylesheet'>
 </head>
 <body>
- <div class="container">
-  <div class="header">
-    <div class="head-logo"> 
-      <div class="logo">
-      <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+  <div class="container">
+    <div class="header">
+      <div class="head-logo"> 
+        <div class="logo">
+          <img src="/src/img/logo_vl_traslucida.png" alt="Logo">
+        </div>
+      </div>
+      <div class="title">
+        <h1>Requerimento de Peças</h1>
       </div>
     </div>
-    <div class="title">
-      <h1>Solicitar Manutenção</h1>
-    </div>
-  </div>
-        <div class="main">
-            <form id="solicitacaoManutencaoForm">
-                <div class="campo">
-                    <label for="nomeSolicitante">Nome do Solicitante:</label>
-                    <input type="text" id="nomeSolicitante" name="nomeSolicitante" required>
-                </div>
-                <div class="campo">
-                    <label for="cpfSolicitante">CPF do Solicitante:</label>
-                    <input type="number" id="cpfSolicitante" name="cpfSolicitante" required>
-                </div>
-                <div class="campo">
-                    <label for="modeloVeiculo">Modelo do Veículo:</label>
-                    <input type="text" id="modeloVeiculo" name="modeloVeiculo" value="Gol" readonly> 
-                </div>
-                <div class="campo">
-                    <label for="placaVeiculo">Placa do Veículo:</label>
-                    <input type="text" id="placaVeiculo" name="placaVeiculo" value="ABC-1234" readonly> 
-                </div>
-                <div class="campo">
-                    <label for="dataSolicitacao">Data da Solicitação:</label>
-                    <input type="date" id="dataSolicitacao" name="dataSolicitacao" required>
-                </div>
-                <div class="campo">
-                    <label for="descricaoProblema">Descrição do Problema: <br>(as informaçoes do cheklist já estão anexadas):</label>
-                    <textarea id="descricaoProblema" name="descricaoProblema" required></textarea>
-                </div>
-                <div class="campo">
-                    <label for="autorizacaoManutencao">O Carro Pode rodar em quando aguarda manutenção?</label>
-                    <select id="autorizacaoManutencao" name="autorizacaoManutencao" required>
-                        <option value="sim">Sim</option>
-                        <option value="nao">Não</option>
-                    </select>
-                </div>
-                <div class="campo">
-                    <button class="submit_button" type="submit">Enviar Solicitação</button>
-                </div>
-            </form>
-        </div>
-        <div class="footer">
-            <button class="footer_return_button">Voltar</button>
-            <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
-        </div>
-        <script>
-            const footer_return_button = document.querySelector('.footer_return_button');
-            footer_return_button.addEventListener('click', () => {
-                window.history.back();
-            });
+    <div class="main">
+      <div class="veiculo-informacoes">
+        <p><b>Placa:</b> ABC-1234</p>
+        <p><b>Modelo:</b> Onix</p>
+        <p><b>Marca:</b> Chevrolet</p>
+        <p><b>Ano:</b> 2023</p>
+      </div>
+      <br>
 
-            const solicitacaoManutencaoForm = document.getElementById('solicitacaoManutencaoForm');
-            solicitacaoManutencaoForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Solicitação de manutenção enviada com sucesso!');
-                // Aqui você pode adicionar a lógica para enviar os dados do formulário ao servidor
-                solicitacaoManutencaoForm.reset();
-            });
-        </script>
+      <div class="pesquisa-pecas" >
+        <input style="width: 330px; display: block;" type="text" placeholder="Pesquisar por marca ou código da peça">
+        <button style="width: 200px; " >Pesquisar</button>
+      </div>
+      <br>
+      <div class="tabela1">
+      <table class="tabela1">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Código da Peça</th>
+            <th>Produto</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Quantidade</th>
+            <th>Adicionar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>F026400258</td>
+            <td>Filtro de Ar</td>
+            <td>Bosch</td>
+            <td>F026400258</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>FGT20353691</td>
+            <td>Óleo de Motor</td>
+            <td>Castrol</td>
+            <td>Magnatec 5W-30</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>T2442</td>
+            <td>Pastilhas de Freio</td>
+            <td>Textar</td>
+            <td>T2442</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>BTB60H45</td>
+            <td>Bateria</td>
+            <td>Moura</td>
+            <td>60Ah</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>BKR5EYA</td>
+            <td>Velas de Ignição</td>
+            <td>NGK</td>
+            <td>BKR5EYA</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>K015499XS</td>
+            <td>Correia Dentada</td>
+            <td>Gates</td>
+            <td>K015499XS</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>G30904</td>
+            <td>Amortecedor Dianteiro</td>
+            <td>Monroe</td>
+            <td>G30904</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>09.B330.13</td>
+            <td>Disco de Freio</td>
+            <td>Brembo</td>
+            <td>09.B330.13</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>G3913</td>
+            <td>Filtro de Combustível</td>
+            <td>Fram</td>
+            <td>G3913</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Cinturato P7 195/65 R15 91H</td>
+            <td>Pneu</td>
+            <td>Pirelli</td>
+            <td>Cinturato P7 195/65 R15 91H</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Cinturato P7 195/65 R15 91H</td>
+            <td>Pneu</td>
+            <td>Pirelli</td>
+            <td>Cinturato P7 195/65 R15 91H</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>0445120159</td>
+            <td>Filtro de Ar do Motor</td>
+            <td>Volkswagen</td>
+            <td>0445120159</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>361338951</td>
+            <td>Pastilhas de Freio Traseiras</td>
+            <td>Bosch</td>
+            <td>361338951</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>03L109244B</td>
+            <td>Bomba de Água</td>
+            <td>SKF</td>
+            <td>03L109244B</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>11717566895</td>
+            <td>Amortecedor Traseiro Direito</td>
+            <td>Monroe</td>
+            <td>11717566895</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>06H121065D</td>
+            <td>Bobina de Ignição</td>
+            <td>NGK</td>
+            <td>06H121065D</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>5Q0121101F</td>
+            <td>Filtro de Óleo</td>
+            <td>Mahle</td>
+            <td>5Q0121101F</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>8200525380</td>
+            <td>Vela de Ignição</td>
+            <td>Bosch</td>
+            <td>8200525380</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>5Q0122421A</td>
+            <td> Correia Dentada</td>
+            <td>Continental</td>
+            <td>5Q0122421A</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>06H103157D</td>
+            <td>Sensor de Oxigênio</td>
+            <td>Bosch</td>
+            <td>06H103157D</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>4B0615121N</td>
+            <td>Disco de Freio Dianteiro</td>
+            <td>Brembo</td>
+            <td>4B0615121N</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>036133292</td>
+            <td>Bieлета da Suspensão Dianteira</td>
+            <td>TRW</td>
+            <td>036133292</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>5Q0121101H</td>
+            <td>Filtro de Combustível</td>
+            <td>Mann-Filter</td>
+            <td>5Q0121101H</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>06H145710N</td>
+            <td>Bomba de Combustível</td>
+            <td>Bosch</td>
+            <td>06H145710N</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>5Q0122291D</td>
+            <td>Tensor da Correia Dentada</td>
+            <td>INA</td>
+            <td>5Q0122291D</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>8E0947105C</td>
+            <td>Amortecedor Dianteiro Esquerdo</td>
+            <td>Sachs</td>
+            <td>8E0947105C</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>06H109477</td>
+            <td>Termostato</td>
+            <td>Wahler</td>
+            <td>06H109477</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td>5Q0129620C</td>
+            <td>Sensor de Temperatura da Água</td>
+            <td>VDO</td>
+            <td>5Q0129620C</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>28</td>
+            <td>06J133353C</td>
+            <td>Sensor de Rotação</td>
+            <td>Hella</td>
+            <td>06J133353C</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td>8K0947415E</td>
+            <td>Disco de Freio Traseiro</td>
+            <td>ATE</td>
+            <td>8K0947415E</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>06H145709C</td>
+            <td>Bomba de Água</td>
+            <td>Hepu</td>
+            <td>06H145709C</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>5Q0103495G</td>
+            <td>Filtro de Ar do Motor</td>
+            <td>Mahle</td>
+            <td>5Q0103495G</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td>06J109163A</td>
+            <td>Correia do Alternador</td>
+            <td>Gates</td>
+            <td>06J109163A</td>
+            <td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><input type="checkbox"></td>
+        </tbody>
+      </table>
+      </div>
+      <br>
+      <button style="width: 200px;" class="submit_button" id="btnEnviarRequisicao">Enviar Requisição</button>
     </div>
+    <div class="footer">
+      <button class="footer_return_button">Voltar</button>
+      <button class="footer_out_button" type="button" onclick="window.location.href='/index.html'">Sair</button>
+    </div>
+    <script>
+      const footer_return_button = document.querySelector('.footer_return_button');
+      footer_return_button.addEventListener('click', () => {
+        window.history.back();
+      });
+
+      const btnEnviarRequisicao = document.getElementById('btnEnviarRequisicao');
+      btnEnviarRequisicao.addEventListener('click', () => {
+        // Lógica para enviar a requisição de peças para o servidor
+        alert('Requisição de peças enviada com sucesso!');
+        // Você pode adicionar lógica para:
+        // - Validar a quantidade de cada peça
+        // - Salvar a requisição no banco de dados
+        // - Enviar notificações para o almoxarifado
+      });
+
+    </script>
+  </div>
 </body>
 </html>
