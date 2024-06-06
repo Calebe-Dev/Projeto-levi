@@ -155,6 +155,58 @@
                     </div>
                 </div>
                 <br><br>
+                <div style="text-align: center;" class="title_checklist">
+                    <h2>Componentes do Veículo</h2>
+                </div> 
+                <br>
+
+                <div class="itensp">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Motor</th>
+                                <th>Câmbio</th>
+                                <th>Suspensão</th>
+                                <th>Elétrica</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" id="radiador" name="radiador"> <label for="radiador">Radiador</label></td>
+                                <td><input type="checkbox" id="embreagem" name="embreagem"> <label for="embreagem">Embreagem</label></td>
+                                <td><input type="checkbox" id="amortecedores" name="amortecedores"> <label for="amortecedores">Amortecedores</label></td>
+                                <td><input type="checkbox" id="bateria" name="bateria"> <label for="bateria">Bateria</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="blocoMotor" name="blocoMotor"> <label for="blocoMotor">Bloco do Motor</label></td>
+                                <td><input type="checkbox" id="caixaCambio" name="caixaCambio"> <label for="caixaCambio">Caixa de Câmbio</label></td>
+                                <td><input type="checkbox" id="molas" name="molas"> <label for="molas">Molas</label></td>
+                                <td><input type="checkbox" id="alternador" name="alternador"> <label for="alternador">Alternador</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="mangueiraArrefecimento" name="mangueiraArrefecimento"> <label for="mangueiraArrefecimento">Mangueira de Arrefecimento</label></td>
+                                <td><input type="checkbox" id="fluidoCambio" name="fluidoCambio"> <label for="fluidoCambio">Fluido de Câmbio</label></td>
+                                <td><input type="checkbox" id="bieletas" name="bieletas"> <label for="bieletas">Bieletas</label></td>
+                                <td><input type="checkbox" id="motorDePartida" name="motorDePartida"> <label for="motorDePartida">Motor de Partida</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="bombaDagua" name="bombaDagua"> <label for="bombaDagua">Bomba d'Água</label></td>
+                                <td><input type="checkbox" id="correiaCambio" name="correiaCambio"> <label for="correiaCambio">Correia de Câmbio</label></td>
+                                <td><input type="checkbox" id="buchas" name="buchas"> <label for="buchas">Buchas</label></td>
+                                <td><input type="checkbox" id="fiosEletricos" name="fiosEletricos"> <label for="fiosEletricos">Fios Elétricos</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="velasIgnição" name="velasIgnição"> <label for="velasIgnição">Velas de Ignição</label></td>
+                                <td><input type="checkbox" id="cardan" name="cardan"> <label for="cardan">Cardan</label></td>
+                                <td><input type="checkbox" id="braçosSuspensao" name="braçosSuspensao"> <label for="braçosSuspensao">Braços de Suspensão</label></td>
+                                <td><input type="checkbox" id="faróis" name="faróis"> <label for="faróis">Faróis</label></td>
+                            </tr>
+                            <!-- Adicione mais linhas conforme necessário -->
+                        </tbody>
+                    </table>
+                </div>
+                <br><br>
+
 
 
             <div class="campo-manutencao">
@@ -190,15 +242,15 @@
                     </div>
                 </div>
                 <br><br>
-
-
                 <div class="campo1">
                     <label for="previsaoProximaManutencao">Previsão de próxima manutenção:</label>
                     <input type="date" id="previsaoProximaManutencao" name="previsaoProximaManutencao" required>
                     <label for="previsaoProximaManutencao">km:</label>
                     <input type="text" id="previsaoProximaManutencao" name="previsaoProximaManutencao" required>
                 </div>
+
                 <div class="campo">
+
                     <label for="veiculoPodeRodar">O veículo pode rodar?</label>
                     <br>
                     <select id="veiculoPodeRodar" name="veiculoPodeRodar" required>
